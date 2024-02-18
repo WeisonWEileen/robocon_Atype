@@ -1,0 +1,1353 @@
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ccsbcs.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Middlewares/Third_Party/FatFs/src/option/ccsbcs.c"
+  20              		.section	.text.ff_convert,"ax",%progbits
+  21              		.align	1
+  22              		.p2align 2,,3
+  23              		.global	ff_convert
+  24              		.syntax unified
+  25              		.thumb
+  26              		.thumb_func
+  28              	ff_convert:
+  29              	.LVL0:
+  30              	.LFB130:
+   1:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /*------------------------------------------------------------------------*/
+   2:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /* Unicode - Local code bidirectional converter  (C)ChaN, 2015            */
+   3:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /* (SBCS code pages)                                                      */
+   4:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /*------------------------------------------------------------------------*/
+   5:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /*  437   U.S.
+   6:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   720   Arabic
+   7:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   737   Greek
+   8:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   771   KBL
+   9:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   775   Baltic
+  10:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   850   Latin 1
+  11:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   852   Latin 2
+  12:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   855   Cyrillic
+  13:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   857   Turkish
+  14:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   860   Portuguese
+  15:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   861   Icelandic
+  16:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   862   Hebrew
+  17:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   863   Canadian French
+  18:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   864   Arabic
+  19:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   865   Nordic
+  20:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   866   Russian
+  21:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** /   869   Greek 2
+  22:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** */
+  23:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  24:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #include "../ff.h"
+  25:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  26:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  27:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #if _CODE_PAGE == 437
+  28:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 2
+
+
+  29:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+  30:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP437(0x80-0xFF) to Unicode conversion table */
+  31:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00E4, 0x00E0, 0x00E5, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00EF, 0x
+  32:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00E6, 0x00C6, 0x00F4, 0x00F6, 0x00F2, 0x00FB, 0x00F9, 0x00FF, 0x00D6, 0x00DC, 0x00A2, 0x
+  33:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00E1, 0x00ED, 0x00F3, 0x00FA, 0x00F1, 0x00D1, 0x00AA, 0x00BA, 0x00BF, 0x2310, 0x00AC, 0x00BD, 0x
+  34:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+  35:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+  36:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+  37:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B1, 0x00DF, 0x0393, 0x03C0, 0x03A3, 0x03C3, 0x00B5, 0x03C4, 0x03A6, 0x0398, 0x03A9, 0x03B4, 0x
+  38:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2261, 0x00B1, 0x2265, 0x2264, 0x2320, 0x2321, 0x00F7, 0x2248, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+  39:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+  40:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  41:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 720
+  42:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+  43:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+  44:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP720(0x80-0xFF) to Unicode conversion table */
+  45:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0000, 0x0000, 0x00E9, 0x00E2, 0x0000, 0x00E0, 0x0000, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00EF, 0x
+  46:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0000, 0x0651, 0x0652, 0x00F4, 0x00A4, 0x0640, 0x00FB, 0x00F9, 0x0621, 0x0622, 0x0623, 0x0624, 0x
+  47:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0628, 0x0629, 0x062A, 0x062B, 0x062C, 0x062D, 0x062E, 0x062F, 0x0630, 0x0631, 0x0632, 0x0633, 0x
+  48:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+  49:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+  50:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+  51:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0636, 0x0637, 0x0638, 0x0639, 0x063A, 0x0641, 0x00B5, 0x0642, 0x0643, 0x0644, 0x0645, 0x0646, 0x
+  52:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2261, 0x064B, 0x064C, 0x064D, 0x064E, 0x064F, 0x0650, 0x2248, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+  53:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+  54:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  55:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 737
+  56:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+  57:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+  58:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP737(0x80-0xFF) to Unicode conversion table */
+  59:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0391, 0x0392, 0x0393, 0x0394, 0x0395, 0x0396, 0x0397, 0x0398, 0x0399, 0x039A, 0x039B, 0x039C, 0x
+  60:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03A1, 0x03A3, 0x03A4, 0x03A5, 0x03A6, 0x03A7, 0x03A8, 0x03A9, 0x03B1, 0x03B2, 0x03B3, 0x03B4, 0x
+  61:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B9, 0x03BA, 0x03BB, 0x03BC, 0x03BD, 0x03BE, 0x03BF, 0x03C0, 0x03C1, 0x03C3, 0x03C2, 0x03C4, 0x
+  62:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+  63:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+  64:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+  65:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03C9, 0x03AC, 0x03AD, 0x03AE, 0x03CA, 0x03AF, 0x03CC, 0x03CD, 0x03CB, 0x03CE, 0x0386, 0x0388, 0x
+  66:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x038F, 0x00B1, 0x2265, 0x2264, 0x03AA, 0x03AB, 0x00F7, 0x2248, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+  67:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+  68:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  69:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 771
+  70:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+  71:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+  72:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP771(0x80-0xFF) to Unicode conversion table */
+  73:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0410, 0x0411, 0x0412, 0x0413, 0x0414, 0x0415, 0x0416, 0x0417, 0x0418, 0x0419, 0x041A, 0x041B, 0x
+  74:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0420, 0x0421, 0x0422, 0x0423, 0x0424, 0x0425, 0x0426, 0x0427, 0x0428, 0x0429, 0x042A, 0x042B, 0x
+  75:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0430, 0x0431, 0x0432, 0x0433, 0x0434, 0x0435, 0x0436, 0x0437, 0x0438, 0x0439, 0x043A, 0x043B, 0x
+  76:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+  77:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+  78:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+  79:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0440, 0x0441, 0x0442, 0x0443, 0x0444, 0x0445, 0x0446, 0x0447, 0x0448, 0x0449, 0x044A, 0x044B, 0x
+  80:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0118, 0x0119, 0x0116, 0x0117, 0x012E, 0x012F, 0x0160, 0x0161, 0x0172, 0x0173, 0x016A, 0x016B, 0x
+  81:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+  82:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  83:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 775
+  84:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+  85:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 3
+
+
+  86:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP775(0x80-0xFF) to Unicode conversion table */
+  87:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0106, 0x00FC, 0x00E9, 0x0101, 0x00E4, 0x0123, 0x00E5, 0x0107, 0x0142, 0x0113, 0x0156, 0x0157, 0x
+  88:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00E6, 0x00C6, 0x014D, 0x00F6, 0x0122, 0x00A2, 0x015A, 0x015B, 0x00D6, 0x00DC, 0x00F8, 0x
+  89:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0100, 0x012A, 0x00F3, 0x017B, 0x017C, 0x017A, 0x201D, 0x00A6, 0x00A9, 0x00AE, 0x00AC, 0x00BD, 0x
+  90:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x0104, 0x010C, 0x0118, 0x0116, 0x2563, 0x2551, 0x2557, 0x
+  91:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x0172, 0x016A, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+  92:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0105, 0x010D, 0x0119, 0x0117, 0x012F, 0x0161, 0x0173, 0x016B, 0x017E, 0x2518, 0x250C, 0x2588, 0x
+  93:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00D3, 0x00DF, 0x014C, 0x0143, 0x00F5, 0x00D5, 0x00B5, 0x0144, 0x0136, 0x0137, 0x013B, 0x013C, 0x
+  94:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00AD, 0x00B1, 0x201C, 0x00BE, 0x00B6, 0x00A7, 0x00F7, 0x201E, 0x00B0, 0x2219, 0x00B7, 0x00B9, 0x
+  95:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+  96:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  97:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 850
+  98:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+  99:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 100:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP850(0x80-0xFF) to Unicode conversion table */
+ 101:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00E4, 0x00E0, 0x00E5, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00EF, 0x
+ 102:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00E6, 0x00C6, 0x00F4, 0x00F6, 0x00F2, 0x00FB, 0x00F9, 0x00FF, 0x00D6, 0x00DC, 0x00F8, 0x
+ 103:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00E1, 0x00ED, 0x00F3, 0x00FA, 0x00F1, 0x00D1, 0x00AA, 0x00BA, 0x00BF, 0x00AE, 0x00AC, 0x00BD, 0x
+ 104:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x00C1, 0x00C2, 0x00C0, 0x00A9, 0x2563, 0x2551, 0x2557, 0x
+ 105:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x00E3, 0x00C3, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 106:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00F0, 0x00D0, 0x00CA, 0x00CB, 0x00C8, 0x0131, 0x00CD, 0x00CE, 0x00CF, 0x2518, 0x250C, 0x2588, 0x
+ 107:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00D3, 0x00DF, 0x00D4, 0x00D2, 0x00F5, 0x00D5, 0x00B5, 0x00FE, 0x00DE, 0x00DA, 0x00DB, 0x00D9, 0x
+ 108:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00AD, 0x00B1, 0x2017, 0x00BE, 0x00B6, 0x00A7, 0x00F7, 0x00B8, 0x00B0, 0x00A8, 0x00B7, 0x00B9, 0x
+ 109:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 110:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 111:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 852
+ 112:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 113:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 114:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP852(0x80-0xFF) to Unicode conversion table */
+ 115:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00E4, 0x016F, 0x0107, 0x00E7, 0x0142, 0x00EB, 0x0150, 0x0151, 0x
+ 116:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x0139, 0x013A, 0x00F4, 0x00F6, 0x013D, 0x013E, 0x015A, 0x015B, 0x00D6, 0x00DC, 0x0164, 0x
+ 117:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00E1, 0x00ED, 0x00F3, 0x00FA, 0x0104, 0x0105, 0x017D, 0x017E, 0x0118, 0x0119, 0x00AC, 0x017A, 0x
+ 118:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x00C1, 0x00C2, 0x011A, 0x015E, 0x2563, 0x2551, 0x2557, 0x
+ 119:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x0102, 0x0103, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 120:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0111, 0x0110, 0x010E, 0x00CB, 0x010F, 0x0147, 0x00CD, 0x00CE, 0x011B, 0x2518, 0x250C, 0x2588, 0x
+ 121:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00D3, 0x00DF, 0x00D4, 0x0143, 0x0144, 0x0148, 0x0160, 0x0161, 0x0154, 0x00DA, 0x0155, 0x0170, 0x
+ 122:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00AD, 0x02DD, 0x02DB, 0x02C7, 0x02D8, 0x00A7, 0x00F7, 0x00B8, 0x00B0, 0x00A8, 0x02D9, 0x0171, 0x
+ 123:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 124:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 125:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 855
+ 126:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 127:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 128:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP855(0x80-0xFF) to Unicode conversion table */
+ 129:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0452, 0x0402, 0x0453, 0x0403, 0x0451, 0x0401, 0x0454, 0x0404, 0x0455, 0x0405, 0x0456, 0x0406, 0x
+ 130:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0459, 0x0409, 0x045A, 0x040A, 0x045B, 0x040B, 0x045C, 0x040C, 0x045E, 0x040E, 0x045F, 0x040F, 0x
+ 131:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0430, 0x0410, 0x0431, 0x0411, 0x0446, 0x0426, 0x0434, 0x0414, 0x0435, 0x0415, 0x0444, 0x0424, 0x
+ 132:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x0445, 0x0425, 0x0438, 0x0418, 0x2563, 0x2551, 0x2557, 0x
+ 133:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x043A, 0x041A, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 134:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x043B, 0x041B, 0x043C, 0x041C, 0x043D, 0x041D, 0x043E, 0x041E, 0x043F, 0x2518, 0x250C, 0x2588, 0x
+ 135:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x042F, 0x0440, 0x0420, 0x0441, 0x0421, 0x0442, 0x0422, 0x0443, 0x0423, 0x0436, 0x0416, 0x0432, 0x
+ 136:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00AD, 0x044B, 0x042B, 0x0437, 0x0417, 0x0448, 0x0428, 0x044D, 0x042D, 0x0449, 0x0429, 0x0447, 0x
+ 137:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 138:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 139:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 857
+ 140:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 141:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 142:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP857(0x80-0xFF) to Unicode conversion table */
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 4
+
+
+ 143:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00E4, 0x00E0, 0x00E5, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00EF, 0x
+ 144:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00E6, 0x00C6, 0x00F4, 0x00F6, 0x00F2, 0x00FB, 0x00F9, 0x0130, 0x00D6, 0x00DC, 0x00F8, 0x
+ 145:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00E1, 0x00ED, 0x00F3, 0x00FA, 0x00F1, 0x00D1, 0x011E, 0x011F, 0x00BF, 0x00AE, 0x00AC, 0x00BD, 0x
+ 146:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x00C1, 0x00C2, 0x00C0, 0x00A9, 0x2563, 0x2551, 0x2557, 0x
+ 147:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x00E3, 0x00C3, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 148:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00BA, 0x00AA, 0x00CA, 0x00CB, 0x00C8, 0x0000, 0x00CD, 0x00CE, 0x00CF, 0x2518, 0x250C, 0x2588, 0x
+ 149:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00D3, 0x00DF, 0x00D4, 0x00D2, 0x00F5, 0x00D5, 0x00B5, 0x0000, 0x00D7, 0x00DA, 0x00DB, 0x00D9, 0x
+ 150:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00AD, 0x00B1, 0x0000, 0x00BE, 0x00B6, 0x00A7, 0x00F7, 0x00B8, 0x00B0, 0x00A8, 0x00B7, 0x00B9, 0x
+ 151:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 152:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 153:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 860
+ 154:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 155:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 156:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP860(0x80-0xFF) to Unicode conversion table */
+ 157:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00E3, 0x00E0, 0x00C1, 0x00E7, 0x00EA, 0x00CA, 0x00E8, 0x00CD, 0x
+ 158:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00C0, 0x00C8, 0x00F4, 0x00F5, 0x00F2, 0x00DA, 0x00F9, 0x00CC, 0x00D5, 0x00DC, 0x00A2, 0x
+ 159:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00E1, 0x00ED, 0x00F3, 0x00FA, 0x00F1, 0x00D1, 0x00AA, 0x00BA, 0x00BF, 0x00D2, 0x00AC, 0x00BD, 0x
+ 160:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+ 161:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 162:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+ 163:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B1, 0x00DF, 0x0393, 0x03C0, 0x03A3, 0x03C3, 0x00B5, 0x03C4, 0x03A6, 0x0398, 0x03A9, 0x03B4, 0x
+ 164:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2261, 0x00B1, 0x2265, 0x2264, 0x2320, 0x2321, 0x00F7, 0x2248, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+ 165:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 166:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 167:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 861
+ 168:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 169:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 170:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP861(0x80-0xFF) to Unicode conversion table */
+ 171:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00E4, 0x00E0, 0x00E6, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00D0, 0x
+ 172:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00E6, 0x00C6, 0x00F4, 0x00F6, 0x00FE, 0x00FB, 0x00DD, 0x00FD, 0x00D6, 0x00DC, 0x00F8, 0x
+ 173:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00E1, 0x00ED, 0x00F3, 0x00FA, 0x00C1, 0x00CD, 0x00D3, 0x00DA, 0x00BF, 0x2310, 0x00AC, 0x00BD, 0x
+ 174:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+ 175:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 176:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+ 177:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B1, 0x00DF, 0x0393, 0x03C0, 0x03A3, 0x03C3, 0x00B5, 0x03C4, 0x03A6, 0x0398, 0x03A9, 0x03B4, 0x
+ 178:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2261, 0x00B1, 0x2265, 0x2264, 0x2320, 0x2321, 0x00F7, 0x2248, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+ 179:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 180:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 181:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 862
+ 182:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 183:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 184:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP862(0x80-0xFF) to Unicode conversion table */
+ 185:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x05D0, 0x05D1, 0x05D2, 0x05D3, 0x05D4, 0x05D5, 0x05D6, 0x05D7, 0x05D8, 0x05D9, 0x05DA, 0x05DB, 0x
+ 186:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x05E0, 0x05E1, 0x05E2, 0x05E3, 0x05E4, 0x05E5, 0x05E6, 0x05E7, 0x05E8, 0x05E9, 0x05EA, 0x00A2, 0x
+ 187:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00E1, 0x00ED, 0x00F3, 0x00FA, 0x00F1, 0x00D1, 0x00AA, 0x00BA, 0x00BF, 0x2310, 0x00AC, 0x00BD, 0x
+ 188:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+ 189:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 190:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+ 191:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B1, 0x00DF, 0x0393, 0x03C0, 0x03A3, 0x03C3, 0x00B5, 0x03C4, 0x03A6, 0x0398, 0x03A9, 0x03B4, 0x
+ 192:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2261, 0x00B1, 0x2265, 0x2264, 0x2320, 0x2321, 0x00F7, 0x2248, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+ 193:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 194:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 195:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 863
+ 196:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 197:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 198:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP863(0x80-0xFF) to Unicode conversion table */
+ 199:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00C2, 0x00E0, 0x00B6, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00EF, 0x
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 5
+
+
+ 200:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00C8, 0x00CA, 0x00F4, 0x00CB, 0x00CF, 0x00FB, 0x00F9, 0x00A4, 0x00D4, 0x00DC, 0x00A2, 0x
+ 201:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00A6, 0x00B4, 0x00F3, 0x00FA, 0x00A8, 0x00BB, 0x00B3, 0x00AF, 0x00CE, 0x3210, 0x00AC, 0x00BD, 0x
+ 202:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+ 203:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 204:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+ 205:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B1, 0x00DF, 0x0393, 0x03C0, 0x03A3, 0x03C3, 0x00B5, 0x03C4, 0x03A6, 0x0398, 0x03A9, 0x03B4, 0x
+ 206:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2261, 0x00B1, 0x2265, 0x2264, 0x2320, 0x2321, 0x00F7, 0x2248, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+ 207:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 208:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 209:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 864
+ 210:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 211:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 212:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP864(0x80-0xFF) to Unicode conversion table */
+ 213:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00B0, 0x00B7, 0x2219, 0x221A, 0x2592, 0x2500, 0x2502, 0x253C, 0x2524, 0x252C, 0x251C, 0x2534, 0x
+ 214:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B2, 0x221E, 0x03C6, 0x00B1, 0x00BD, 0x00BC, 0x2248, 0x00AB, 0x00BB, 0xFEF7, 0xFEF8, 0x0000, 0x
+ 215:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00A0, 0x00AD, 0xFE82, 0x00A3, 0x00A4, 0xFE84, 0x0000, 0x20AC, 0xFE8E, 0xFE8F, 0xFE95, 0xFE99, 0x
+ 216:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0660, 0x0661, 0x0662, 0x0663, 0x0664, 0x0665, 0x0666, 0x0667, 0x0668, 0x0669, 0xFED1, 0x061B, 0x
+ 217:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00A2, 0xFE80, 0xFE81, 0xFE83, 0xFE85, 0xFECA, 0xFE8B, 0xFE8D, 0xFE91, 0xFE93, 0xFE97, 0xFE9B, 0x
+ 218:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0xFEAB, 0xFEAD, 0xFEAF, 0xFEB3, 0xFEB7, 0xFEBB, 0xFEBF, 0xFEC1, 0xFEC5, 0xFECB, 0xFECF, 0x00A6, 0x
+ 219:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0640, 0xFED3, 0xFED7, 0xFEDB, 0xFEDF, 0xFEE3, 0xFEE7, 0xFEEB, 0xFEED, 0xFEEF, 0xFEF3, 0xFEBD, 0x
+ 220:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0xFE7D, 0x0651, 0xFEE5, 0xFEE9, 0xFEEC, 0xFEF0, 0xFEF2, 0xFED0, 0xFED5, 0xFEF5, 0xFEF6, 0xFEDD, 0x
+ 221:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 222:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 223:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 865
+ 224:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 225:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 226:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP865(0x80-0xFF) to Unicode conversion table */
+ 227:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00E4, 0x00E0, 0x00E5, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00EF, 0x
+ 228:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C5, 0x00E6, 0x00C6, 0x00F4, 0x00F6, 0x00F2, 0x00FB, 0x00F9, 0x00FF, 0x00D6, 0x00DC, 0x00F8, 0x
+ 229:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00E1, 0x00ED, 0x00F3, 0x00FA, 0x00F1, 0x00D1, 0x00AA, 0x00BA, 0x00BF, 0x2310, 0x00AC, 0x00BD, 0x
+ 230:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+ 231:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 232:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+ 233:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B1, 0x00DF, 0x0393, 0x03C0, 0x03A3, 0x03C3, 0x00B5, 0x03C4, 0x03A6, 0x0398, 0x03A9, 0x03B4, 0x
+ 234:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2261, 0x00B1, 0x2265, 0x2264, 0x2320, 0x2321, 0x00F7, 0x2248, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+ 235:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 236:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 237:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 866
+ 238:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 239:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 240:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP866(0x80-0xFF) to Unicode conversion table */
+ 241:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0410, 0x0411, 0x0412, 0x0413, 0x0414, 0x0415, 0x0416, 0x0417, 0x0418, 0x0419, 0x041A, 0x041B, 0x
+ 242:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0420, 0x0421, 0x0422, 0x0423, 0x0424, 0x0425, 0x0426, 0x0427, 0x0428, 0x0429, 0x042A, 0x042B, 0x
+ 243:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0430, 0x0431, 0x0432, 0x0433, 0x0434, 0x0435, 0x0436, 0x0437, 0x0438, 0x0439, 0x043A, 0x043B, 0x
+ 244:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x2561, 0x2562, 0x2556, 0x2555, 0x2563, 0x2551, 0x2557, 0x
+ 245:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x255E, 0x255F, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 246:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2568, 0x2564, 0x2565, 0x2559, 0x2558, 0x2552, 0x2553, 0x256B, 0x256A, 0x2518, 0x250C, 0x2588, 0x
+ 247:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0440, 0x0441, 0x0442, 0x0443, 0x0444, 0x0445, 0x0446, 0x0447, 0x0448, 0x0449, 0x044A, 0x044B, 0x
+ 248:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0401, 0x0451, 0x0404, 0x0454, 0x0407, 0x0457, 0x040E, 0x045E, 0x00B0, 0x2219, 0x00B7, 0x221A, 0x
+ 249:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 250:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 251:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #elif _CODE_PAGE == 869
+ 252:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
+ 253:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
+ 254:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP869(0x80-0xFF) to Unicode conversion table */
+ 255:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00B7, 0x00B7, 0x00B7, 0x00B7, 0x00B7, 0x00B7, 0x0386, 0x00B7, 0x00B7, 0x00AC, 0x00A6, 0x2018, 0x
+ 256:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x038A, 0x03AA, 0x038C, 0x00B7, 0x00B7, 0x038E, 0x03AB, 0x00A9, 0x038F, 0x00B2, 0x00B3, 0x03AC, 0x
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 6
+
+
+ 257:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03CA, 0x0390, 0x03CC, 0x03CD, 0x0391, 0x0392, 0x0393, 0x0394, 0x0395, 0x0396, 0x0397, 0x00BD, 0x
+ 258:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x039A, 0x039B, 0x039C, 0x039D, 0x2563, 0x2551, 0x2557, 0x
+ 259:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2514, 0x2534, 0x252C, 0x251C, 0x2500, 0x253C, 0x0A30, 0x03A1, 0x255A, 0x2554, 0x2569, 0x2566, 0x
+ 260:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03A4, 0x03A5, 0x03A6, 0x03A7, 0x03A8, 0x03A9, 0x03B1, 0x03B2, 0x03B3, 0x2518, 0x250C, 0x2588, 0x
+ 261:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03B6, 0x03B7, 0x03B8, 0x03B9, 0x03BA, 0x03BB, 0x03BC, 0x03BD, 0x03BE, 0x03BF, 0x03C0, 0x03C1, 0x
+ 262:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00AD, 0x00B1, 0x03C5, 0x03C6, 0x03C7, 0x00A7, 0x03C8, 0x0385, 0x00B0, 0x00A8, 0x03C9, 0x03CB, 0x
+ 263:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** };
+ 264:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 265:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #endif
+ 266:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 267:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 268:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #if !_TBLDEF || !_USE_LFN
+ 269:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #error This file is not needed at current configuration. Remove from the project.
+ 270:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #endif
+ 271:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 272:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 273:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 274:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 275:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** WCHAR ff_convert (	/* Converted character, Returns zero on error */
+ 276:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	WCHAR	chr,	/* Character code to be converted */
+ 277:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	UINT	dir		/* 0: Unicode to OEM code, 1: OEM code to Unicode */
+ 278:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** )
+ 279:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** {
+  31              		.loc 1 279 1 view -0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 0, uses_anonymous_args = 0
+  35              		@ link register save eliminated.
+ 280:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	WCHAR c;
+  36              		.loc 1 280 2 view .LVU1
+ 281:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 282:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 283:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	if (chr < 0x80) {	/* ASCII */
+  37              		.loc 1 283 2 view .LVU2
+  38              		.loc 1 283 5 is_stmt 0 view .LVU3
+  39 0000 7F28     		cmp	r0, #127
+  40 0002 0FD9     		bls	.L2
+ 284:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		c = chr;
+ 285:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 286:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	} else {
+ 287:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		if (dir) {		/* OEM code to Unicode */
+  41              		.loc 1 287 3 is_stmt 1 view .LVU4
+  42              		.loc 1 287 6 is_stmt 0 view .LVU5
+  43 0004 59B9     		cbnz	r1, .L10
+  44 0006 0A4B     		ldr	r3, .L13
+  45 0008 02E0     		b	.L5
+  46              	.LVL1:
+  47              	.L11:
+ 288:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			c = (chr >= 0x100) ? 0 : Tbl[chr - 0x80];
+ 289:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 290:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		} else {		/* Unicode to OEM code */
+ 291:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			for (c = 0; c < 0x80; c++) {
+  48              		.loc 1 291 18 discriminator 2 view .LVU6
+  49 000a 0131     		adds	r1, r1, #1
+  50              	.LVL2:
+  51              		.loc 1 291 18 discriminator 2 view .LVU7
+  52 000c 8029     		cmp	r1, #128
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 7
+
+
+  53 000e 08D0     		beq	.L7
+  54              	.LVL3:
+  55              	.L5:
+ 292:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 				if (chr == Tbl[c]) break;
+  56              		.loc 1 292 5 is_stmt 1 view .LVU8
+ 291:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 				if (chr == Tbl[c]) break;
+  57              		.loc 1 291 27 view .LVU9
+ 291:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 				if (chr == Tbl[c]) break;
+  58              		.loc 1 291 18 view .LVU10
+  59              		.loc 1 292 19 is_stmt 0 view .LVU11
+  60 0010 33F8022B 		ldrh	r2, [r3], #2
+  61              		.loc 1 292 8 view .LVU12
+  62 0014 8242     		cmp	r2, r0
+  63 0016 F8D1     		bne	.L11
+ 293:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			}
+ 294:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			c = (c + 0x80) & 0xFF;
+  64              		.loc 1 294 11 view .LVU13
+  65 0018 8031     		adds	r1, r1, #128
+  66              	.LVL4:
+  67              		.loc 1 294 11 view .LVU14
+  68 001a 88B2     		uxth	r0, r1
+  69              	.LVL5:
+  70              		.loc 1 294 4 is_stmt 1 view .LVU15
+  71              		.loc 1 294 4 is_stmt 0 view .LVU16
+  72 001c 7047     		bx	lr
+  73              	.LVL6:
+  74              	.L10:
+ 288:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  75              		.loc 1 288 4 is_stmt 1 view .LVU17
+ 288:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  76              		.loc 1 288 6 is_stmt 0 view .LVU18
+  77 001e FF28     		cmp	r0, #255
+  78 0020 01D9     		bls	.L12
+  79              	.LVL7:
+  80              	.L7:
+ 288:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  81              		.loc 1 288 6 view .LVU19
+  82 0022 0020     		movs	r0, #0
+  83              	.LVL8:
+  84              	.L2:
+ 295:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		}
+ 296:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	}
+ 297:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 298:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	return c;
+  85              		.loc 1 298 2 is_stmt 1 view .LVU20
+ 299:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+  86              		.loc 1 299 1 is_stmt 0 view .LVU21
+  87 0024 7047     		bx	lr
+  88              	.LVL9:
+  89              	.L12:
+ 288:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  90              		.loc 1 288 6 discriminator 1 view .LVU22
+  91 0026 024B     		ldr	r3, .L13
+  92 0028 8038     		subs	r0, r0, #128
+  93              	.LVL10:
+ 288:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+  94              		.loc 1 288 6 discriminator 1 view .LVU23
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 8
+
+
+  95 002a 33F81000 		ldrh	r0, [r3, r0, lsl #1]
+  96 002e 7047     		bx	lr
+  97              	.L14:
+  98              		.align	2
+  99              	.L13:
+ 100 0030 00000000 		.word	Tbl
+ 101              		.cfi_endproc
+ 102              	.LFE130:
+ 104              		.section	.text.ff_wtoupper,"ax",%progbits
+ 105              		.align	1
+ 106              		.p2align 2,,3
+ 107              		.global	ff_wtoupper
+ 108              		.syntax unified
+ 109              		.thumb
+ 110              		.thumb_func
+ 112              	ff_wtoupper:
+ 113              	.LVL11:
+ 114              	.LFB131:
+ 300:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 301:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 302:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 303:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** WCHAR ff_wtoupper (	/* Returns upper converted character */
+ 304:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	WCHAR chr		/* Unicode character to be upper converted (BMP only) */
+ 305:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** )
+ 306:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** {
+ 115              		.loc 1 306 1 is_stmt 1 view -0
+ 116              		.cfi_startproc
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 307:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	/* Compressed upper conversion table */
+ 308:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	static const WCHAR cvt1[] = {	/* U+0000 - U+0FFF */
+ 119              		.loc 1 308 2 view .LVU25
+ 309:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Basic Latin */
+ 310:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0061,0x031A,
+ 311:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Latin-1 Supplement */
+ 312:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x00E0,0x0317,  0x00F8,0x0307,  0x00FF,0x0001,0x0178,
+ 313:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Latin Extended-A */
+ 314:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0100,0x0130,  0x0132,0x0106,  0x0139,0x0110,  0x014A,0x012E,  0x0179,0x0106,
+ 315:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Latin Extended-B */
+ 316:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0180,0x004D,0x0243,0x0181,0x0182,0x0182,0x0184,0x0184,0x0186,0x0187,0x0187,0x0189,0x018A,0x018B
+ 317:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x01CD,0x0110,  0x01DD,0x0001,0x018E,  0x01DE,0x0112,  0x01F3,0x0003,0x01F1,0x01F4,0x01F4,  0x01F
+ 318:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0222,0x0112,  0x023A,0x0009,0x2C65,0x023B,0x023B,0x023D,0x2C66,0x023F,0x0240,0x0241,0x0241,  0x
+ 319:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* IPA Extensions */
+ 320:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0253,0x0040,0x0181,0x0186,0x0255,0x0189,0x018A,0x0258,0x018F,0x025A,0x0190,0x025C,0x025D,0x025E
+ 321:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Greek, Coptic */
+ 322:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x037B,0x0003,0x03FD,0x03FE,0x03FF,  0x03AC,0x0004,0x0386,0x0388,0x0389,0x038A,  0x03B1,0x0311,
+ 323:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x03C2,0x0002,0x03A3,0x03A3,  0x03C4,0x0308,  0x03CC,0x0003,0x038C,0x038E,0x038F,  0x03D8,0x0118,
+ 324:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x03F2,0x000A,0x03F9,0x03F3,0x03F4,0x03F5,0x03F6,0x03F7,0x03F7,0x03F9,0x03FA,0x03FA,
+ 325:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Cyrillic */
+ 326:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0430,0x0320,  0x0450,0x0710,  0x0460,0x0122,  0x048A,0x0136,  0x04C1,0x010E,  0x04CF,0x0001,0x0
+ 327:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Armenian */
+ 328:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0561,0x0426,
+ 329:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 330:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0000
+ 331:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	};
+ 332:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	static const WCHAR cvt2[] = {	/* U+1000 - U+FFFF */
+ 120              		.loc 1 332 2 view .LVU26
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 9
+
+
+ 333:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Phonetic Extensions */
+ 334:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x1D7D,0x0001,0x2C63,
+ 335:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Latin Extended Additional */
+ 336:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x1E00,0x0196,  0x1EA0,0x015A,
+ 337:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Greek Extended */
+ 338:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x1F00,0x0608,  0x1F10,0x0606,  0x1F20,0x0608,  0x1F30,0x0608,  0x1F40,0x0606,
+ 339:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x1F51,0x0007,0x1F59,0x1F52,0x1F5B,0x1F54,0x1F5D,0x1F56,0x1F5F,  0x1F60,0x0608,
+ 340:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x1F70,0x000E,0x1FBA,0x1FBB,0x1FC8,0x1FC9,0x1FCA,0x1FCB,0x1FDA,0x1FDB,0x1FF8,0x1FF9,0x1FEA,0x1FEB
+ 341:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x1F80,0x0608,  0x1F90,0x0608,  0x1FA0,0x0608,  0x1FB0,0x0004,0x1FB8,0x1FB9,0x1FB2,0x1FBC,
+ 342:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x1FCC,0x0001,0x1FC3,  0x1FD0,0x0602,  0x1FE0,0x0602,  0x1FE5,0x0001,0x1FEC,  0x1FF2,0x0001,0x1FF
+ 343:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Letterlike Symbols */
+ 344:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x214E,0x0001,0x2132,
+ 345:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Number forms */
+ 346:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x2170,0x0210,  0x2184,0x0001,0x2183,
+ 347:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Enclosed Alphanumerics */
+ 348:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x24D0,0x051A,  0x2C30,0x042F,
+ 349:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Latin Extended-C */
+ 350:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x2C60,0x0102,  0x2C67,0x0106, 0x2C75,0x0102,
+ 351:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Coptic */
+ 352:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x2C80,0x0164,
+ 353:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Georgian Supplement */
+ 354:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x2D00,0x0826,
+ 355:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Full-width */
+ 356:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0xFF41,0x031A,
+ 357:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 358:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		0x0000
+ 359:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	};
+ 360:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	const WCHAR *p;
+ 121              		.loc 1 360 2 view .LVU27
+ 361:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	WCHAR bc, nc, cmd;
+ 122              		.loc 1 361 2 view .LVU28
+ 362:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 363:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 364:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	p = chr < 0x1000 ? cvt1 : cvt2;
+ 123              		.loc 1 364 2 view .LVU29
+ 306:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	/* Compressed upper conversion table */
+ 124              		.loc 1 306 1 is_stmt 0 view .LVU30
+ 125 0000 10B5     		push	{r4, lr}
+ 126              		.cfi_def_cfa_offset 8
+ 127              		.cfi_offset 4, -8
+ 128              		.cfi_offset 14, -4
+ 129              		.loc 1 364 26 view .LVU31
+ 130 0002 244B     		ldr	r3, .L41
+ 131 0004 244A     		ldr	r2, .L41+4
+ 132 0006 B0F5805F 		cmp	r0, #4096
+ 133 000a 28BF     		it	cs
+ 134 000c 1346     		movcs	r3, r2
+ 135              	.L30:
+ 136 000e 0433     		adds	r3, r3, #4
+ 137 0010 0DE0     		b	.L29
+ 138              	.LVL12:
+ 139              	.L40:
+ 365:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	for (;;) {
+ 366:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		bc = *p++;								/* Get block base */
+ 367:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		if (!bc || chr < bc) break;
+ 140              		.loc 1 367 11 discriminator 1 view .LVU32
+ 141 0012 8842     		cmp	r0, r1
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 10
+
+
+ 142 0014 10D3     		bcc	.L17
+ 368:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		nc = *p++; cmd = nc >> 8; nc &= 0xFF;	/* Get processing command and block size */
+ 143              		.loc 1 368 6 view .LVU33
+ 144 0016 33F8022C 		ldrh	r2, [r3, #-2]
+ 145              	.LVL13:
+ 146              		.loc 1 368 14 is_stmt 1 view .LVU34
+ 147              		.loc 1 368 32 is_stmt 0 view .LVU35
+ 148 001a 5FFA82FC 		uxtb	ip, r2
+ 369:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		if (chr < bc + nc) {	/* In the block? */
+ 149              		.loc 1 369 16 view .LVU36
+ 150 001e 0CEB010E 		add	lr, ip, r1
+ 151              		.loc 1 369 6 view .LVU37
+ 152 0022 7045     		cmp	r0, lr
+ 368:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		nc = *p++; cmd = nc >> 8; nc &= 0xFF;	/* Get processing command and block size */
+ 153              		.loc 1 368 18 view .LVU38
+ 154 0024 4FEA1222 		lsr	r2, r2, #8
+ 155              	.LVL14:
+ 368:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		nc = *p++; cmd = nc >> 8; nc &= 0xFF;	/* Get processing command and block size */
+ 156              		.loc 1 368 29 is_stmt 1 view .LVU39
+ 157              		.loc 1 369 3 view .LVU40
+ 158              		.loc 1 369 6 is_stmt 0 view .LVU41
+ 159 0028 07DB     		blt	.L38
+ 370:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			switch (cmd) {
+ 371:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 0:	chr = p[chr - bc]; break;		/* Table conversion */
+ 372:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 1:	chr -= (chr - bc) & 1; break;	/* Case pairs */
+ 373:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 2: chr -= 16; break;				/* Shift -16 */
+ 374:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 3:	chr -= 32; break;				/* Shift -32 */
+ 375:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 4:	chr -= 48; break;				/* Shift -48 */
+ 376:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 5:	chr -= 26; break;				/* Shift -26 */
+ 377:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 6:	chr += 8; break;				/* Shift +8 */
+ 378:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 7: chr -= 80; break;				/* Shift -80 */
+ 379:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 8:	chr -= 0x1C60; break;			/* Shift -0x1C60 */
+ 380:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			}
+ 381:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			break;
+ 382:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		}
+ 383:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		if (!cmd) p += nc;
+ 160              		.loc 1 383 6 view .LVU42
+ 161 002a 0433     		adds	r3, r3, #4
+ 162              	.LVL15:
+ 163              		.loc 1 383 6 view .LVU43
+ 164 002c 72B1     		cbz	r2, .L39
+ 165              	.LVL16:
+ 166              	.L29:
+ 365:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		bc = *p++;								/* Get block base */
+ 167              		.loc 1 365 2 is_stmt 1 view .LVU44
+ 366:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		if (!bc || chr < bc) break;
+ 168              		.loc 1 366 3 view .LVU45
+ 368:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		if (chr < bc + nc) {	/* In the block? */
+ 169              		.loc 1 368 3 view .LVU46
+ 170              		.loc 1 383 3 view .LVU47
+ 366:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		if (!bc || chr < bc) break;
+ 171              		.loc 1 366 6 is_stmt 0 view .LVU48
+ 172 002e 33F8041C 		ldrh	r1, [r3, #-4]
+ 173              	.LVL17:
+ 367:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		nc = *p++; cmd = nc >> 8; nc &= 0xFF;	/* Get processing command and block size */
+ 174              		.loc 1 367 3 is_stmt 1 view .LVU49
+ 175 0032 1C46     		mov	r4, r3
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 11
+
+
+ 367:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		nc = *p++; cmd = nc >> 8; nc &= 0xFF;	/* Get processing command and block size */
+ 176              		.loc 1 367 6 is_stmt 0 view .LVU50
+ 177 0034 0029     		cmp	r1, #0
+ 178 0036 ECD1     		bne	.L40
+ 179              	.L17:
+ 384:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	}
+ 385:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	return chr;
+ 180              		.loc 1 386 2 is_stmt 1 view .LVU51
+ 387:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 181              		.loc 1 387 1 is_stmt 0 view .LVU52
+ 182 0038 10BD     		pop	{r4, pc}
+ 183              	.LVL18:
+ 184              	.L38:
+ 370:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 0:	chr = p[chr - bc]; break;		/* Table conversion */
+ 185              		.loc 1 370 4 is_stmt 1 view .LVU53
+ 186 003a 082A     		cmp	r2, #8
+ 187 003c FCD8     		bhi	.L17
+ 188 003e DFE802F0 		tbb	[pc, r2]
+ 189              	.L20:
+ 190 0042 0C       		.byte	(.L28-.L20)/2
+ 191 0043 10       		.byte	(.L27-.L20)/2
+ 192 0044 16       		.byte	(.L26-.L20)/2
+ 193 0045 19       		.byte	(.L25-.L20)/2
+ 194 0046 1C       		.byte	(.L24-.L20)/2
+ 195 0047 1F       		.byte	(.L23-.L20)/2
+ 196 0048 22       		.byte	(.L22-.L20)/2
+ 197 0049 25       		.byte	(.L21-.L20)/2
+ 198 004a 08       		.byte	(.L19-.L20)/2
+ 199              	.LVL19:
+ 200 004b 00       		.p2align 1
+ 201              	.L39:
+ 383:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	}
+ 202              		.loc 1 383 13 discriminator 1 view .LVU54
+ 383:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	}
+ 203              		.loc 1 383 15 is_stmt 0 discriminator 1 view .LVU55
+ 204 004c 04EB4C03 		add	r3, r4, ip, lsl #1
+ 205              	.LVL20:
+ 383:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	}
+ 206              		.loc 1 383 15 discriminator 1 view .LVU56
+ 207 0050 DDE7     		b	.L30
+ 208              	.L19:
+ 379:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			}
+ 209              		.loc 1 379 12 is_stmt 1 view .LVU57
+ 379:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			}
+ 210              		.loc 1 379 16 is_stmt 0 view .LVU58
+ 211 0052 A0F5E350 		sub	r0, r0, #7264
+ 212              	.LVL21:
+ 379:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			}
+ 213              		.loc 1 379 16 view .LVU59
+ 214 0056 80B2     		uxth	r0, r0
+ 215              	.LVL22:
+ 379:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			}
+ 216              		.loc 1 379 27 is_stmt 1 view .LVU60
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 217              		.loc 1 386 2 view .LVU61
+ 218              		.loc 1 387 1 is_stmt 0 view .LVU62
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 12
+
+
+ 219 0058 10BD     		pop	{r4, pc}
+ 220              	.L28:
+ 371:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 1:	chr -= (chr - bc) & 1; break;	/* Case pairs */
+ 221              		.loc 1 371 12 is_stmt 1 view .LVU63
+ 371:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 1:	chr -= (chr - bc) & 1; break;	/* Case pairs */
+ 222              		.loc 1 371 24 is_stmt 0 view .LVU64
+ 223 005a 401A     		subs	r0, r0, r1
+ 224              	.LVL23:
+ 371:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 1:	chr -= (chr - bc) & 1; break;	/* Case pairs */
+ 225              		.loc 1 371 16 view .LVU65
+ 226 005c 33F81000 		ldrh	r0, [r3, r0, lsl #1]
+ 227              	.LVL24:
+ 371:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 1:	chr -= (chr - bc) & 1; break;	/* Case pairs */
+ 228              		.loc 1 371 31 is_stmt 1 view .LVU66
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 229              		.loc 1 386 2 view .LVU67
+ 230              		.loc 1 387 1 is_stmt 0 view .LVU68
+ 231 0060 10BD     		pop	{r4, pc}
+ 232              	.L27:
+ 372:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 2: chr -= 16; break;				/* Shift -16 */
+ 233              		.loc 1 372 12 is_stmt 1 view .LVU69
+ 372:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 2: chr -= 16; break;				/* Shift -16 */
+ 234              		.loc 1 372 30 is_stmt 0 view .LVU70
+ 235 0062 431A     		subs	r3, r0, r1
+ 236              	.LVL25:
+ 372:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 2: chr -= 16; break;				/* Shift -16 */
+ 237              		.loc 1 372 30 view .LVU71
+ 238 0064 03F00103 		and	r3, r3, #1
+ 372:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 2: chr -= 16; break;				/* Shift -16 */
+ 239              		.loc 1 372 16 view .LVU72
+ 240 0068 C01A     		subs	r0, r0, r3
+ 241              	.LVL26:
+ 372:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 2: chr -= 16; break;				/* Shift -16 */
+ 242              		.loc 1 372 16 view .LVU73
+ 243 006a 80B2     		uxth	r0, r0
+ 244              	.LVL27:
+ 372:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 2: chr -= 16; break;				/* Shift -16 */
+ 245              		.loc 1 372 35 is_stmt 1 view .LVU74
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 246              		.loc 1 386 2 view .LVU75
+ 247              		.loc 1 387 1 is_stmt 0 view .LVU76
+ 248 006c 10BD     		pop	{r4, pc}
+ 249              	.LVL28:
+ 250              	.L26:
+ 373:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 3:	chr -= 32; break;				/* Shift -32 */
+ 251              		.loc 1 373 12 is_stmt 1 view .LVU77
+ 373:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 3:	chr -= 32; break;				/* Shift -32 */
+ 252              		.loc 1 373 16 is_stmt 0 view .LVU78
+ 253 006e 1038     		subs	r0, r0, #16
+ 254              	.LVL29:
+ 373:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 3:	chr -= 32; break;				/* Shift -32 */
+ 255              		.loc 1 373 16 view .LVU79
+ 256 0070 80B2     		uxth	r0, r0
+ 257              	.LVL30:
+ 373:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 3:	chr -= 32; break;				/* Shift -32 */
+ 258              		.loc 1 373 23 is_stmt 1 view .LVU80
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 13
+
+
+ 259              		.loc 1 386 2 view .LVU81
+ 260              		.loc 1 387 1 is_stmt 0 view .LVU82
+ 261 0072 10BD     		pop	{r4, pc}
+ 262              	.L25:
+ 374:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 4:	chr -= 48; break;				/* Shift -48 */
+ 263              		.loc 1 374 12 is_stmt 1 view .LVU83
+ 374:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 4:	chr -= 48; break;				/* Shift -48 */
+ 264              		.loc 1 374 16 is_stmt 0 view .LVU84
+ 265 0074 2038     		subs	r0, r0, #32
+ 266              	.LVL31:
+ 374:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 4:	chr -= 48; break;				/* Shift -48 */
+ 267              		.loc 1 374 16 view .LVU85
+ 268 0076 80B2     		uxth	r0, r0
+ 269              	.LVL32:
+ 374:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 4:	chr -= 48; break;				/* Shift -48 */
+ 270              		.loc 1 374 23 is_stmt 1 view .LVU86
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 271              		.loc 1 386 2 view .LVU87
+ 272              		.loc 1 387 1 is_stmt 0 view .LVU88
+ 273 0078 10BD     		pop	{r4, pc}
+ 274              	.L24:
+ 375:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 5:	chr -= 26; break;				/* Shift -26 */
+ 275              		.loc 1 375 12 is_stmt 1 view .LVU89
+ 375:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 5:	chr -= 26; break;				/* Shift -26 */
+ 276              		.loc 1 375 16 is_stmt 0 view .LVU90
+ 277 007a 3038     		subs	r0, r0, #48
+ 278              	.LVL33:
+ 375:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 5:	chr -= 26; break;				/* Shift -26 */
+ 279              		.loc 1 375 16 view .LVU91
+ 280 007c 80B2     		uxth	r0, r0
+ 281              	.LVL34:
+ 375:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 5:	chr -= 26; break;				/* Shift -26 */
+ 282              		.loc 1 375 23 is_stmt 1 view .LVU92
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 283              		.loc 1 386 2 view .LVU93
+ 284              		.loc 1 387 1 is_stmt 0 view .LVU94
+ 285 007e 10BD     		pop	{r4, pc}
+ 286              	.L23:
+ 376:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 6:	chr += 8; break;				/* Shift +8 */
+ 287              		.loc 1 376 12 is_stmt 1 view .LVU95
+ 376:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 6:	chr += 8; break;				/* Shift +8 */
+ 288              		.loc 1 376 16 is_stmt 0 view .LVU96
+ 289 0080 1A38     		subs	r0, r0, #26
+ 290              	.LVL35:
+ 376:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 6:	chr += 8; break;				/* Shift +8 */
+ 291              		.loc 1 376 16 view .LVU97
+ 292 0082 80B2     		uxth	r0, r0
+ 293              	.LVL36:
+ 376:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 6:	chr += 8; break;				/* Shift +8 */
+ 294              		.loc 1 376 23 is_stmt 1 view .LVU98
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 295              		.loc 1 386 2 view .LVU99
+ 296              		.loc 1 387 1 is_stmt 0 view .LVU100
+ 297 0084 10BD     		pop	{r4, pc}
+ 298              	.L22:
+ 377:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 7: chr -= 80; break;				/* Shift -80 */
+ 299              		.loc 1 377 12 is_stmt 1 view .LVU101
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 14
+
+
+ 377:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 7: chr -= 80; break;				/* Shift -80 */
+ 300              		.loc 1 377 16 is_stmt 0 view .LVU102
+ 301 0086 0830     		adds	r0, r0, #8
+ 302              	.LVL37:
+ 377:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 7: chr -= 80; break;				/* Shift -80 */
+ 303              		.loc 1 377 16 view .LVU103
+ 304 0088 80B2     		uxth	r0, r0
+ 305              	.LVL38:
+ 377:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 7: chr -= 80; break;				/* Shift -80 */
+ 306              		.loc 1 377 22 is_stmt 1 view .LVU104
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 307              		.loc 1 386 2 view .LVU105
+ 308              		.loc 1 387 1 is_stmt 0 view .LVU106
+ 309 008a 10BD     		pop	{r4, pc}
+ 310              	.L21:
+ 378:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 8:	chr -= 0x1C60; break;			/* Shift -0x1C60 */
+ 311              		.loc 1 378 12 is_stmt 1 view .LVU107
+ 378:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 8:	chr -= 0x1C60; break;			/* Shift -0x1C60 */
+ 312              		.loc 1 378 16 is_stmt 0 view .LVU108
+ 313 008c 5038     		subs	r0, r0, #80
+ 314              	.LVL39:
+ 378:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 8:	chr -= 0x1C60; break;			/* Shift -0x1C60 */
+ 315              		.loc 1 378 16 view .LVU109
+ 316 008e 80B2     		uxth	r0, r0
+ 317              	.LVL40:
+ 378:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 8:	chr -= 0x1C60; break;			/* Shift -0x1C60 */
+ 318              		.loc 1 378 23 is_stmt 1 view .LVU110
+ 386:Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** }
+ 319              		.loc 1 386 2 view .LVU111
+ 320              		.loc 1 387 1 is_stmt 0 view .LVU112
+ 321 0090 10BD     		pop	{r4, pc}
+ 322              	.L42:
+ 323 0092 00BF     		.align	2
+ 324              	.L41:
+ 325 0094 00000000 		.word	cvt1.1
+ 326 0098 00000000 		.word	cvt2.0
+ 327              		.cfi_endproc
+ 328              	.LFE131:
+ 330              		.section	.rodata.cvt2.0,"a"
+ 331              		.align	2
+ 334              	cvt2.0:
+ 335 0000 7D1D     		.short	7549
+ 336 0002 0100     		.short	1
+ 337 0004 632C     		.short	11363
+ 338 0006 001E     		.short	7680
+ 339 0008 9601     		.short	406
+ 340 000a A01E     		.short	7840
+ 341 000c 5A01     		.short	346
+ 342 000e 001F     		.short	7936
+ 343 0010 0806     		.short	1544
+ 344 0012 101F     		.short	7952
+ 345 0014 0606     		.short	1542
+ 346 0016 201F     		.short	7968
+ 347 0018 0806     		.short	1544
+ 348 001a 301F     		.short	7984
+ 349 001c 0806     		.short	1544
+ 350 001e 401F     		.short	8000
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 15
+
+
+ 351 0020 0606     		.short	1542
+ 352 0022 511F     		.short	8017
+ 353 0024 0700     		.short	7
+ 354 0026 591F     		.short	8025
+ 355 0028 521F     		.short	8018
+ 356 002a 5B1F     		.short	8027
+ 357 002c 541F     		.short	8020
+ 358 002e 5D1F     		.short	8029
+ 359 0030 561F     		.short	8022
+ 360 0032 5F1F     		.short	8031
+ 361 0034 601F     		.short	8032
+ 362 0036 0806     		.short	1544
+ 363 0038 701F     		.short	8048
+ 364 003a 0E00     		.short	14
+ 365 003c BA1F     		.short	8122
+ 366 003e BB1F     		.short	8123
+ 367 0040 C81F     		.short	8136
+ 368 0042 C91F     		.short	8137
+ 369 0044 CA1F     		.short	8138
+ 370 0046 CB1F     		.short	8139
+ 371 0048 DA1F     		.short	8154
+ 372 004a DB1F     		.short	8155
+ 373 004c F81F     		.short	8184
+ 374 004e F91F     		.short	8185
+ 375 0050 EA1F     		.short	8170
+ 376 0052 EB1F     		.short	8171
+ 377 0054 FA1F     		.short	8186
+ 378 0056 FB1F     		.short	8187
+ 379 0058 801F     		.short	8064
+ 380 005a 0806     		.short	1544
+ 381 005c 901F     		.short	8080
+ 382 005e 0806     		.short	1544
+ 383 0060 A01F     		.short	8096
+ 384 0062 0806     		.short	1544
+ 385 0064 B01F     		.short	8112
+ 386 0066 0400     		.short	4
+ 387 0068 B81F     		.short	8120
+ 388 006a B91F     		.short	8121
+ 389 006c B21F     		.short	8114
+ 390 006e BC1F     		.short	8124
+ 391 0070 CC1F     		.short	8140
+ 392 0072 0100     		.short	1
+ 393 0074 C31F     		.short	8131
+ 394 0076 D01F     		.short	8144
+ 395 0078 0206     		.short	1538
+ 396 007a E01F     		.short	8160
+ 397 007c 0206     		.short	1538
+ 398 007e E51F     		.short	8165
+ 399 0080 0100     		.short	1
+ 400 0082 EC1F     		.short	8172
+ 401 0084 F21F     		.short	8178
+ 402 0086 0100     		.short	1
+ 403 0088 FC1F     		.short	8188
+ 404 008a 4E21     		.short	8526
+ 405 008c 0100     		.short	1
+ 406 008e 3221     		.short	8498
+ 407 0090 7021     		.short	8560
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 16
+
+
+ 408 0092 1002     		.short	528
+ 409 0094 8421     		.short	8580
+ 410 0096 0100     		.short	1
+ 411 0098 8321     		.short	8579
+ 412 009a D024     		.short	9424
+ 413 009c 1A05     		.short	1306
+ 414 009e 302C     		.short	11312
+ 415 00a0 2F04     		.short	1071
+ 416 00a2 602C     		.short	11360
+ 417 00a4 0201     		.short	258
+ 418 00a6 672C     		.short	11367
+ 419 00a8 0601     		.short	262
+ 420 00aa 752C     		.short	11381
+ 421 00ac 0201     		.short	258
+ 422 00ae 802C     		.short	11392
+ 423 00b0 6401     		.short	356
+ 424 00b2 002D     		.short	11520
+ 425 00b4 2608     		.short	2086
+ 426 00b6 41FF     		.short	-191
+ 427 00b8 1A03     		.short	794
+ 428 00ba 0000     		.short	0
+ 429              		.section	.rodata.cvt1.1,"a"
+ 430              		.align	2
+ 433              	cvt1.1:
+ 434 0000 6100     		.short	97
+ 435 0002 1A03     		.short	794
+ 436 0004 E000     		.short	224
+ 437 0006 1703     		.short	791
+ 438 0008 F800     		.short	248
+ 439 000a 0703     		.short	775
+ 440 000c FF00     		.short	255
+ 441 000e 0100     		.short	1
+ 442 0010 7801     		.short	376
+ 443 0012 0001     		.short	256
+ 444 0014 3001     		.short	304
+ 445 0016 3201     		.short	306
+ 446 0018 0601     		.short	262
+ 447 001a 3901     		.short	313
+ 448 001c 1001     		.short	272
+ 449 001e 4A01     		.short	330
+ 450 0020 2E01     		.short	302
+ 451 0022 7901     		.short	377
+ 452 0024 0601     		.short	262
+ 453 0026 8001     		.short	384
+ 454 0028 4D00     		.short	77
+ 455 002a 4302     		.short	579
+ 456 002c 8101     		.short	385
+ 457 002e 8201     		.short	386
+ 458 0030 8201     		.short	386
+ 459 0032 8401     		.short	388
+ 460 0034 8401     		.short	388
+ 461 0036 8601     		.short	390
+ 462 0038 8701     		.short	391
+ 463 003a 8701     		.short	391
+ 464 003c 8901     		.short	393
+ 465 003e 8A01     		.short	394
+ 466 0040 8B01     		.short	395
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 17
+
+
+ 467 0042 8B01     		.short	395
+ 468 0044 8D01     		.short	397
+ 469 0046 8E01     		.short	398
+ 470 0048 8F01     		.short	399
+ 471 004a 9001     		.short	400
+ 472 004c 9101     		.short	401
+ 473 004e 9101     		.short	401
+ 474 0050 9301     		.short	403
+ 475 0052 9401     		.short	404
+ 476 0054 F601     		.short	502
+ 477 0056 9601     		.short	406
+ 478 0058 9701     		.short	407
+ 479 005a 9801     		.short	408
+ 480 005c 9801     		.short	408
+ 481 005e 3D02     		.short	573
+ 482 0060 9B01     		.short	411
+ 483 0062 9C01     		.short	412
+ 484 0064 9D01     		.short	413
+ 485 0066 2002     		.short	544
+ 486 0068 9F01     		.short	415
+ 487 006a A001     		.short	416
+ 488 006c A001     		.short	416
+ 489 006e A201     		.short	418
+ 490 0070 A201     		.short	418
+ 491 0072 A401     		.short	420
+ 492 0074 A401     		.short	420
+ 493 0076 A601     		.short	422
+ 494 0078 A701     		.short	423
+ 495 007a A701     		.short	423
+ 496 007c A901     		.short	425
+ 497 007e AA01     		.short	426
+ 498 0080 AB01     		.short	427
+ 499 0082 AC01     		.short	428
+ 500 0084 AC01     		.short	428
+ 501 0086 AE01     		.short	430
+ 502 0088 AF01     		.short	431
+ 503 008a AF01     		.short	431
+ 504 008c B101     		.short	433
+ 505 008e B201     		.short	434
+ 506 0090 B301     		.short	435
+ 507 0092 B301     		.short	435
+ 508 0094 B501     		.short	437
+ 509 0096 B501     		.short	437
+ 510 0098 B701     		.short	439
+ 511 009a B801     		.short	440
+ 512 009c B801     		.short	440
+ 513 009e BA01     		.short	442
+ 514 00a0 BB01     		.short	443
+ 515 00a2 BC01     		.short	444
+ 516 00a4 BC01     		.short	444
+ 517 00a6 BE01     		.short	446
+ 518 00a8 F701     		.short	503
+ 519 00aa C001     		.short	448
+ 520 00ac C101     		.short	449
+ 521 00ae C201     		.short	450
+ 522 00b0 C301     		.short	451
+ 523 00b2 C401     		.short	452
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 18
+
+
+ 524 00b4 C501     		.short	453
+ 525 00b6 C401     		.short	452
+ 526 00b8 C701     		.short	455
+ 527 00ba C801     		.short	456
+ 528 00bc C701     		.short	455
+ 529 00be CA01     		.short	458
+ 530 00c0 CB01     		.short	459
+ 531 00c2 CA01     		.short	458
+ 532 00c4 CD01     		.short	461
+ 533 00c6 1001     		.short	272
+ 534 00c8 DD01     		.short	477
+ 535 00ca 0100     		.short	1
+ 536 00cc 8E01     		.short	398
+ 537 00ce DE01     		.short	478
+ 538 00d0 1201     		.short	274
+ 539 00d2 F301     		.short	499
+ 540 00d4 0300     		.short	3
+ 541 00d6 F101     		.short	497
+ 542 00d8 F401     		.short	500
+ 543 00da F401     		.short	500
+ 544 00dc F801     		.short	504
+ 545 00de 2801     		.short	296
+ 546 00e0 2202     		.short	546
+ 547 00e2 1201     		.short	274
+ 548 00e4 3A02     		.short	570
+ 549 00e6 0900     		.short	9
+ 550 00e8 652C     		.short	11365
+ 551 00ea 3B02     		.short	571
+ 552 00ec 3B02     		.short	571
+ 553 00ee 3D02     		.short	573
+ 554 00f0 662C     		.short	11366
+ 555 00f2 3F02     		.short	575
+ 556 00f4 4002     		.short	576
+ 557 00f6 4102     		.short	577
+ 558 00f8 4102     		.short	577
+ 559 00fa 4602     		.short	582
+ 560 00fc 0A01     		.short	266
+ 561 00fe 5302     		.short	595
+ 562 0100 4000     		.short	64
+ 563 0102 8101     		.short	385
+ 564 0104 8601     		.short	390
+ 565 0106 5502     		.short	597
+ 566 0108 8901     		.short	393
+ 567 010a 8A01     		.short	394
+ 568 010c 5802     		.short	600
+ 569 010e 8F01     		.short	399
+ 570 0110 5A02     		.short	602
+ 571 0112 9001     		.short	400
+ 572 0114 5C02     		.short	604
+ 573 0116 5D02     		.short	605
+ 574 0118 5E02     		.short	606
+ 575 011a 5F02     		.short	607
+ 576 011c 9301     		.short	403
+ 577 011e 6102     		.short	609
+ 578 0120 6202     		.short	610
+ 579 0122 9401     		.short	404
+ 580 0124 6402     		.short	612
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 19
+
+
+ 581 0126 6502     		.short	613
+ 582 0128 6602     		.short	614
+ 583 012a 6702     		.short	615
+ 584 012c 9701     		.short	407
+ 585 012e 9601     		.short	406
+ 586 0130 6A02     		.short	618
+ 587 0132 622C     		.short	11362
+ 588 0134 6C02     		.short	620
+ 589 0136 6D02     		.short	621
+ 590 0138 6E02     		.short	622
+ 591 013a 9C01     		.short	412
+ 592 013c 7002     		.short	624
+ 593 013e 7102     		.short	625
+ 594 0140 9D01     		.short	413
+ 595 0142 7302     		.short	627
+ 596 0144 7402     		.short	628
+ 597 0146 9F01     		.short	415
+ 598 0148 7602     		.short	630
+ 599 014a 7702     		.short	631
+ 600 014c 7802     		.short	632
+ 601 014e 7902     		.short	633
+ 602 0150 7A02     		.short	634
+ 603 0152 7B02     		.short	635
+ 604 0154 7C02     		.short	636
+ 605 0156 642C     		.short	11364
+ 606 0158 7E02     		.short	638
+ 607 015a 7F02     		.short	639
+ 608 015c A601     		.short	422
+ 609 015e 8102     		.short	641
+ 610 0160 8202     		.short	642
+ 611 0162 A901     		.short	425
+ 612 0164 8402     		.short	644
+ 613 0166 8502     		.short	645
+ 614 0168 8602     		.short	646
+ 615 016a 8702     		.short	647
+ 616 016c AE01     		.short	430
+ 617 016e 4402     		.short	580
+ 618 0170 B101     		.short	433
+ 619 0172 B201     		.short	434
+ 620 0174 4502     		.short	581
+ 621 0176 8D02     		.short	653
+ 622 0178 8E02     		.short	654
+ 623 017a 8F02     		.short	655
+ 624 017c 9002     		.short	656
+ 625 017e 9102     		.short	657
+ 626 0180 B701     		.short	439
+ 627 0182 7B03     		.short	891
+ 628 0184 0300     		.short	3
+ 629 0186 FD03     		.short	1021
+ 630 0188 FE03     		.short	1022
+ 631 018a FF03     		.short	1023
+ 632 018c AC03     		.short	940
+ 633 018e 0400     		.short	4
+ 634 0190 8603     		.short	902
+ 635 0192 8803     		.short	904
+ 636 0194 8903     		.short	905
+ 637 0196 8A03     		.short	906
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 20
+
+
+ 638 0198 B103     		.short	945
+ 639 019a 1103     		.short	785
+ 640 019c C203     		.short	962
+ 641 019e 0200     		.short	2
+ 642 01a0 A303     		.short	931
+ 643 01a2 A303     		.short	931
+ 644 01a4 C403     		.short	964
+ 645 01a6 0803     		.short	776
+ 646 01a8 CC03     		.short	972
+ 647 01aa 0300     		.short	3
+ 648 01ac 8C03     		.short	908
+ 649 01ae 8E03     		.short	910
+ 650 01b0 8F03     		.short	911
+ 651 01b2 D803     		.short	984
+ 652 01b4 1801     		.short	280
+ 653 01b6 F203     		.short	1010
+ 654 01b8 0A00     		.short	10
+ 655 01ba F903     		.short	1017
+ 656 01bc F303     		.short	1011
+ 657 01be F403     		.short	1012
+ 658 01c0 F503     		.short	1013
+ 659 01c2 F603     		.short	1014
+ 660 01c4 F703     		.short	1015
+ 661 01c6 F703     		.short	1015
+ 662 01c8 F903     		.short	1017
+ 663 01ca FA03     		.short	1018
+ 664 01cc FA03     		.short	1018
+ 665 01ce 3004     		.short	1072
+ 666 01d0 2003     		.short	800
+ 667 01d2 5004     		.short	1104
+ 668 01d4 1007     		.short	1808
+ 669 01d6 6004     		.short	1120
+ 670 01d8 2201     		.short	290
+ 671 01da 8A04     		.short	1162
+ 672 01dc 3601     		.short	310
+ 673 01de C104     		.short	1217
+ 674 01e0 0E01     		.short	270
+ 675 01e2 CF04     		.short	1231
+ 676 01e4 0100     		.short	1
+ 677 01e6 C004     		.short	1216
+ 678 01e8 D004     		.short	1232
+ 679 01ea 4401     		.short	324
+ 680 01ec 6105     		.short	1377
+ 681 01ee 2604     		.short	1062
+ 682 01f0 0000     		.short	0
+ 683              		.section	.rodata.Tbl,"a"
+ 684              		.align	2
+ 687              	Tbl:
+ 688 0000 C700     		.short	199
+ 689 0002 FC00     		.short	252
+ 690 0004 E900     		.short	233
+ 691 0006 E200     		.short	226
+ 692 0008 E400     		.short	228
+ 693 000a E000     		.short	224
+ 694 000c E500     		.short	229
+ 695 000e E700     		.short	231
+ 696 0010 EA00     		.short	234
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 21
+
+
+ 697 0012 EB00     		.short	235
+ 698 0014 E800     		.short	232
+ 699 0016 EF00     		.short	239
+ 700 0018 EE00     		.short	238
+ 701 001a EC00     		.short	236
+ 702 001c C400     		.short	196
+ 703 001e C500     		.short	197
+ 704 0020 C900     		.short	201
+ 705 0022 E600     		.short	230
+ 706 0024 C600     		.short	198
+ 707 0026 F400     		.short	244
+ 708 0028 F600     		.short	246
+ 709 002a F200     		.short	242
+ 710 002c FB00     		.short	251
+ 711 002e F900     		.short	249
+ 712 0030 FF00     		.short	255
+ 713 0032 D600     		.short	214
+ 714 0034 DC00     		.short	220
+ 715 0036 F800     		.short	248
+ 716 0038 A300     		.short	163
+ 717 003a D800     		.short	216
+ 718 003c D700     		.short	215
+ 719 003e 9201     		.short	402
+ 720 0040 E100     		.short	225
+ 721 0042 ED00     		.short	237
+ 722 0044 F300     		.short	243
+ 723 0046 FA00     		.short	250
+ 724 0048 F100     		.short	241
+ 725 004a D100     		.short	209
+ 726 004c AA00     		.short	170
+ 727 004e BA00     		.short	186
+ 728 0050 BF00     		.short	191
+ 729 0052 AE00     		.short	174
+ 730 0054 AC00     		.short	172
+ 731 0056 BD00     		.short	189
+ 732 0058 BC00     		.short	188
+ 733 005a A100     		.short	161
+ 734 005c AB00     		.short	171
+ 735 005e BB00     		.short	187
+ 736 0060 9125     		.short	9617
+ 737 0062 9225     		.short	9618
+ 738 0064 9325     		.short	9619
+ 739 0066 0225     		.short	9474
+ 740 0068 2425     		.short	9508
+ 741 006a C100     		.short	193
+ 742 006c C200     		.short	194
+ 743 006e C000     		.short	192
+ 744 0070 A900     		.short	169
+ 745 0072 6325     		.short	9571
+ 746 0074 5125     		.short	9553
+ 747 0076 5725     		.short	9559
+ 748 0078 5D25     		.short	9565
+ 749 007a A200     		.short	162
+ 750 007c A500     		.short	165
+ 751 007e 1025     		.short	9488
+ 752 0080 1425     		.short	9492
+ 753 0082 3425     		.short	9524
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 22
+
+
+ 754 0084 2C25     		.short	9516
+ 755 0086 1C25     		.short	9500
+ 756 0088 0025     		.short	9472
+ 757 008a 3C25     		.short	9532
+ 758 008c E300     		.short	227
+ 759 008e C300     		.short	195
+ 760 0090 5A25     		.short	9562
+ 761 0092 5425     		.short	9556
+ 762 0094 6925     		.short	9577
+ 763 0096 6625     		.short	9574
+ 764 0098 6025     		.short	9568
+ 765 009a 5025     		.short	9552
+ 766 009c 6C25     		.short	9580
+ 767 009e A400     		.short	164
+ 768 00a0 F000     		.short	240
+ 769 00a2 D000     		.short	208
+ 770 00a4 CA00     		.short	202
+ 771 00a6 CB00     		.short	203
+ 772 00a8 C800     		.short	200
+ 773 00aa 3101     		.short	305
+ 774 00ac CD00     		.short	205
+ 775 00ae CE00     		.short	206
+ 776 00b0 CF00     		.short	207
+ 777 00b2 1825     		.short	9496
+ 778 00b4 0C25     		.short	9484
+ 779 00b6 8825     		.short	9608
+ 780 00b8 8425     		.short	9604
+ 781 00ba A600     		.short	166
+ 782 00bc CC00     		.short	204
+ 783 00be 8025     		.short	9600
+ 784 00c0 D300     		.short	211
+ 785 00c2 DF00     		.short	223
+ 786 00c4 D400     		.short	212
+ 787 00c6 D200     		.short	210
+ 788 00c8 F500     		.short	245
+ 789 00ca D500     		.short	213
+ 790 00cc B500     		.short	181
+ 791 00ce FE00     		.short	254
+ 792 00d0 DE00     		.short	222
+ 793 00d2 DA00     		.short	218
+ 794 00d4 DB00     		.short	219
+ 795 00d6 D900     		.short	217
+ 796 00d8 FD00     		.short	253
+ 797 00da DD00     		.short	221
+ 798 00dc AF00     		.short	175
+ 799 00de B400     		.short	180
+ 800 00e0 AD00     		.short	173
+ 801 00e2 B100     		.short	177
+ 802 00e4 1720     		.short	8215
+ 803 00e6 BE00     		.short	190
+ 804 00e8 B600     		.short	182
+ 805 00ea A700     		.short	167
+ 806 00ec F700     		.short	247
+ 807 00ee B800     		.short	184
+ 808 00f0 B000     		.short	176
+ 809 00f2 A800     		.short	168
+ 810 00f4 B700     		.short	183
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 23
+
+
+ 811 00f6 B900     		.short	185
+ 812 00f8 B300     		.short	179
+ 813 00fa B200     		.short	178
+ 814 00fc A025     		.short	9632
+ 815 00fe A000     		.short	160
+ 816              		.text
+ 817              	.Letext0:
+ 818              		.file 2 "Middlewares/Third_Party/FatFs/src/option/../integer.h"
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ccsbcs.c
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:21     .text.ff_convert:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:28     .text.ff_convert:00000000 ff_convert
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:100    .text.ff_convert:00000030 $d
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:687    .rodata.Tbl:00000000 Tbl
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:105    .text.ff_wtoupper:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:112    .text.ff_wtoupper:00000000 ff_wtoupper
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:190    .text.ff_wtoupper:00000042 $d
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:325    .text.ff_wtoupper:00000094 $d
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:433    .rodata.cvt1.1:00000000 cvt1.1
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:334    .rodata.cvt2.0:00000000 cvt2.0
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:331    .rodata.cvt2.0:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:430    .rodata.cvt1.1:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:684    .rodata.Tbl:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:200    .text.ff_wtoupper:0000004b $d
+C:\Users\pw705\AppData\Local\Temp\ccgvbhiV.s:200    .text.ff_wtoupper:0000004c $t
+
+NO UNDEFINED SYMBOLS

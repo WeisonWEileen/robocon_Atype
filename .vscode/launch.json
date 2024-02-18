@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "showDevDebugOutput": "parsed",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/SDCard.elf",
+            "name": "Debug STM32",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "preLaunchTask": "Build STM",
+            "device": "stm32f427",
+            "configFiles": [
+                "openocd.cfg"
+            ],
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "rttConfig": {
+                "enabled": true,
+                "address": "auto",
+                "clearSearch": false,
+                "polling_interval": 20,
+                "decoders": [
+                    {
+                        "label": "",
+                        "port": 0,
+                        "type": "console"
+                    }
+                ]
+            }
+        },
+        {
+            "showDevDebugOutput": "parsed",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/SDCard.elf",
+            "name": "Attach STM32",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "preLaunchTask": "Build STM",
+            "device": "stm32f427",
+            "configFiles": [
+                "openocd.cfg"
+            ]
+        }
+    ]
+}

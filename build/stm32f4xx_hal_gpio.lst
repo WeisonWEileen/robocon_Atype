@@ -1,0 +1,1950 @@
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32f4xx_hal_gpio.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"
+  20              		.section	.text.HAL_GPIO_Init,"ax",%progbits
+  21              		.align	1
+  22              		.p2align 2,,3
+  23              		.global	HAL_GPIO_Init
+  24              		.syntax unified
+  25              		.thumb
+  26              		.thumb_func
+  28              	HAL_GPIO_Init:
+  29              	.LVL0:
+  30              	.LFB130:
+   1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+   2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   ******************************************************************************
+   3:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @file    stm32f4xx_hal_gpio.c
+   4:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @author  MCD Application Team
+   5:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief   GPIO HAL module driver.
+   6:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *          This file provides firmware functions to manage the following 
+   7:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *          functionalities of the General Purpose Input/Output (GPIO) peripheral:
+   8:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *           + Initialization and de-initialization functions
+   9:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *           + IO operation functions
+  10:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
+  11:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   ******************************************************************************
+  12:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @attention
+  13:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
+  14:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * Copyright (c) 2017 STMicroelectronics.
+  15:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * All rights reserved.
+  16:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
+  17:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  18:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * in the root directory of this software component.
+  19:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  20:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
+  21:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   ******************************************************************************
+  22:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   @verbatim
+  23:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   ==============================================================================
+  24:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****                     ##### GPIO Peripheral features #####
+  25:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   ==============================================================================
+  26:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   [..] 
+  27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   Subject to the specific hardware characteristics of each I/O port listed in the datasheet, each
+  28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   port bit of the General Purpose IO (GPIO) Ports, can be individually configured by software
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 2
+
+
+  29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   in several modes:
+  30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   (+) Input mode 
+  31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   (+) Analog mode
+  32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   (+) Output mode
+  33:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   (+) Alternate function mode
+  34:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   (+) External interrupt/event lines
+  35:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  36:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   [..]  
+  37:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   During and just after reset, the alternate functions and external interrupt  
+  38:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   lines are not active and the I/O ports are configured in input floating mode.
+  39:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   
+  40:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   [..]   
+  41:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   All GPIO pins have weak internal pull-up and pull-down resistors, which can be 
+  42:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   activated or not.
+  43:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  44:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   [..]
+  45:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   In Output or Alternate mode, each IO can be configured on open-drain or push-pull
+  46:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   type and the IO speed can be selected depending on the VDD value.
+  47:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  48:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   [..]  
+  49:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   All ports have external interrupt/event capability. To use external interrupt 
+  50:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   lines, the port must be configured in input mode. All available GPIO pins are 
+  51:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   connected to the 16 external interrupt/event lines from EXTI0 to EXTI15.
+  52:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   
+  53:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   [..]
+  54:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   The external interrupt/event controller consists of up to 23 edge detectors 
+  55:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   (16 lines are connected to GPIO) for generating event/interrupt requests (each 
+  56:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   input line can be independently configured to select the type (interrupt or event) 
+  57:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   and the corresponding trigger event (rising or falling or both). Each line can 
+  58:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   also be masked independently. 
+  59:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  60:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****                      ##### How to use this driver #####
+  61:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   ==============================================================================  
+  62:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   [..]
+  63:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) Enable the GPIO AHB clock using the following function: __HAL_RCC_GPIOx_CLK_ENABLE(). 
+  64:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  65:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) Configure the GPIO pin(s) using HAL_GPIO_Init().
+  66:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         (++) Configure the IO mode using "Mode" member from GPIO_InitTypeDef structure
+  67:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         (++) Activate Pull-up, Pull-down resistor using "Pull" member from GPIO_InitTypeDef 
+  68:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****              structure.
+  69:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         (++) In case of Output or alternate function mode selection: the speed is 
+  70:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****              configured through "Speed" member from GPIO_InitTypeDef structure.
+  71:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         (++) In alternate mode is selection, the alternate function connected to the IO
+  72:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****              is configured through "Alternate" member from GPIO_InitTypeDef structure.
+  73:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         (++) Analog mode is required when a pin is to be used as ADC channel 
+  74:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****              or DAC output.
+  75:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         (++) In case of external interrupt/event selection the "Mode" member from 
+  76:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****              GPIO_InitTypeDef structure select the type (interrupt or event) and 
+  77:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****              the corresponding trigger event (rising or falling or both).
+  78:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  79:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) In case of external interrupt/event mode selection, configure NVIC IRQ priority 
+  80:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         mapped to the EXTI line using HAL_NVIC_SetPriority() and enable it using
+  81:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         HAL_NVIC_EnableIRQ().
+  82:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****          
+  83:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) To get the level of a pin configured in input mode use HAL_GPIO_ReadPin().
+  84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****             
+  85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) To set/reset the level of a pin configured in output mode use 
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 3
+
+
+  86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         HAL_GPIO_WritePin()/HAL_GPIO_TogglePin().
+  87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     
+  88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) To lock pin configuration until next reset use HAL_GPIO_LockPin().
+  89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  90:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****                  
+  91:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) During and just after reset, the alternate functions are not 
+  92:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         active and the GPIO pins are configured in input floating mode (except JTAG
+  93:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         pins).
+  94:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   
+  95:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) The LSE oscillator pins OSC32_IN and OSC32_OUT can be used as general purpose 
+  96:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         (PC14 and PC15, respectively) when the LSE oscillator is off. The LSE has 
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         priority over the GPIO function.
+  98:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   
+  99:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) The HSE oscillator pins OSC_IN/OSC_OUT can be used as 
+ 100:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         general purpose PH0 and PH1, respectively, when the HSE oscillator is off. 
+ 101:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         The HSE has priority over the GPIO function.
+ 102:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   
+ 103:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   @endverbatim
+ 104:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   ******************************************************************************
+ 105:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */ 
+ 106:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 107:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Includes ------------------------------------------------------------------*/
+ 108:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** #include "stm32f4xx_hal.h"
+ 109:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 110:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /** @addtogroup STM32F4xx_HAL_Driver
+ 111:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @{
+ 112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 113:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /** @defgroup GPIO GPIO
+ 115:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief GPIO HAL module driver
+ 116:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @{
+ 117:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 118:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 119:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** #ifdef HAL_GPIO_MODULE_ENABLED
+ 120:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 121:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Private typedef -----------------------------------------------------------*/
+ 122:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Private define ------------------------------------------------------------*/
+ 123:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /** @addtogroup GPIO_Private_Constants GPIO Private Constants
+ 124:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @{
+ 125:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 126:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 127:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** #define GPIO_NUMBER           16U
+ 128:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 129:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @}
+ 130:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Private macro -------------------------------------------------------------*/
+ 132:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Private variables ---------------------------------------------------------*/
+ 133:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Private function prototypes -----------------------------------------------*/
+ 134:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Private functions ---------------------------------------------------------*/
+ 135:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Exported functions --------------------------------------------------------*/
+ 136:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /** @defgroup GPIO_Exported_Functions GPIO Exported Functions
+ 137:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @{
+ 138:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 139:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 140:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /** @defgroup GPIO_Exported_Functions_Group1 Initialization and de-initialization functions
+ 141:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *  @brief    Initialization and Configuration functions
+ 142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 4
+
+
+ 143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** @verbatim    
+ 144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****  ===============================================================================
+ 145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****               ##### Initialization and de-initialization functions #####
+ 146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****  ===============================================================================
+ 147:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   [..]
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     This section provides functions allowing to initialize and de-initialize the GPIOs
+ 149:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     to be ready for use.
+ 150:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****  
+ 151:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** @endverbatim
+ 152:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @{
+ 153:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 154:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 155:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 156:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 157:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  Initializes the GPIOx peripheral according to the specified parameters in the GPIO_Init
+ 158:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or
+ 159:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *                      x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427
+ 160:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Init pointer to a GPIO_InitTypeDef structure that contains
+ 161:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *         the configuration information for the specified GPIO peripheral.
+ 162:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @retval None
+ 163:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 164:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** void HAL_GPIO_Init(GPIO_TypeDef  *GPIOx, GPIO_InitTypeDef *GPIO_Init)
+ 165:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** {
+  31              		.loc 1 165 1 view -0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 16
+  34              		@ frame_needed = 0, uses_anonymous_args = 0
+ 166:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t position;
+  35              		.loc 1 166 3 view .LVU1
+ 167:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t ioposition = 0x00U;
+  36              		.loc 1 167 3 view .LVU2
+ 168:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t iocurrent = 0x00U;
+  37              		.loc 1 168 3 view .LVU3
+ 169:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t temp = 0x00U;
+  38              		.loc 1 169 3 view .LVU4
+ 170:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 171:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Check the parameters */
+ 172:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_ALL_INSTANCE(GPIOx));
+  39              		.loc 1 172 3 view .LVU5
+ 173:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Init->Pin));
+  40              		.loc 1 173 3 view .LVU6
+ 174:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_MODE(GPIO_Init->Mode));
+  41              		.loc 1 174 3 view .LVU7
+ 175:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 176:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Configure the port pins */
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   for(position = 0U; position < GPIO_NUMBER; position++)
+  42              		.loc 1 177 3 view .LVU8
+  43              		.loc 1 177 31 view .LVU9
+ 165:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t position;
+  44              		.loc 1 165 1 is_stmt 0 view .LVU10
+  45 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  46              		.cfi_def_cfa_offset 36
+  47              		.cfi_offset 4, -36
+  48              		.cfi_offset 5, -32
+  49              		.cfi_offset 6, -28
+  50              		.cfi_offset 7, -24
+  51              		.cfi_offset 8, -20
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 5
+
+
+  52              		.cfi_offset 9, -16
+  53              		.cfi_offset 10, -12
+  54              		.cfi_offset 11, -8
+  55              		.cfi_offset 14, -4
+  56              		.loc 1 177 16 view .LVU11
+  57 0004 0023     		movs	r3, #0
+ 178:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 179:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the IO position */
+ 180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     ioposition = 0x01U << position;
+ 181:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the current IO position */
+ 182:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     iocurrent = (uint32_t)(GPIO_Init->Pin) & ioposition;
+  58              		.loc 1 182 37 view .LVU12
+  59 0006 0C68     		ldr	r4, [r1]
+  60              	.LBB2:
+ 183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     if(iocurrent == ioposition)
+ 185:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
+ 186:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /*--------------------- GPIO Mode Configuration ------------------------*/
+ 187:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* In case of Output or Alternate function mode selection */
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(((GPIO_Init->Mode & GPIO_MODE) == MODE_OUTPUT) || \
+ 189:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
+ 190:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 191:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Check the Speed parameter */
+ 192:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         assert_param(IS_GPIO_SPEED(GPIO_Init->Speed));
+ 193:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Configure the IO Speed */
+ 194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = GPIOx->OSPEEDR; 
+ 195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U));
+ 196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (GPIO_Init->Speed << (position * 2U));
+ 197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OSPEEDR = temp;
+ 198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Configure the IO Output Type */
+ 200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = GPIOx->OTYPER;
+ 201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_OTYPER_OT_0 << position) ;
+ 202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (((GPIO_Init->Mode & OUTPUT_TYPE) >> OUTPUT_TYPE_Pos) << position);
+ 203:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OTYPER = temp;
+ 204:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****        }
+ 205:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 206:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if((GPIO_Init->Mode & GPIO_MODE) != MODE_ANALOG)
+ 207:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 208:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Check the parameters */
+ 209:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         assert_param(IS_GPIO_PULL(GPIO_Init->Pull));
+ 210:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         
+ 211:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Activate the Pull-up or Pull down resistor for the current IO */
+ 212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = GPIOx->PUPDR;
+ 213:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_PUPDR_PUPDR0 << (position * 2U));
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((GPIO_Init->Pull) << (position * 2U));
+ 215:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->PUPDR = temp;
+ 216:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 217:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 218:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* In case of Alternate function mode selection */
+ 219:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if((GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
+ 220:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 221:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Check the Alternate function parameter */
+ 222:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         assert_param(IS_GPIO_AF(GPIO_Init->Alternate));
+ 223:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Configure Alternate function mapped with the current IO */
+ 224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = GPIOx->AFR[position >> 3U];
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 6
+
+
+ 226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));
+ 227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 228:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 229:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 230:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* Configure IO Direction mode (Input, Output, Alternate or Analog) */
+ 231:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       temp = GPIOx->MODER;
+ 232:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       temp &= ~(GPIO_MODER_MODER0 << (position * 2U));
+ 233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       temp |= ((GPIO_Init->Mode & GPIO_MODE) << (position * 2U));
+ 234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->MODER = temp;
+ 235:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 236:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /*--------------------- EXTI Mode Configuration ------------------------*/
+ 237:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* Configure the External Interrupt or event for the current IO */
+ 238:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if((GPIO_Init->Mode & EXTI_MODE) != 0x00U)
+ 239:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 240:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Enable SYSCFG Clock */
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         __HAL_RCC_SYSCFG_CLK_ENABLE();
+  61              		.loc 1 241 9 view .LVU13
+  62 0008 DFF844A2 		ldr	r10, .L46+12
+  63              	.LBE2:
+ 165:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t position;
+  64              		.loc 1 165 1 view .LVU14
+  65 000c 85B0     		sub	sp, sp, #20
+  66              		.cfi_def_cfa_offset 56
+ 180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the current IO position */
+  67              		.loc 1 180 16 view .LVU15
+  68 000e 4FF0010B 		mov	fp, #1
+ 242:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 243:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = SYSCFG->EXTICR[position >> 2U];
+ 244:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0x0FU << (4U * (position & 0x03U)));
+  69              		.loc 1 244 25 view .LVU16
+  70 0012 8946     		mov	r9, r1
+  71 0014 03E0     		b	.L28
+  72              	.LVL1:
+  73              	.L3:
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+  74              		.loc 1 177 54 is_stmt 1 discriminator 2 view .LVU17
+  75 0016 0133     		adds	r3, r3, #1
+  76              	.LVL2:
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+  77              		.loc 1 177 31 discriminator 2 view .LVU18
+  78 0018 102B     		cmp	r3, #16
+  79 001a 00F09C80 		beq	.L35
+  80              	.LVL3:
+  81              	.L28:
+ 180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the current IO position */
+  82              		.loc 1 180 5 view .LVU19
+ 180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the current IO position */
+  83              		.loc 1 180 16 is_stmt 0 view .LVU20
+  84 001e 0BFA03F2 		lsl	r2, fp, r3
+  85              	.LVL4:
+ 182:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  86              		.loc 1 182 5 is_stmt 1 view .LVU21
+ 182:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+  87              		.loc 1 182 15 is_stmt 0 view .LVU22
+  88 0022 02EA0408 		and	r8, r2, r4
+  89              	.LVL5:
+ 184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 7
+
+
+  90              		.loc 1 184 5 is_stmt 1 view .LVU23
+ 184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
+  91              		.loc 1 184 7 is_stmt 0 view .LVU24
+  92 0026 A243     		bics	r2, r2, r4
+  93              	.LVL6:
+ 184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
+  94              		.loc 1 184 7 view .LVU25
+  95 0028 F5D1     		bne	.L3
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
+  96              		.loc 1 188 7 is_stmt 1 view .LVU26
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
+  97              		.loc 1 188 21 is_stmt 0 view .LVU27
+  98 002a D9F80410 		ldr	r1, [r9, #4]
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
+  99              		.loc 1 188 28 view .LVU28
+ 100 002e 01F00302 		and	r2, r1, #3
+ 101 0032 4FEA430C 		lsl	ip, r3, #1
+ 195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (GPIO_Init->Speed << (position * 2U));
+ 102              		.loc 1 195 42 view .LVU29
+ 103 0036 0325     		movs	r5, #3
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
+ 104              		.loc 1 188 57 view .LVU30
+ 105 0038 571E     		subs	r7, r2, #1
+ 195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (GPIO_Init->Speed << (position * 2U));
+ 106              		.loc 1 195 42 view .LVU31
+ 107 003a 05FA0CF5 		lsl	r5, r5, ip
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
+ 108              		.loc 1 188 9 view .LVU32
+ 109 003e 012F     		cmp	r7, #1
+ 195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (GPIO_Init->Speed << (position * 2U));
+ 110              		.loc 1 195 17 view .LVU33
+ 111 0040 6FEA0505 		mvn	r5, r5
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
+ 112              		.loc 1 188 9 view .LVU34
+ 113 0044 40F28A80 		bls	.L36
+ 206:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 114              		.loc 1 206 7 is_stmt 1 view .LVU35
+ 206:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 115              		.loc 1 206 9 is_stmt 0 view .LVU36
+ 116 0048 032A     		cmp	r2, #3
+ 117 004a 40F0C080 		bne	.L37
+ 118              	.L8:
+ 231:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       temp &= ~(GPIO_MODER_MODER0 << (position * 2U));
+ 119              		.loc 1 231 7 is_stmt 1 view .LVU37
+ 231:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       temp &= ~(GPIO_MODER_MODER0 << (position * 2U));
+ 120              		.loc 1 231 12 is_stmt 0 view .LVU38
+ 121 004e 0768     		ldr	r7, [r0]
+ 122              	.LVL7:
+ 232:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       temp |= ((GPIO_Init->Mode & GPIO_MODE) << (position * 2U));
+ 123              		.loc 1 232 7 is_stmt 1 view .LVU39
+ 233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->MODER = temp;
+ 124              		.loc 1 233 46 is_stmt 0 view .LVU40
+ 125 0050 02FA0CF2 		lsl	r2, r2, ip
+ 232:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       temp |= ((GPIO_Init->Mode & GPIO_MODE) << (position * 2U));
+ 126              		.loc 1 232 12 view .LVU41
+ 127 0054 3D40     		ands	r5, r5, r7
+ 128              	.LVL8:
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 8
+
+
+ 233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->MODER = temp;
+ 129              		.loc 1 233 7 is_stmt 1 view .LVU42
+ 233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->MODER = temp;
+ 130              		.loc 1 233 12 is_stmt 0 view .LVU43
+ 131 0056 2A43     		orrs	r2, r2, r5
+ 132              	.LVL9:
+ 234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 133              		.loc 1 234 7 is_stmt 1 view .LVU44
+ 238:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 134              		.loc 1 238 9 is_stmt 0 view .LVU45
+ 135 0058 11F4403F 		tst	r1, #196608
+ 234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 136              		.loc 1 234 20 view .LVU46
+ 137 005c 0260     		str	r2, [r0]
+ 238:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 138              		.loc 1 238 7 is_stmt 1 view .LVU47
+ 238:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 139              		.loc 1 238 9 is_stmt 0 view .LVU48
+ 140 005e DAD0     		beq	.L3
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 141              		.loc 1 241 9 is_stmt 1 view .LVU49
+ 142              	.LBB3:
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 143              		.loc 1 241 9 view .LVU50
+ 144 0060 0022     		movs	r2, #0
+ 145              	.LVL10:
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 146              		.loc 1 241 9 is_stmt 0 view .LVU51
+ 147 0062 0392     		str	r2, [sp, #12]
+ 148              	.LVL11:
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 149              		.loc 1 241 9 is_stmt 1 view .LVU52
+ 150 0064 DAF84420 		ldr	r2, [r10, #68]
+ 151 0068 42F48042 		orr	r2, r2, #16384
+ 152 006c CAF84420 		str	r2, [r10, #68]
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 153              		.loc 1 241 9 view .LVU53
+ 154 0070 DAF84420 		ldr	r2, [r10, #68]
+ 155 0074 02F48042 		and	r2, r2, #16384
+ 156 0078 0392     		str	r2, [sp, #12]
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 157              		.loc 1 241 9 view .LVU54
+ 158 007a 039A     		ldr	r2, [sp, #12]
+ 159              	.LBE3:
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 160              		.loc 1 241 9 view .LVU55
+ 243:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0x0FU << (4U * (position & 0x03U)));
+ 161              		.loc 1 243 9 view .LVU56
+ 162 007c 23F00302 		bic	r2, r3, #3
+ 163 0080 02F18042 		add	r2, r2, #1073741824
+ 164              		.loc 1 244 44 is_stmt 0 view .LVU57
+ 165 0084 03F00307 		and	r7, r3, #3
+ 166              		.loc 1 244 25 view .LVU58
+ 167 0088 0F26     		movs	r6, #15
+ 168 008a 02F59C32 		add	r2, r2, #79872
+ 169              		.loc 1 244 32 view .LVU59
+ 170 008e BF00     		lsls	r7, r7, #2
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 9
+
+
+ 171              		.loc 1 244 25 view .LVU60
+ 172 0090 06FA07FC 		lsl	ip, r6, r7
+ 173              	.LVL12:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U)));
+ 174              		.loc 1 245 18 view .LVU61
+ 175 0094 6B4E     		ldr	r6, .L46
+ 243:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0x0FU << (4U * (position & 0x03U)));
+ 176              		.loc 1 243 14 view .LVU62
+ 177 0096 9568     		ldr	r5, [r2, #8]
+ 178              	.LVL13:
+ 244:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U)));
+ 179              		.loc 1 244 9 is_stmt 1 view .LVU63
+ 180              		.loc 1 245 18 is_stmt 0 view .LVU64
+ 181 0098 B042     		cmp	r0, r6
+ 244:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U)));
+ 182              		.loc 1 244 14 view .LVU65
+ 183 009a 25EA0C05 		bic	r5, r5, ip
+ 184              	.LVL14:
+ 185              		.loc 1 245 9 is_stmt 1 view .LVU66
+ 186              		.loc 1 245 18 is_stmt 0 view .LVU67
+ 187 009e 31D0     		beq	.L10
+ 188              		.loc 1 245 29 discriminator 1 view .LVU68
+ 189 00a0 06F58066 		add	r6, r6, #1024
+ 190 00a4 B042     		cmp	r0, r6
+ 191 00a6 00F09D80 		beq	.L38
+ 192              		.loc 1 245 29 discriminator 3 view .LVU69
+ 193 00aa 674E     		ldr	r6, .L46+4
+ 194 00ac B042     		cmp	r0, r6
+ 195 00ae 00F09F80 		beq	.L39
+ 196              		.loc 1 245 29 discriminator 5 view .LVU70
+ 197 00b2 DFF8A0C1 		ldr	ip, .L46+16
+ 198 00b6 6045     		cmp	r0, ip
+ 199 00b8 00F0A080 		beq	.L40
+ 200              		.loc 1 245 29 discriminator 7 view .LVU71
+ 201 00bc DFF898C1 		ldr	ip, .L46+20
+ 202 00c0 6045     		cmp	r0, ip
+ 203 00c2 00F0A180 		beq	.L41
+ 204              		.loc 1 245 29 discriminator 9 view .LVU72
+ 205 00c6 DFF894C1 		ldr	ip, .L46+24
+ 206 00ca 6045     		cmp	r0, ip
+ 207 00cc 00F0A880 		beq	.L42
+ 208              		.loc 1 245 29 discriminator 11 view .LVU73
+ 209 00d0 DFF88CC1 		ldr	ip, .L46+28
+ 210 00d4 6045     		cmp	r0, ip
+ 211 00d6 00F0A980 		beq	.L43
+ 212              		.loc 1 245 29 discriminator 13 view .LVU74
+ 213 00da DFF888C1 		ldr	ip, .L46+32
+ 214 00de 6045     		cmp	r0, ip
+ 215 00e0 00F09880 		beq	.L44
+ 216              		.loc 1 245 29 discriminator 15 view .LVU75
+ 217 00e4 DFF880C1 		ldr	ip, .L46+36
+ 218 00e8 6045     		cmp	r0, ip
+ 219 00ea 00F0A580 		beq	.L45
+ 220              		.loc 1 245 29 discriminator 17 view .LVU76
+ 221 00ee DFF87CC1 		ldr	ip, .L46+40
+ 222 00f2 6045     		cmp	r0, ip
+ 223              		.loc 1 245 52 discriminator 17 view .LVU77
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 10
+
+
+ 224 00f4 0CBF     		ite	eq
+ 225 00f6 4FF0090C 		moveq	ip, #9
+ 226 00fa 4FF00A0C 		movne	ip, #10
+ 227 00fe 0CFA07F7 		lsl	r7, ip, r7
+ 228              		.loc 1 245 14 discriminator 17 view .LVU78
+ 229 0102 3D43     		orrs	r5, r5, r7
+ 230              	.LVL15:
+ 231              	.L10:
+ 246:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 232              		.loc 1 246 9 is_stmt 1 discriminator 40 view .LVU79
+ 233              		.loc 1 246 40 is_stmt 0 discriminator 40 view .LVU80
+ 234 0104 9560     		str	r5, [r2, #8]
+ 247:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 248:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Clear Rising Falling edge configuration */
+ 249:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = EXTI->RTSR;
+ 235              		.loc 1 249 9 is_stmt 1 discriminator 40 view .LVU81
+ 236              		.loc 1 249 14 is_stmt 0 discriminator 40 view .LVU82
+ 237 0106 514A     		ldr	r2, .L46+8
+ 238 0108 9268     		ldr	r2, [r2, #8]
+ 239              	.LVL16:
+ 250:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ 240              		.loc 1 250 9 is_stmt 1 discriminator 40 view .LVU83
+ 251:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & TRIGGER_RISING) != 0x00U)
+ 241              		.loc 1 251 11 is_stmt 0 discriminator 40 view .LVU84
+ 242 010a CE02     		lsls	r6, r1, #11
+ 250:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ 243              		.loc 1 250 17 discriminator 40 view .LVU85
+ 244 010c 6FEA0805 		mvn	r5, r8
+ 245              	.LVL17:
+ 246              		.loc 1 251 9 is_stmt 1 discriminator 40 view .LVU86
+ 252:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         {
+ 253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           temp |= iocurrent;
+ 254:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 255:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->RTSR = temp;
+ 247              		.loc 1 255 20 is_stmt 0 discriminator 40 view .LVU87
+ 248 0110 4E4E     		ldr	r6, .L46+8
+ 250:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & TRIGGER_RISING) != 0x00U)
+ 249              		.loc 1 250 14 discriminator 40 view .LVU88
+ 250 0112 54BF     		ite	pl
+ 251 0114 2A40     		andpl	r2, r2, r5
+ 252              	.LVL18:
+ 253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 253              		.loc 1 253 11 is_stmt 1 discriminator 40 view .LVU89
+ 253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 254              		.loc 1 253 16 is_stmt 0 discriminator 40 view .LVU90
+ 255 0116 48EA0202 		orrmi	r2, r8, r2
+ 256              	.LVL19:
+ 257              		.loc 1 255 9 is_stmt 1 discriminator 40 view .LVU91
+ 258              		.loc 1 255 20 is_stmt 0 discriminator 40 view .LVU92
+ 259 011a B260     		str	r2, [r6, #8]
+ 256:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 257:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = EXTI->FTSR;
+ 260              		.loc 1 257 9 is_stmt 1 discriminator 40 view .LVU93
+ 261              		.loc 1 257 14 is_stmt 0 discriminator 40 view .LVU94
+ 262 011c F268     		ldr	r2, [r6, #12]
+ 263              	.LVL20:
+ 258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 11
+
+
+ 264              		.loc 1 258 9 is_stmt 1 discriminator 40 view .LVU95
+ 259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & TRIGGER_FALLING) != 0x00U)
+ 265              		.loc 1 259 9 discriminator 40 view .LVU96
+ 260:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         {
+ 261:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           temp |= iocurrent;
+ 262:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 263:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->FTSR = temp;
+ 266              		.loc 1 263 20 is_stmt 0 discriminator 40 view .LVU97
+ 267 011e 4B4E     		ldr	r6, .L46+8
+ 259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & TRIGGER_FALLING) != 0x00U)
+ 268              		.loc 1 259 11 discriminator 40 view .LVU98
+ 269 0120 8F02     		lsls	r7, r1, #10
+ 258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & TRIGGER_FALLING) != 0x00U)
+ 270              		.loc 1 258 14 discriminator 40 view .LVU99
+ 271 0122 54BF     		ite	pl
+ 272 0124 2A40     		andpl	r2, r2, r5
+ 273              	.LVL21:
+ 261:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 274              		.loc 1 261 11 is_stmt 1 discriminator 40 view .LVU100
+ 261:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 275              		.loc 1 261 16 is_stmt 0 discriminator 40 view .LVU101
+ 276 0126 48EA0202 		orrmi	r2, r8, r2
+ 277              	.LVL22:
+ 278              		.loc 1 263 9 is_stmt 1 discriminator 40 view .LVU102
+ 279              		.loc 1 263 20 is_stmt 0 discriminator 40 view .LVU103
+ 280 012a F260     		str	r2, [r6, #12]
+ 264:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 265:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = EXTI->EMR;
+ 281              		.loc 1 265 9 is_stmt 1 discriminator 40 view .LVU104
+ 282              		.loc 1 265 14 is_stmt 0 discriminator 40 view .LVU105
+ 283 012c 7268     		ldr	r2, [r6, #4]
+ 284              	.LVL23:
+ 266:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ 285              		.loc 1 266 9 is_stmt 1 discriminator 40 view .LVU106
+ 267:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & EXTI_EVT) != 0x00U)
+ 286              		.loc 1 267 9 discriminator 40 view .LVU107
+ 287              		.loc 1 267 11 is_stmt 0 discriminator 40 view .LVU108
+ 288 012e 8E03     		lsls	r6, r1, #14
+ 268:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         {
+ 269:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           temp |= iocurrent;
+ 270:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 271:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->EMR = temp;
+ 289              		.loc 1 271 19 discriminator 40 view .LVU109
+ 290 0130 464E     		ldr	r6, .L46+8
+ 266:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & EXTI_EVT) != 0x00U)
+ 291              		.loc 1 266 14 discriminator 40 view .LVU110
+ 292 0132 54BF     		ite	pl
+ 293 0134 2A40     		andpl	r2, r2, r5
+ 294              	.LVL24:
+ 269:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 295              		.loc 1 269 11 is_stmt 1 discriminator 40 view .LVU111
+ 269:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 296              		.loc 1 269 16 is_stmt 0 discriminator 40 view .LVU112
+ 297 0136 48EA0202 		orrmi	r2, r8, r2
+ 298              	.LVL25:
+ 299              		.loc 1 271 9 is_stmt 1 discriminator 40 view .LVU113
+ 300              		.loc 1 271 19 is_stmt 0 discriminator 40 view .LVU114
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 12
+
+
+ 301 013a 7260     		str	r2, [r6, #4]
+ 272:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 273:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Clear EXTI line configuration */
+ 274:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = EXTI->IMR;
+ 302              		.loc 1 274 9 is_stmt 1 discriminator 40 view .LVU115
+ 303              		.loc 1 274 14 is_stmt 0 discriminator 40 view .LVU116
+ 304 013c 3268     		ldr	r2, [r6]
+ 305              	.LVL26:
+ 275:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ 306              		.loc 1 275 9 is_stmt 1 discriminator 40 view .LVU117
+ 276:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & EXTI_IT) != 0x00U)
+ 307              		.loc 1 276 9 discriminator 40 view .LVU118
+ 308              		.loc 1 276 11 is_stmt 0 discriminator 40 view .LVU119
+ 309 013e C903     		lsls	r1, r1, #15
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 310              		.loc 1 177 54 discriminator 40 view .LVU120
+ 311 0140 03F10103 		add	r3, r3, #1
+ 312              	.LVL27:
+ 277:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         {
+ 278:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           temp |= iocurrent;
+ 279:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 280:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->IMR = temp;
+ 313              		.loc 1 280 19 discriminator 40 view .LVU121
+ 314 0144 4149     		ldr	r1, .L46+8
+ 275:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & EXTI_IT) != 0x00U)
+ 315              		.loc 1 275 14 discriminator 40 view .LVU122
+ 316 0146 54BF     		ite	pl
+ 317 0148 2A40     		andpl	r2, r2, r5
+ 318              	.LVL28:
+ 278:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 319              		.loc 1 278 11 is_stmt 1 discriminator 40 view .LVU123
+ 278:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
+ 320              		.loc 1 278 16 is_stmt 0 discriminator 40 view .LVU124
+ 321 014a 48EA0202 		orrmi	r2, r8, r2
+ 322              	.LVL29:
+ 323              		.loc 1 280 9 is_stmt 1 discriminator 40 view .LVU125
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 324              		.loc 1 177 31 is_stmt 0 discriminator 40 view .LVU126
+ 325 014e 102B     		cmp	r3, #16
+ 326              		.loc 1 280 19 discriminator 40 view .LVU127
+ 327 0150 0A60     		str	r2, [r1]
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 328              		.loc 1 177 54 is_stmt 1 discriminator 40 view .LVU128
+ 329              	.LVL30:
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 330              		.loc 1 177 31 discriminator 40 view .LVU129
+ 331 0152 7FF464AF 		bne	.L28
+ 332              	.LVL31:
+ 333              	.L35:
+ 281:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     }
+ 283:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 284:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
+ 334              		.loc 1 284 1 is_stmt 0 view .LVU130
+ 335 0156 05B0     		add	sp, sp, #20
+ 336              		.cfi_remember_state
+ 337              		.cfi_def_cfa_offset 36
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 13
+
+
+ 338              		@ sp needed
+ 339 0158 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 340              	.LVL32:
+ 341              	.L36:
+ 342              		.cfi_restore_state
+ 192:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Configure the IO Speed */
+ 343              		.loc 1 192 9 is_stmt 1 view .LVU131
+ 194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U));
+ 344              		.loc 1 194 9 view .LVU132
+ 194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U));
+ 345              		.loc 1 194 14 is_stmt 0 view .LVU133
+ 346 015c 8768     		ldr	r7, [r0, #8]
+ 347              	.LVL33:
+ 195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (GPIO_Init->Speed << (position * 2U));
+ 348              		.loc 1 195 9 is_stmt 1 view .LVU134
+ 195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (GPIO_Init->Speed << (position * 2U));
+ 349              		.loc 1 195 14 is_stmt 0 view .LVU135
+ 350 015e 07EA050E 		and	lr, r7, r5
+ 351              	.LVL34:
+ 196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OSPEEDR = temp;
+ 352              		.loc 1 196 9 is_stmt 1 view .LVU136
+ 196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OSPEEDR = temp;
+ 353              		.loc 1 196 35 is_stmt 0 view .LVU137
+ 354 0162 D9F80C70 		ldr	r7, [r9, #12]
+ 355 0166 07FA0CF7 		lsl	r7, r7, ip
+ 196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OSPEEDR = temp;
+ 356              		.loc 1 196 14 view .LVU138
+ 357 016a 47EA0E07 		orr	r7, r7, lr
+ 358              	.LVL35:
+ 197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 359              		.loc 1 197 9 is_stmt 1 view .LVU139
+ 197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 360              		.loc 1 197 24 is_stmt 0 view .LVU140
+ 361 016e 8760     		str	r7, [r0, #8]
+ 200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_OTYPER_OT_0 << position) ;
+ 362              		.loc 1 200 9 is_stmt 1 view .LVU141
+ 200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_OTYPER_OT_0 << position) ;
+ 363              		.loc 1 200 14 is_stmt 0 view .LVU142
+ 364 0170 4768     		ldr	r7, [r0, #4]
+ 365              	.LVL36:
+ 201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (((GPIO_Init->Mode & OUTPUT_TYPE) >> OUTPUT_TYPE_Pos) << position);
+ 366              		.loc 1 201 9 is_stmt 1 view .LVU143
+ 201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= (((GPIO_Init->Mode & OUTPUT_TYPE) >> OUTPUT_TYPE_Pos) << position);
+ 367              		.loc 1 201 14 is_stmt 0 view .LVU144
+ 368 0172 27EA080E 		bic	lr, r7, r8
+ 369              	.LVL37:
+ 202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OTYPER = temp;
+ 370              		.loc 1 202 9 is_stmt 1 view .LVU145
+ 202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OTYPER = temp;
+ 371              		.loc 1 202 51 is_stmt 0 view .LVU146
+ 372 0176 C1F30017 		ubfx	r7, r1, #4, #1
+ 202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OTYPER = temp;
+ 373              		.loc 1 202 71 view .LVU147
+ 374 017a 9F40     		lsls	r7, r7, r3
+ 202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->OTYPER = temp;
+ 375              		.loc 1 202 14 view .LVU148
+ 376 017c 47EA0E07 		orr	r7, r7, lr
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 14
+
+
+ 377              	.LVL38:
+ 203:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****        }
+ 378              		.loc 1 203 9 is_stmt 1 view .LVU149
+ 203:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****        }
+ 379              		.loc 1 203 23 is_stmt 0 view .LVU150
+ 380 0180 4760     		str	r7, [r0, #4]
+ 206:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 381              		.loc 1 206 7 is_stmt 1 view .LVU151
+ 209:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         
+ 382              		.loc 1 209 9 view .LVU152
+ 212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_PUPDR_PUPDR0 << (position * 2U));
+ 383              		.loc 1 212 9 view .LVU153
+ 212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_PUPDR_PUPDR0 << (position * 2U));
+ 384              		.loc 1 212 14 is_stmt 0 view .LVU154
+ 385 0182 C768     		ldr	r7, [r0, #12]
+ 386              	.LVL39:
+ 213:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((GPIO_Init->Pull) << (position * 2U));
+ 387              		.loc 1 213 9 is_stmt 1 view .LVU155
+ 213:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((GPIO_Init->Pull) << (position * 2U));
+ 388              		.loc 1 213 14 is_stmt 0 view .LVU156
+ 389 0184 07EA050E 		and	lr, r7, r5
+ 390              	.LVL40:
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->PUPDR = temp;
+ 391              		.loc 1 214 9 is_stmt 1 view .LVU157
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->PUPDR = temp;
+ 392              		.loc 1 214 36 is_stmt 0 view .LVU158
+ 393 0188 D9F80870 		ldr	r7, [r9, #8]
+ 394 018c 07FA0CF7 		lsl	r7, r7, ip
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->PUPDR = temp;
+ 395              		.loc 1 214 14 view .LVU159
+ 396 0190 47EA0E07 		orr	r7, r7, lr
+ 397              	.LVL41:
+ 215:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 398              		.loc 1 215 9 is_stmt 1 view .LVU160
+ 219:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 399              		.loc 1 219 9 is_stmt 0 view .LVU161
+ 400 0194 022A     		cmp	r2, #2
+ 215:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 401              		.loc 1 215 22 view .LVU162
+ 402 0196 C760     		str	r7, [r0, #12]
+ 219:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 403              		.loc 1 219 7 is_stmt 1 view .LVU163
+ 219:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 404              		.loc 1 219 9 is_stmt 0 view .LVU164
+ 405 0198 7FF459AF 		bne	.L8
+ 222:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Configure Alternate function mapped with the current IO */
+ 406              		.loc 1 222 9 is_stmt 1 view .LVU165
+ 224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;
+ 407              		.loc 1 224 9 view .LVU166
+ 408              	.LVL42:
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));
+ 409              		.loc 1 225 9 view .LVU167
+ 224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;
+ 410              		.loc 1 224 36 is_stmt 0 view .LVU168
+ 411 019c DF08     		lsrs	r7, r3, #3
+ 412 019e 00EB8707 		add	r7, r0, r7, lsl #2
+ 224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 15
+
+
+ 413              		.loc 1 224 14 view .LVU169
+ 414 01a2 0197     		str	r7, [sp, #4]
+ 415 01a4 3E6A     		ldr	r6, [r7, #32]
+ 416              	.LVL43:
+ 226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 417              		.loc 1 226 51 view .LVU170
+ 418 01a6 D9F81070 		ldr	r7, [r9, #16]
+ 224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;
+ 419              		.loc 1 224 14 view .LVU171
+ 420 01aa 0096     		str	r6, [sp]
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));
+ 421              		.loc 1 225 28 view .LVU172
+ 422 01ac 03F0070E 		and	lr, r3, #7
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));
+ 423              		.loc 1 225 57 view .LVU173
+ 424 01b0 4FEA8E0E 		lsl	lr, lr, #2
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));
+ 425              		.loc 1 225 24 view .LVU174
+ 426 01b4 0F26     		movs	r6, #15
+ 226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 427              		.loc 1 226 51 view .LVU175
+ 428 01b6 07FA0EF7 		lsl	r7, r7, lr
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));
+ 429              		.loc 1 225 24 view .LVU176
+ 430 01ba 06FA0EFE 		lsl	lr, r6, lr
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));
+ 431              		.loc 1 225 14 view .LVU177
+ 432 01be 009E     		ldr	r6, [sp]
+ 433 01c0 26EA0E0E 		bic	lr, r6, lr
+ 434              	.LVL44:
+ 226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 435              		.loc 1 226 9 is_stmt 1 view .LVU178
+ 227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 436              		.loc 1 227 36 is_stmt 0 view .LVU179
+ 437 01c4 019E     		ldr	r6, [sp, #4]
+ 226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 438              		.loc 1 226 14 view .LVU180
+ 439 01c6 47EA0E07 		orr	r7, r7, lr
+ 440              	.LVL45:
+ 227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 441              		.loc 1 227 9 is_stmt 1 view .LVU181
+ 227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 442              		.loc 1 227 36 is_stmt 0 view .LVU182
+ 443 01ca 3762     		str	r7, [r6, #32]
+ 444 01cc 3FE7     		b	.L8
+ 445              	.LVL46:
+ 446              	.L37:
+ 209:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         
+ 447              		.loc 1 209 9 is_stmt 1 view .LVU183
+ 212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_PUPDR_PUPDR0 << (position * 2U));
+ 448              		.loc 1 212 9 view .LVU184
+ 212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_PUPDR_PUPDR0 << (position * 2U));
+ 449              		.loc 1 212 14 is_stmt 0 view .LVU185
+ 450 01ce C768     		ldr	r7, [r0, #12]
+ 451              	.LVL47:
+ 213:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((GPIO_Init->Pull) << (position * 2U));
+ 452              		.loc 1 213 9 is_stmt 1 view .LVU186
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 16
+
+
+ 213:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((GPIO_Init->Pull) << (position * 2U));
+ 453              		.loc 1 213 14 is_stmt 0 view .LVU187
+ 454 01d0 07EA050E 		and	lr, r7, r5
+ 455              	.LVL48:
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->PUPDR = temp;
+ 456              		.loc 1 214 9 is_stmt 1 view .LVU188
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->PUPDR = temp;
+ 457              		.loc 1 214 36 is_stmt 0 view .LVU189
+ 458 01d4 D9F80870 		ldr	r7, [r9, #8]
+ 459 01d8 07FA0CF7 		lsl	r7, r7, ip
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->PUPDR = temp;
+ 460              		.loc 1 214 14 view .LVU190
+ 461 01dc 47EA0E07 		orr	r7, r7, lr
+ 462              	.LVL49:
+ 215:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 463              		.loc 1 215 9 is_stmt 1 view .LVU191
+ 215:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 464              		.loc 1 215 22 is_stmt 0 view .LVU192
+ 465 01e0 C760     		str	r7, [r0, #12]
+ 219:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 466              		.loc 1 219 7 is_stmt 1 view .LVU193
+ 467 01e2 34E7     		b	.L8
+ 468              	.LVL50:
+ 469              	.L38:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 470              		.loc 1 245 52 is_stmt 0 view .LVU194
+ 471 01e4 4FF0010C 		mov	ip, #1
+ 472 01e8 0CFA07F7 		lsl	r7, ip, r7
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 473              		.loc 1 245 14 view .LVU195
+ 474 01ec 3D43     		orrs	r5, r5, r7
+ 475              	.LVL51:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 476              		.loc 1 245 14 view .LVU196
+ 477 01ee 89E7     		b	.L10
+ 478              	.LVL52:
+ 479              	.L39:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 480              		.loc 1 245 52 view .LVU197
+ 481 01f0 4FF0020C 		mov	ip, #2
+ 482 01f4 0CFA07F7 		lsl	r7, ip, r7
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 483              		.loc 1 245 14 view .LVU198
+ 484 01f8 3D43     		orrs	r5, r5, r7
+ 485              	.LVL53:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 486              		.loc 1 245 14 view .LVU199
+ 487 01fa 83E7     		b	.L10
+ 488              	.LVL54:
+ 489              	.L40:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 490              		.loc 1 245 52 view .LVU200
+ 491 01fc 4FF0030C 		mov	ip, #3
+ 492 0200 0CFA07F7 		lsl	r7, ip, r7
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 493              		.loc 1 245 14 view .LVU201
+ 494 0204 3D43     		orrs	r5, r5, r7
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 17
+
+
+ 495              	.LVL55:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 496              		.loc 1 245 14 view .LVU202
+ 497 0206 7DE7     		b	.L10
+ 498              	.LVL56:
+ 499              	.L41:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 500              		.loc 1 245 52 view .LVU203
+ 501 0208 4FF0040C 		mov	ip, #4
+ 502 020c 0CFA07F7 		lsl	r7, ip, r7
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 503              		.loc 1 245 14 view .LVU204
+ 504 0210 3D43     		orrs	r5, r5, r7
+ 505              	.LVL57:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 506              		.loc 1 245 14 view .LVU205
+ 507 0212 77E7     		b	.L10
+ 508              	.LVL58:
+ 509              	.L44:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 510              		.loc 1 245 52 view .LVU206
+ 511 0214 4FF0070C 		mov	ip, #7
+ 512 0218 0CFA07F7 		lsl	r7, ip, r7
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 513              		.loc 1 245 14 view .LVU207
+ 514 021c 3D43     		orrs	r5, r5, r7
+ 515              	.LVL59:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 516              		.loc 1 245 14 view .LVU208
+ 517 021e 71E7     		b	.L10
+ 518              	.LVL60:
+ 519              	.L42:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 520              		.loc 1 245 52 view .LVU209
+ 521 0220 4FF0050C 		mov	ip, #5
+ 522 0224 0CFA07F7 		lsl	r7, ip, r7
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 523              		.loc 1 245 14 view .LVU210
+ 524 0228 3D43     		orrs	r5, r5, r7
+ 525              	.LVL61:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 526              		.loc 1 245 14 view .LVU211
+ 527 022a 6BE7     		b	.L10
+ 528              	.LVL62:
+ 529              	.L43:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 530              		.loc 1 245 52 view .LVU212
+ 531 022c 4FF0060C 		mov	ip, #6
+ 532 0230 0CFA07F7 		lsl	r7, ip, r7
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 533              		.loc 1 245 14 view .LVU213
+ 534 0234 3D43     		orrs	r5, r5, r7
+ 535              	.LVL63:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 536              		.loc 1 245 14 view .LVU214
+ 537 0236 65E7     		b	.L10
+ 538              	.LVL64:
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 18
+
+
+ 539              	.L45:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 540              		.loc 1 245 52 view .LVU215
+ 541 0238 4FF0080C 		mov	ip, #8
+ 542 023c 0CFA07F7 		lsl	r7, ip, r7
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 543              		.loc 1 245 14 view .LVU216
+ 544 0240 3D43     		orrs	r5, r5, r7
+ 545              	.LVL65:
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 546              		.loc 1 245 14 view .LVU217
+ 547 0242 5FE7     		b	.L10
+ 548              	.L47:
+ 549              		.align	2
+ 550              	.L46:
+ 551 0244 00000240 		.word	1073872896
+ 552 0248 00080240 		.word	1073874944
+ 553 024c 003C0140 		.word	1073822720
+ 554 0250 00380240 		.word	1073887232
+ 555 0254 000C0240 		.word	1073875968
+ 556 0258 00100240 		.word	1073876992
+ 557 025c 00140240 		.word	1073878016
+ 558 0260 00180240 		.word	1073879040
+ 559 0264 001C0240 		.word	1073880064
+ 560 0268 00200240 		.word	1073881088
+ 561 026c 00240240 		.word	1073882112
+ 562              		.cfi_endproc
+ 563              	.LFE130:
+ 565              		.section	.text.HAL_GPIO_DeInit,"ax",%progbits
+ 566              		.align	1
+ 567              		.p2align 2,,3
+ 568              		.global	HAL_GPIO_DeInit
+ 569              		.syntax unified
+ 570              		.thumb
+ 571              		.thumb_func
+ 573              	HAL_GPIO_DeInit:
+ 574              	.LVL66:
+ 575              	.LFB131:
+ 285:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 286:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 287:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  De-initializes the GPIOx peripheral registers to their default reset values.
+ 288:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or
+ 289:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *                      x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427
+ 290:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Pin specifies the port bit to be written.
+ 291:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *          This parameter can be one of GPIO_PIN_x where x can be (0..15).
+ 292:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @retval None
+ 293:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 294:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** void HAL_GPIO_DeInit(GPIO_TypeDef  *GPIOx, uint32_t GPIO_Pin)
+ 295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** {
+ 576              		.loc 1 295 1 is_stmt 1 view -0
+ 577              		.cfi_startproc
+ 578              		@ args = 0, pretend = 0, frame = 8
+ 579              		@ frame_needed = 0, uses_anonymous_args = 0
+ 296:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t position;
+ 580              		.loc 1 296 3 view .LVU219
+ 297:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t ioposition = 0x00U;
+ 581              		.loc 1 297 3 view .LVU220
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 19
+
+
+ 298:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t iocurrent = 0x00U;
+ 582              		.loc 1 298 3 view .LVU221
+ 299:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t tmp = 0x00U;
+ 583              		.loc 1 299 3 view .LVU222
+ 300:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 301:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Check the parameters */
+ 302:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_ALL_INSTANCE(GPIOx));
+ 584              		.loc 1 302 3 view .LVU223
+ 303:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   
+ 304:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Configure the port pins */
+ 305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   for(position = 0U; position < GPIO_NUMBER; position++)
+ 585              		.loc 1 305 3 view .LVU224
+ 586              		.loc 1 305 31 view .LVU225
+ 295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t position;
+ 587              		.loc 1 295 1 is_stmt 0 view .LVU226
+ 588 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 589              		.cfi_def_cfa_offset 36
+ 590              		.cfi_offset 4, -36
+ 591              		.cfi_offset 5, -32
+ 592              		.cfi_offset 6, -28
+ 593              		.cfi_offset 7, -24
+ 594              		.cfi_offset 8, -20
+ 595              		.cfi_offset 9, -16
+ 596              		.cfi_offset 10, -12
+ 597              		.cfi_offset 11, -8
+ 598              		.cfi_offset 14, -4
+ 599              		.loc 1 305 16 view .LVU227
+ 600 0004 0023     		movs	r3, #0
+ 306:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 307:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the IO position */
+ 308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     ioposition = 0x01U << position;
+ 309:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the current IO position */
+ 310:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     iocurrent = (GPIO_Pin) & ioposition;
+ 311:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 312:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     if(iocurrent == ioposition)
+ 313:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
+ 314:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /*------------------------- EXTI Mode Configuration --------------------*/
+ 315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       tmp = SYSCFG->EXTICR[position >> 2U];
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       tmp &= (0x0FU << (4U * (position & 0x03U)));
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
+ 318:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 319:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Clear EXTI line configuration */
+ 320:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->IMR &= ~((uint32_t)iocurrent);
+ 601              		.loc 1 320 13 view .LVU228
+ 602 0006 5D4F     		ldr	r7, .L74
+ 295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t position;
+ 603              		.loc 1 295 1 view .LVU229
+ 604 0008 83B0     		sub	sp, sp, #12
+ 605              		.cfi_def_cfa_offset 48
+ 308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the current IO position */
+ 606              		.loc 1 308 16 view .LVU230
+ 607 000a 0126     		movs	r6, #1
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
+ 608              		.loc 1 316 21 view .LVU231
+ 609 000c 4FF00F09 		mov	r9, #15
+ 321:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->EMR &= ~((uint32_t)iocurrent);
+ 322:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 20
+
+
+ 323:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Clear Rising Falling edge configuration */
+ 324:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->FTSR &= ~((uint32_t)iocurrent);
+ 325:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->RTSR &= ~((uint32_t)iocurrent);
+ 326:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 327:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Configure the External Interrupt or event for the current IO */
+ 328:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         tmp = 0x0FU << (4U * (position & 0x03U));
+ 329:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] &= ~tmp;
+ 330:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 331:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 332:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /*------------------------- GPIO Mode Configuration --------------------*/
+ 333:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* Configure IO Direction in Input Floating Mode */
+ 334:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->MODER &= ~(GPIO_MODER_MODER0 << (position * 2U));
+ 610              		.loc 1 334 43 view .LVU232
+ 611 0010 4FF0030A 		mov	r10, #3
+ 612 0014 02E0     		b	.L61
+ 613              	.LVL67:
+ 614              	.L49:
+ 305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 615              		.loc 1 305 54 is_stmt 1 discriminator 2 view .LVU233
+ 616 0016 0133     		adds	r3, r3, #1
+ 617              	.LVL68:
+ 305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 618              		.loc 1 305 31 discriminator 2 view .LVU234
+ 619 0018 102B     		cmp	r3, #16
+ 620 001a 7ED0     		beq	.L65
+ 621              	.LVL69:
+ 622              	.L61:
+ 308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the current IO position */
+ 623              		.loc 1 308 5 view .LVU235
+ 308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     /* Get the current IO position */
+ 624              		.loc 1 308 16 is_stmt 0 view .LVU236
+ 625 001c 06FA03F2 		lsl	r2, r6, r3
+ 626              	.LVL70:
+ 310:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 627              		.loc 1 310 5 is_stmt 1 view .LVU237
+ 312:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
+ 628              		.loc 1 312 7 is_stmt 0 view .LVU238
+ 629 0020 32EA0104 		bics	r4, r2, r1
+ 310:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 630              		.loc 1 310 15 view .LVU239
+ 631 0024 02EA010C 		and	ip, r2, r1
+ 632              	.LVL71:
+ 312:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
+ 633              		.loc 1 312 5 is_stmt 1 view .LVU240
+ 312:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
+ 634              		.loc 1 312 7 is_stmt 0 view .LVU241
+ 635 0028 F5D1     		bne	.L49
+ 315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       tmp &= (0x0FU << (4U * (position & 0x03U)));
+ 636              		.loc 1 315 7 is_stmt 1 view .LVU242
+ 637 002a 23F00304 		bic	r4, r3, #3
+ 638 002e 04F18044 		add	r4, r4, #1073741824
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
+ 639              		.loc 1 316 40 is_stmt 0 view .LVU243
+ 640 0032 03F00305 		and	r5, r3, #3
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
+ 641              		.loc 1 316 28 view .LVU244
+ 642 0036 AD00     		lsls	r5, r5, #2
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 21
+
+
+ 643 0038 04F59C34 		add	r4, r4, #79872
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
+ 644              		.loc 1 316 21 view .LVU245
+ 645 003c 09FA05F8 		lsl	r8, r9, r5
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
+ 646              		.loc 1 316 28 view .LVU246
+ 647 0040 0195     		str	r5, [sp, #4]
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 648              		.loc 1 317 18 view .LVU247
+ 649 0042 4F4D     		ldr	r5, .L74+4
+ 315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       tmp &= (0x0FU << (4U * (position & 0x03U)));
+ 650              		.loc 1 315 11 view .LVU248
+ 651 0044 D4F808E0 		ldr	lr, [r4, #8]
+ 652              	.LVL72:
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
+ 653              		.loc 1 316 7 is_stmt 1 view .LVU249
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 654              		.loc 1 317 18 is_stmt 0 view .LVU250
+ 655 0048 A842     		cmp	r0, r5
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
+ 656              		.loc 1 316 11 view .LVU251
+ 657 004a 08EA0E0E 		and	lr, r8, lr
+ 658              	.LVL73:
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 659              		.loc 1 317 7 is_stmt 1 view .LVU252
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 660              		.loc 1 317 18 is_stmt 0 view .LVU253
+ 661 004e 28D0     		beq	.L62
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 662              		.loc 1 317 29 discriminator 1 view .LVU254
+ 663 0050 05F58065 		add	r5, r5, #1024
+ 664 0054 A842     		cmp	r0, r5
+ 665 0056 63D0     		beq	.L66
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 666              		.loc 1 317 29 discriminator 3 view .LVU255
+ 667 0058 4A4D     		ldr	r5, .L74+8
+ 668 005a A842     		cmp	r0, r5
+ 669 005c 64D0     		beq	.L67
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 670              		.loc 1 317 29 discriminator 5 view .LVU256
+ 671 005e 4A4D     		ldr	r5, .L74+12
+ 672 0060 A842     		cmp	r0, r5
+ 673 0062 67D0     		beq	.L68
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 674              		.loc 1 317 29 discriminator 7 view .LVU257
+ 675 0064 494D     		ldr	r5, .L74+16
+ 676 0066 A842     		cmp	r0, r5
+ 677 0068 6AD0     		beq	.L69
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 678              		.loc 1 317 29 discriminator 9 view .LVU258
+ 679 006a DFF824B1 		ldr	fp, .L74+20
+ 680 006e 5845     		cmp	r0, fp
+ 681 0070 6CD0     		beq	.L70
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 682              		.loc 1 317 29 discriminator 11 view .LVU259
+ 683 0072 DFF820B1 		ldr	fp, .L74+24
+ 684 0076 5845     		cmp	r0, fp
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 22
+
+
+ 685 0078 6ED0     		beq	.L71
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 686              		.loc 1 317 29 discriminator 13 view .LVU260
+ 687 007a DFF81CB1 		ldr	fp, .L74+28
+ 688 007e 5845     		cmp	r0, fp
+ 689 0080 70D0     		beq	.L72
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 690              		.loc 1 317 29 discriminator 15 view .LVU261
+ 691 0082 DFF818B1 		ldr	fp, .L74+32
+ 692 0086 5845     		cmp	r0, fp
+ 693 0088 72D0     		beq	.L73
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 694              		.loc 1 317 29 discriminator 17 view .LVU262
+ 695 008a DFF814B1 		ldr	fp, .L74+36
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 696              		.loc 1 317 52 discriminator 17 view .LVU263
+ 697 008e 019D     		ldr	r5, [sp, #4]
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 698              		.loc 1 317 29 discriminator 17 view .LVU264
+ 699 0090 5845     		cmp	r0, fp
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 700              		.loc 1 317 52 discriminator 17 view .LVU265
+ 701 0092 14BF     		ite	ne
+ 702 0094 4FF00A0B 		movne	fp, #10
+ 703 0098 4FF0090B 		moveq	fp, #9
+ 704 009c 0BFA05F5 		lsl	r5, fp, r5
+ 705 00a0 00E0     		b	.L50
+ 706              	.L62:
+ 707 00a2 0025     		movs	r5, #0
+ 708              	.L50:
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ 709              		.loc 1 317 9 discriminator 40 view .LVU266
+ 710 00a4 AE45     		cmp	lr, r5
+ 711 00a6 13D1     		bne	.L60
+ 320:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->EMR &= ~((uint32_t)iocurrent);
+ 712              		.loc 1 320 9 is_stmt 1 view .LVU267
+ 320:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->EMR &= ~((uint32_t)iocurrent);
+ 713              		.loc 1 320 13 is_stmt 0 view .LVU268
+ 714 00a8 3D68     		ldr	r5, [r7]
+ 320:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->EMR &= ~((uint32_t)iocurrent);
+ 715              		.loc 1 320 19 view .LVU269
+ 716 00aa 25EA0C05 		bic	r5, r5, ip
+ 717 00ae 3D60     		str	r5, [r7]
+ 321:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         
+ 718              		.loc 1 321 9 is_stmt 1 view .LVU270
+ 321:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         
+ 719              		.loc 1 321 13 is_stmt 0 view .LVU271
+ 720 00b0 7D68     		ldr	r5, [r7, #4]
+ 321:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         
+ 721              		.loc 1 321 19 view .LVU272
+ 722 00b2 25EA0C05 		bic	r5, r5, ip
+ 723 00b6 7D60     		str	r5, [r7, #4]
+ 324:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->RTSR &= ~((uint32_t)iocurrent);
+ 724              		.loc 1 324 9 is_stmt 1 view .LVU273
+ 324:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->RTSR &= ~((uint32_t)iocurrent);
+ 725              		.loc 1 324 13 is_stmt 0 view .LVU274
+ 726 00b8 FD68     		ldr	r5, [r7, #12]
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 23
+
+
+ 324:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->RTSR &= ~((uint32_t)iocurrent);
+ 727              		.loc 1 324 20 view .LVU275
+ 728 00ba 25EA0C05 		bic	r5, r5, ip
+ 729 00be FD60     		str	r5, [r7, #12]
+ 325:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 730              		.loc 1 325 9 is_stmt 1 view .LVU276
+ 325:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 731              		.loc 1 325 13 is_stmt 0 view .LVU277
+ 732 00c0 BD68     		ldr	r5, [r7, #8]
+ 325:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 733              		.loc 1 325 20 view .LVU278
+ 734 00c2 25EA0C05 		bic	r5, r5, ip
+ 735 00c6 BD60     		str	r5, [r7, #8]
+ 328:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] &= ~tmp;
+ 736              		.loc 1 328 9 is_stmt 1 view .LVU279
+ 737              	.LVL74:
+ 329:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 738              		.loc 1 329 9 view .LVU280
+ 329:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 739              		.loc 1 329 23 is_stmt 0 view .LVU281
+ 740 00c8 A568     		ldr	r5, [r4, #8]
+ 329:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       }
+ 741              		.loc 1 329 40 view .LVU282
+ 742 00ca 25EA0805 		bic	r5, r5, r8
+ 743 00ce A560     		str	r5, [r4, #8]
+ 744              	.LVL75:
+ 745              	.L60:
+ 746              		.loc 1 334 7 is_stmt 1 view .LVU283
+ 747              		.loc 1 334 12 is_stmt 0 view .LVU284
+ 748 00d0 0468     		ldr	r4, [r0]
+ 749              		.loc 1 334 43 view .LVU285
+ 750 00d2 5D00     		lsls	r5, r3, #1
+ 751 00d4 0AFA05F5 		lsl	r5, r10, r5
+ 335:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 336:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* Configure the default Alternate Function in current IO */
+ 337:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->AFR[position >> 3U] &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;
+ 752              		.loc 1 337 17 view .LVU286
+ 753 00d8 4FEAD30C 		lsr	ip, r3, #3
+ 754              	.LVL76:
+ 334:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 755              		.loc 1 334 20 view .LVU287
+ 756 00dc 24EA0504 		bic	r4, r4, r5
+ 757 00e0 00EB8C0C 		add	ip, r0, ip, lsl #2
+ 758 00e4 0460     		str	r4, [r0]
+ 759              		.loc 1 337 7 is_stmt 1 view .LVU288
+ 760              		.loc 1 337 48 is_stmt 0 view .LVU289
+ 761 00e6 03F00704 		and	r4, r3, #7
+ 762              		.loc 1 337 17 view .LVU290
+ 763 00ea DCF820E0 		ldr	lr, [ip, #32]
+ 764              		.loc 1 337 77 view .LVU291
+ 765 00ee A400     		lsls	r4, r4, #2
+ 766              		.loc 1 337 44 view .LVU292
+ 767 00f0 09FA04F4 		lsl	r4, r9, r4
+ 768              		.loc 1 337 34 view .LVU293
+ 769 00f4 2EEA0404 		bic	r4, lr, r4
+ 770 00f8 CCF82040 		str	r4, [ip, #32]
+ 338:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 24
+
+
+ 339:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* Deactivate the Pull-up and Pull-down resistor for the current IO */
+ 340:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->PUPDR &= ~(GPIO_PUPDR_PUPDR0 << (position * 2U));
+ 771              		.loc 1 340 7 is_stmt 1 view .LVU294
+ 772              		.loc 1 340 12 is_stmt 0 view .LVU295
+ 773 00fc C468     		ldr	r4, [r0, #12]
+ 774              		.loc 1 340 20 view .LVU296
+ 775 00fe 24EA0504 		bic	r4, r4, r5
+ 776 0102 C460     		str	r4, [r0, #12]
+ 341:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 342:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* Configure the default value IO Output Type */
+ 343:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->OTYPER  &= ~(GPIO_OTYPER_OT_0 << position) ;
+ 777              		.loc 1 343 7 is_stmt 1 view .LVU297
+ 778              		.loc 1 343 12 is_stmt 0 view .LVU298
+ 779 0104 4468     		ldr	r4, [r0, #4]
+ 780              		.loc 1 343 22 view .LVU299
+ 781 0106 24EA0202 		bic	r2, r4, r2
+ 782              	.LVL77:
+ 783              		.loc 1 343 22 view .LVU300
+ 784 010a 4260     		str	r2, [r0, #4]
+ 344:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 345:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /* Configure the default value for IO Speed */
+ 346:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U));
+ 785              		.loc 1 346 7 is_stmt 1 view .LVU301
+ 786              		.loc 1 346 12 is_stmt 0 view .LVU302
+ 787 010c 8268     		ldr	r2, [r0, #8]
+ 305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 788              		.loc 1 305 54 view .LVU303
+ 789 010e 0133     		adds	r3, r3, #1
+ 790              	.LVL78:
+ 791              		.loc 1 346 22 view .LVU304
+ 792 0110 22EA0502 		bic	r2, r2, r5
+ 305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 793              		.loc 1 305 31 view .LVU305
+ 794 0114 102B     		cmp	r3, #16
+ 795              		.loc 1 346 22 view .LVU306
+ 796 0116 8260     		str	r2, [r0, #8]
+ 305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 797              		.loc 1 305 54 is_stmt 1 view .LVU307
+ 798              	.LVL79:
+ 305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 799              		.loc 1 305 31 view .LVU308
+ 800 0118 80D1     		bne	.L61
+ 801              	.LVL80:
+ 802              	.L65:
+ 347:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     }
+ 348:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 349:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
+ 803              		.loc 1 349 1 is_stmt 0 view .LVU309
+ 804 011a 03B0     		add	sp, sp, #12
+ 805              		.cfi_remember_state
+ 806              		.cfi_def_cfa_offset 36
+ 807              		@ sp needed
+ 808 011c BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 809              	.LVL81:
+ 810              	.L66:
+ 811              		.cfi_restore_state
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 25
+
+
+ 812              		.loc 1 317 52 view .LVU310
+ 813 0120 019D     		ldr	r5, [sp, #4]
+ 814 0122 06FA05F5 		lsl	r5, r6, r5
+ 815 0126 BDE7     		b	.L50
+ 816              	.L67:
+ 817 0128 019D     		ldr	r5, [sp, #4]
+ 818 012a 4FF0020B 		mov	fp, #2
+ 819 012e 0BFA05F5 		lsl	r5, fp, r5
+ 820 0132 B7E7     		b	.L50
+ 821              	.L68:
+ 822 0134 019D     		ldr	r5, [sp, #4]
+ 823 0136 4FF0030B 		mov	fp, #3
+ 824 013a 0BFA05F5 		lsl	r5, fp, r5
+ 825 013e B1E7     		b	.L50
+ 826              	.L69:
+ 827 0140 019D     		ldr	r5, [sp, #4]
+ 828 0142 4FF0040B 		mov	fp, #4
+ 829 0146 0BFA05F5 		lsl	r5, fp, r5
+ 830 014a ABE7     		b	.L50
+ 831              	.L70:
+ 832 014c 019D     		ldr	r5, [sp, #4]
+ 833 014e 4FF0050B 		mov	fp, #5
+ 834 0152 0BFA05F5 		lsl	r5, fp, r5
+ 835 0156 A5E7     		b	.L50
+ 836              	.L71:
+ 837 0158 019D     		ldr	r5, [sp, #4]
+ 838 015a 4FF0060B 		mov	fp, #6
+ 839 015e 0BFA05F5 		lsl	r5, fp, r5
+ 840 0162 9FE7     		b	.L50
+ 841              	.L72:
+ 842 0164 019D     		ldr	r5, [sp, #4]
+ 843 0166 4FF0070B 		mov	fp, #7
+ 844 016a 0BFA05F5 		lsl	r5, fp, r5
+ 845 016e 99E7     		b	.L50
+ 846              	.L73:
+ 847 0170 019D     		ldr	r5, [sp, #4]
+ 848 0172 4FF0080B 		mov	fp, #8
+ 849 0176 0BFA05F5 		lsl	r5, fp, r5
+ 850 017a 93E7     		b	.L50
+ 851              	.L75:
+ 852              		.align	2
+ 853              	.L74:
+ 854 017c 003C0140 		.word	1073822720
+ 855 0180 00000240 		.word	1073872896
+ 856 0184 00080240 		.word	1073874944
+ 857 0188 000C0240 		.word	1073875968
+ 858 018c 00100240 		.word	1073876992
+ 859 0190 00140240 		.word	1073878016
+ 860 0194 00180240 		.word	1073879040
+ 861 0198 001C0240 		.word	1073880064
+ 862 019c 00200240 		.word	1073881088
+ 863 01a0 00240240 		.word	1073882112
+ 864              		.cfi_endproc
+ 865              	.LFE131:
+ 867              		.section	.text.HAL_GPIO_ReadPin,"ax",%progbits
+ 868              		.align	1
+ 869              		.p2align 2,,3
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 26
+
+
+ 870              		.global	HAL_GPIO_ReadPin
+ 871              		.syntax unified
+ 872              		.thumb
+ 873              		.thumb_func
+ 875              	HAL_GPIO_ReadPin:
+ 876              	.LVL82:
+ 877              	.LFB132:
+ 350:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 351:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 352:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @}
+ 353:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 354:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 355:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /** @defgroup GPIO_Exported_Functions_Group2 IO operation functions 
+ 356:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *  @brief   GPIO Read and Write
+ 357:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
+ 358:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** @verbatim
+ 359:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****  ===============================================================================
+ 360:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****                        ##### IO operation functions #####
+ 361:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****  ===============================================================================
+ 362:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 363:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** @endverbatim
+ 364:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @{
+ 365:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 366:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 367:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 368:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  Reads the specified input port pin.
+ 369:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or
+ 370:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *                      x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427
+ 371:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Pin specifies the port bit to read.
+ 372:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *         This parameter can be GPIO_PIN_x where x can be (0..15).
+ 373:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @retval The input port pin value.
+ 374:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 375:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 376:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** {
+ 878              		.loc 1 376 1 is_stmt 1 view -0
+ 879              		.cfi_startproc
+ 880              		@ args = 0, pretend = 0, frame = 0
+ 881              		@ frame_needed = 0, uses_anonymous_args = 0
+ 882              		@ link register save eliminated.
+ 377:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   GPIO_PinState bitstatus;
+ 883              		.loc 1 377 3 view .LVU312
+ 378:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 379:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Check the parameters */
+ 380:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Pin));
+ 884              		.loc 1 380 3 view .LVU313
+ 381:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 382:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   if((GPIOx->IDR & GPIO_Pin) != (uint32_t)GPIO_PIN_RESET)
+ 885              		.loc 1 382 3 view .LVU314
+ 886              		.loc 1 382 12 is_stmt 0 view .LVU315
+ 887 0000 0369     		ldr	r3, [r0, #16]
+ 888              	.LVL83:
+ 383:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 384:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     bitstatus = GPIO_PIN_SET;
+ 385:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 386:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   else
+ 387:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 388:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     bitstatus = GPIO_PIN_RESET;
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 27
+
+
+ 389:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 390:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   return bitstatus;
+ 889              		.loc 1 390 3 is_stmt 1 view .LVU316
+ 382:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 890              		.loc 1 382 5 is_stmt 0 view .LVU317
+ 891 0002 1942     		tst	r1, r3
+ 391:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
+ 892              		.loc 1 391 1 view .LVU318
+ 893 0004 14BF     		ite	ne
+ 894 0006 0120     		movne	r0, #1
+ 895              	.LVL84:
+ 896              		.loc 1 391 1 view .LVU319
+ 897 0008 0020     		moveq	r0, #0
+ 898 000a 7047     		bx	lr
+ 899              		.cfi_endproc
+ 900              	.LFE132:
+ 902              		.section	.text.HAL_GPIO_WritePin,"ax",%progbits
+ 903              		.align	1
+ 904              		.p2align 2,,3
+ 905              		.global	HAL_GPIO_WritePin
+ 906              		.syntax unified
+ 907              		.thumb
+ 908              		.thumb_func
+ 910              	HAL_GPIO_WritePin:
+ 911              	.LVL85:
+ 912              	.LFB133:
+ 392:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 393:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 394:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  Sets or clears the selected data port bit.
+ 395:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
+ 396:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @note   This function uses GPIOx_BSRR register to allow atomic read/modify
+ 397:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *         accesses. In this way, there is no risk of an IRQ occurring between
+ 398:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *         the read and the modify access.
+ 399:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
+ 400:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or
+ 401:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *                      x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427
+ 402:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Pin specifies the port bit to be written.
+ 403:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *          This parameter can be one of GPIO_PIN_x where x can be (0..15).
+ 404:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  PinState specifies the value to be written to the selected bit.
+ 405:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *          This parameter can be one of the GPIO_PinState enum values:
+ 406:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *            @arg GPIO_PIN_RESET: to clear the port pin
+ 407:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *            @arg GPIO_PIN_SET: to set the port pin
+ 408:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @retval None
+ 409:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 410:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)
+ 411:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** {
+ 913              		.loc 1 411 1 is_stmt 1 view -0
+ 914              		.cfi_startproc
+ 915              		@ args = 0, pretend = 0, frame = 0
+ 916              		@ frame_needed = 0, uses_anonymous_args = 0
+ 917              		@ link register save eliminated.
+ 412:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Check the parameters */
+ 413:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Pin));
+ 918              		.loc 1 413 3 view .LVU321
+ 414:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN_ACTION(PinState));
+ 919              		.loc 1 414 3 view .LVU322
+ 415:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 28
+
+
+ 416:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   if(PinState != GPIO_PIN_RESET)
+ 920              		.loc 1 416 3 view .LVU323
+ 921              		.loc 1 416 5 is_stmt 0 view .LVU324
+ 922 0000 02B9     		cbnz	r2, .L80
+ 417:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 418:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     GPIOx->BSRR = GPIO_Pin;
+ 419:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 420:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   else
+ 421:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 422:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     GPIOx->BSRR = (uint32_t)GPIO_Pin << 16U;
+ 923              		.loc 1 422 5 is_stmt 1 view .LVU325
+ 924              		.loc 1 422 38 is_stmt 0 view .LVU326
+ 925 0002 0904     		lsls	r1, r1, #16
+ 926              	.LVL86:
+ 927              	.L80:
+ 928              		.loc 1 422 17 view .LVU327
+ 929 0004 8161     		str	r1, [r0, #24]
+ 423:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 424:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
+ 930              		.loc 1 424 1 view .LVU328
+ 931 0006 7047     		bx	lr
+ 932              		.cfi_endproc
+ 933              	.LFE133:
+ 935              		.section	.text.HAL_GPIO_TogglePin,"ax",%progbits
+ 936              		.align	1
+ 937              		.p2align 2,,3
+ 938              		.global	HAL_GPIO_TogglePin
+ 939              		.syntax unified
+ 940              		.thumb
+ 941              		.thumb_func
+ 943              	HAL_GPIO_TogglePin:
+ 944              	.LVL87:
+ 945              	.LFB134:
+ 425:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 426:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 427:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  Toggles the specified GPIO pins.
+ 428:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIOx Where x can be (A..K) to select the GPIO peripheral for STM32F429X device or
+ 429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *                      x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427
+ 430:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Pin Specifies the pins to be toggled.
+ 431:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @retval None
+ 432:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 433:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** void HAL_GPIO_TogglePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 434:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** {
+ 946              		.loc 1 434 1 is_stmt 1 view -0
+ 947              		.cfi_startproc
+ 948              		@ args = 0, pretend = 0, frame = 0
+ 949              		@ frame_needed = 0, uses_anonymous_args = 0
+ 950              		@ link register save eliminated.
+ 435:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t odr;
+ 951              		.loc 1 435 3 view .LVU330
+ 436:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 437:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Check the parameters */
+ 438:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Pin));
+ 952              		.loc 1 438 3 view .LVU331
+ 439:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 440:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* get current Output Data Register value */
+ 441:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   odr = GPIOx->ODR;
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 29
+
+
+ 953              		.loc 1 441 3 view .LVU332
+ 954              		.loc 1 441 7 is_stmt 0 view .LVU333
+ 955 0000 4369     		ldr	r3, [r0, #20]
+ 956              	.LVL88:
+ 442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 443:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Set selected pins that were at low level, and reset ones that were high */
+ 444:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   GPIOx->BSRR = ((odr & GPIO_Pin) << GPIO_NUMBER) | (~odr & GPIO_Pin);
+ 957              		.loc 1 444 3 is_stmt 1 view .LVU334
+ 958              		.loc 1 444 23 is_stmt 0 view .LVU335
+ 959 0002 01EA0302 		and	r2, r1, r3
+ 960              		.loc 1 444 59 view .LVU336
+ 961 0006 21EA0301 		bic	r1, r1, r3
+ 962              	.LVL89:
+ 963              		.loc 1 444 51 view .LVU337
+ 964 000a 41EA0241 		orr	r1, r1, r2, lsl #16
+ 965              		.loc 1 444 15 view .LVU338
+ 966 000e 8161     		str	r1, [r0, #24]
+ 445:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
+ 967              		.loc 1 445 1 view .LVU339
+ 968 0010 7047     		bx	lr
+ 969              		.cfi_endproc
+ 970              	.LFE134:
+ 972 0012 00BF     		.section	.text.HAL_GPIO_LockPin,"ax",%progbits
+ 973              		.align	1
+ 974              		.p2align 2,,3
+ 975              		.global	HAL_GPIO_LockPin
+ 976              		.syntax unified
+ 977              		.thumb
+ 978              		.thumb_func
+ 980              	HAL_GPIO_LockPin:
+ 981              	.LVL90:
+ 982              	.LFB135:
+ 446:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 447:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 448:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  Locks GPIO Pins configuration registers.
+ 449:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @note   The locked registers are GPIOx_MODER, GPIOx_OTYPER, GPIOx_OSPEEDR,
+ 450:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *         GPIOx_PUPDR, GPIOx_AFRL and GPIOx_AFRH.
+ 451:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @note   The configuration of the locked GPIO pins can no longer be modified
+ 452:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *         until the next reset.
+ 453:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..F) to select the GPIO peripheral for STM32F4 family
+ 454:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Pin specifies the port bit to be locked.
+ 455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *         This parameter can be any combination of GPIO_PIN_x where x can be (0..15).
+ 456:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @retval None
+ 457:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 458:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** HAL_StatusTypeDef HAL_GPIO_LockPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 459:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** {
+ 983              		.loc 1 459 1 is_stmt 1 view -0
+ 984              		.cfi_startproc
+ 985              		@ args = 0, pretend = 0, frame = 8
+ 986              		@ frame_needed = 0, uses_anonymous_args = 0
+ 987              		@ link register save eliminated.
+ 460:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   __IO uint32_t tmp = GPIO_LCKR_LCKK;
+ 988              		.loc 1 460 3 view .LVU341
+ 459:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   __IO uint32_t tmp = GPIO_LCKR_LCKK;
+ 989              		.loc 1 459 1 is_stmt 0 view .LVU342
+ 990 0000 82B0     		sub	sp, sp, #8
+ 991              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 30
+
+
+ 992              		.loc 1 460 17 view .LVU343
+ 993 0002 4FF48033 		mov	r3, #65536
+ 994 0006 0193     		str	r3, [sp, #4]
+ 461:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 462:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Check the parameters */
+ 463:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Pin));
+ 995              		.loc 1 463 3 is_stmt 1 view .LVU344
+ 464:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 465:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Apply lock key write sequence */
+ 466:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   tmp |= GPIO_Pin;
+ 996              		.loc 1 466 3 view .LVU345
+ 997              		.loc 1 466 7 is_stmt 0 view .LVU346
+ 998 0008 019B     		ldr	r3, [sp, #4]
+ 999 000a 0B43     		orrs	r3, r3, r1
+ 1000 000c 0193     		str	r3, [sp, #4]
+ 467:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Set LCKx bit(s): LCKK='1' + LCK[15-0] */
+ 468:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   GPIOx->LCKR = tmp;
+ 1001              		.loc 1 468 3 is_stmt 1 view .LVU347
+ 1002              		.loc 1 468 15 is_stmt 0 view .LVU348
+ 1003 000e 019B     		ldr	r3, [sp, #4]
+ 1004 0010 C361     		str	r3, [r0, #28]
+ 469:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Reset LCKx bit(s): LCKK='0' + LCK[15-0] */
+ 470:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   GPIOx->LCKR = GPIO_Pin;
+ 1005              		.loc 1 470 3 is_stmt 1 view .LVU349
+ 1006              		.loc 1 470 15 is_stmt 0 view .LVU350
+ 1007 0012 C161     		str	r1, [r0, #28]
+ 471:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Set LCKx bit(s): LCKK='1' + LCK[15-0] */
+ 472:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   GPIOx->LCKR = tmp;
+ 1008              		.loc 1 472 3 is_stmt 1 view .LVU351
+ 1009              		.loc 1 472 15 is_stmt 0 view .LVU352
+ 1010 0014 019B     		ldr	r3, [sp, #4]
+ 1011 0016 C361     		str	r3, [r0, #28]
+ 473:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Read LCKR register. This read is mandatory to complete key lock sequence */
+ 474:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   tmp = GPIOx->LCKR;
+ 1012              		.loc 1 474 3 is_stmt 1 view .LVU353
+ 1013              		.loc 1 474 14 is_stmt 0 view .LVU354
+ 1014 0018 C369     		ldr	r3, [r0, #28]
+ 1015              		.loc 1 474 7 view .LVU355
+ 1016 001a 0193     		str	r3, [sp, #4]
+ 475:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 476:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Read again in order to confirm lock is active */
+ 477:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****  if((GPIOx->LCKR & GPIO_LCKR_LCKK) != RESET)
+ 1017              		.loc 1 477 2 is_stmt 1 view .LVU356
+ 1018              		.loc 1 477 11 is_stmt 0 view .LVU357
+ 1019 001c C069     		ldr	r0, [r0, #28]
+ 1020              	.LVL91:
+ 1021              		.loc 1 477 4 view .LVU358
+ 1022 001e 80F48030 		eor	r0, r0, #65536
+ 478:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 479:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     return HAL_OK;
+ 480:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 481:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   else
+ 482:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 483:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     return HAL_ERROR;
+ 484:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 485:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
+ 1023              		.loc 1 485 1 view .LVU359
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 31
+
+
+ 1024 0022 C0F30040 		ubfx	r0, r0, #16, #1
+ 1025 0026 02B0     		add	sp, sp, #8
+ 1026              		.cfi_def_cfa_offset 0
+ 1027              		@ sp needed
+ 1028 0028 7047     		bx	lr
+ 1029              		.cfi_endproc
+ 1030              	.LFE135:
+ 1032 002a 00BF     		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
+ 1033              		.align	1
+ 1034              		.p2align 2,,3
+ 1035              		.weak	HAL_GPIO_EXTI_Callback
+ 1036              		.syntax unified
+ 1037              		.thumb
+ 1038              		.thumb_func
+ 1040              	HAL_GPIO_EXTI_Callback:
+ 1041              	.LVL92:
+ 1042              	.LFB137:
+ 486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 487:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 488:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  This function handles EXTI interrupt request.
+ 489:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Pin Specifies the pins connected EXTI line
+ 490:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @retval None
+ 491:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 492:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)
+ 493:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** {
+ 494:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* EXTI line interrupt detected */
+ 495:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   if(__HAL_GPIO_EXTI_GET_IT(GPIO_Pin) != RESET)
+ 496:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 497:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_Pin);
+ 498:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     HAL_GPIO_EXTI_Callback(GPIO_Pin);
+ 499:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 500:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
+ 501:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 502:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
+ 503:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  EXTI line detection callbacks.
+ 504:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Pin Specifies the pins connected EXTI line
+ 505:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @retval None
+ 506:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
+ 507:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** __weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+ 508:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** {
+ 1043              		.loc 1 508 1 is_stmt 1 view -0
+ 1044              		.cfi_startproc
+ 1045              		@ args = 0, pretend = 0, frame = 0
+ 1046              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1047              		@ link register save eliminated.
+ 509:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Prevent unused argument(s) compilation warning */
+ 510:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   UNUSED(GPIO_Pin);
+ 1048              		.loc 1 510 3 view .LVU361
+ 511:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* NOTE: This function Should not be modified, when the callback is needed,
+ 512:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****            the HAL_GPIO_EXTI_Callback could be implemented in the user file
+ 513:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****    */
+ 514:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
+ 1049              		.loc 1 514 1 is_stmt 0 view .LVU362
+ 1050 0000 7047     		bx	lr
+ 1051              		.cfi_endproc
+ 1052              	.LFE137:
+ 1054 0002 00BF     		.section	.text.HAL_GPIO_EXTI_IRQHandler,"ax",%progbits
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 32
+
+
+ 1055              		.align	1
+ 1056              		.p2align 2,,3
+ 1057              		.global	HAL_GPIO_EXTI_IRQHandler
+ 1058              		.syntax unified
+ 1059              		.thumb
+ 1060              		.thumb_func
+ 1062              	HAL_GPIO_EXTI_IRQHandler:
+ 1063              	.LVL93:
+ 1064              	.LFB136:
+ 493:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* EXTI line interrupt detected */
+ 1065              		.loc 1 493 1 is_stmt 1 view -0
+ 1066              		.cfi_startproc
+ 1067              		@ args = 0, pretend = 0, frame = 0
+ 1068              		@ frame_needed = 0, uses_anonymous_args = 0
+ 495:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 1069              		.loc 1 495 3 view .LVU364
+ 495:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 1070              		.loc 1 495 6 is_stmt 0 view .LVU365
+ 1071 0000 044A     		ldr	r2, .L95
+ 1072 0002 5169     		ldr	r1, [r2, #20]
+ 495:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
+ 1073              		.loc 1 495 5 view .LVU366
+ 1074 0004 0142     		tst	r1, r0
+ 1075 0006 00D1     		bne	.L94
+ 1076 0008 7047     		bx	lr
+ 1077              	.L94:
+ 497:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     HAL_GPIO_EXTI_Callback(GPIO_Pin);
+ 1078              		.loc 1 497 5 is_stmt 1 view .LVU367
+ 493:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* EXTI line interrupt detected */
+ 1079              		.loc 1 493 1 is_stmt 0 view .LVU368
+ 1080 000a 08B5     		push	{r3, lr}
+ 1081              		.cfi_def_cfa_offset 8
+ 1082              		.cfi_offset 3, -8
+ 1083              		.cfi_offset 14, -4
+ 497:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     HAL_GPIO_EXTI_Callback(GPIO_Pin);
+ 1084              		.loc 1 497 5 view .LVU369
+ 1085 000c 5061     		str	r0, [r2, #20]
+ 498:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
+ 1086              		.loc 1 498 5 is_stmt 1 view .LVU370
+ 1087 000e FFF7FEFF 		bl	HAL_GPIO_EXTI_Callback
+ 1088              	.LVL94:
+ 500:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
+ 1089              		.loc 1 500 1 is_stmt 0 view .LVU371
+ 1090 0012 08BD     		pop	{r3, pc}
+ 1091              	.L96:
+ 1092              		.align	2
+ 1093              	.L95:
+ 1094 0014 003C0140 		.word	1073822720
+ 1095              		.cfi_endproc
+ 1096              	.LFE136:
+ 1098              		.text
+ 1099              	.Letext0:
+ 1100              		.file 2 "c:\\users\\pw705\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 1101              		.file 3 "c:\\users\\pw705\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 1102              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h"
+ 1103              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 1104              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 33
+
+
+ 1105              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s 			page 34
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f4xx_hal_gpio.c
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:21     .text.HAL_GPIO_Init:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:28     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:551    .text.HAL_GPIO_Init:00000244 $d
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:566    .text.HAL_GPIO_DeInit:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:573    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:854    .text.HAL_GPIO_DeInit:0000017c $d
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:868    .text.HAL_GPIO_ReadPin:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:875    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:903    .text.HAL_GPIO_WritePin:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:910    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:936    .text.HAL_GPIO_TogglePin:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:943    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:973    .text.HAL_GPIO_LockPin:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:980    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:1033   .text.HAL_GPIO_EXTI_Callback:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:1040   .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:1055   .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:1062   .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
+C:\Users\pw705\AppData\Local\Temp\ccZQZ2vg.s:1094   .text.HAL_GPIO_EXTI_IRQHandler:00000014 $d
+
+NO UNDEFINED SYMBOLS
