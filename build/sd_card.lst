@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
   40 0094 204F7065 		.ascii	" Open file error!\012\000"
   40      6E206669 
   40      6C652065 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 2
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 2
 
 
   40      72726F72 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
   29:Src/sd_card.c **** /**
   30:Src/sd_card.c ****   * @brief  read ok indicator
   31:Src/sd_card.c ****   * @param  
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 3
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 3
 
 
   32:Src/sd_card.c ****   * @retval 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
   76              		.loc 1 64 3 view .LVU6
   77 0008 3DD0     		beq	.L2
   78 000a 0228     		cmp	r0, #2
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 4
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 4
 
 
   79 000c 0BD0     		beq	.L11
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
  106              	.LBB8:
  107              	.LBB9:
   49:Src/sd_card.c **** 		HAL_Delay(4000);
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 5
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 5
 
 
  108              		.loc 1 49 3 view .LVU12
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
   79:Src/sd_card.c **** 				HAL_Delay(10);	
  153              		.loc 1 79 5 view .LVU22
  154 006a 2048     		ldr	r0, .L12+16
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 6
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 6
 
 
  155 006c 0090     		str	r0, [sp]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
   52:Src/sd_card.c **** 	}
  201              		.loc 1 52 3 view .LVU32
  202 00a6 6420     		movs	r0, #100
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 7
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 7
 
 
  203 00a8 FFF7FEFF 		bl	HAL_Delay
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
  248 00dc C8000000 		.word	.LC7
  249 00e0 00000000 		.word	huart6
  250 00e4 00100240 		.word	1073876992
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 8
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 8
 
 
  251 00e8 94000000 		.word	.LC5
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
  291              		.loc 1 102 7 view .LVU48
  292 0008 0022     		movs	r2, #0
  293 000a FFF7FEFF 		bl	f_mount
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 9
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 9
 
 
  294              	.LVL22:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
  311 001a BDE81040 		pop	{r4, lr}
  312              		.cfi_restore 14
  313              		.cfi_restore 4
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 10
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 10
 
 
  314              		.cfi_def_cfa_offset 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
  358 005a FFF7FEFF 		bl	f_close
  359              	.LVL27:
  114:Src/sd_card.c **** 				{
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 11
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 11
 
 
  360              		.loc 1 114 5 view .LVU64
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
  407 00b0 00000000 		.word	bytesread
  408 00b4 00000000 		.word	rtext
  409 00b8 00100240 		.word	1073876992
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 12
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 12
 
 
  410              		.cfi_endproc
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
  463              		.file 3 "c:\\users\\pw705\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
  464              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h"
  465              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 13
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 13
 
 
  466              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
@@ -731,33 +731,33 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 1
  473              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  474              		.file 14 "Inc/bsp_log.h"
  475              		.file 15 "Inc/sd_card.h"
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s 			page 14
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 sd_card.c
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:21     .rodata.error_detect.str1.4:00000000 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:48     .text.error_detect:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:55     .text.error_detect:00000000 error_detect
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:248    .text.error_detect:000000dc $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:262    .rodata.sd_test.str1.4:00000000 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:266    .text.sd_test:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:273    .text.sd_test:00000000 sd_test
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:399    .text.sd_test:00000090 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:458    .bss.SDFatFs:00000000 SDFatFs
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:424    .bss.err:00000000 err
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:451    .bss.buffer:00000000 buffer
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:445    .bss.byteswritten:00000000 byteswritten
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:418    .data.wtext:00000000 wtext
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:438    .bss.bytesread:00000000 bytesread
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:431    .bss.rtext:00000000 rtext
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:415    .data.wtext:00000000 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:425    .bss.err:00000000 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:428    .bss.rtext:00000000 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:435    .bss.bytesread:00000000 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:442    .bss.byteswritten:00000000 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:448    .bss.buffer:00000000 $d
-C:\Users\pw705\AppData\Local\Temp\cc5GVG88.s:455    .bss.SDFatFs:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:21     .rodata.error_detect.str1.4:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:48     .text.error_detect:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:55     .text.error_detect:00000000 error_detect
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:248    .text.error_detect:000000dc $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:262    .rodata.sd_test.str1.4:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:266    .text.sd_test:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:273    .text.sd_test:00000000 sd_test
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:399    .text.sd_test:00000090 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:458    .bss.SDFatFs:00000000 SDFatFs
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:424    .bss.err:00000000 err
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:451    .bss.buffer:00000000 buffer
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:445    .bss.byteswritten:00000000 byteswritten
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:418    .data.wtext:00000000 wtext
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:438    .bss.bytesread:00000000 bytesread
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:431    .bss.rtext:00000000 rtext
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:415    .data.wtext:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:425    .bss.err:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:428    .bss.rtext:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:435    .bss.bytesread:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:442    .bss.byteswritten:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:448    .bss.buffer:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\ccv0HgCZ.s:455    .bss.SDFatFs:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Transmit

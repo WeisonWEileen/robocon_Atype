@@ -2281,7 +2281,7 @@ HAL_StatusTypeDef HAL_SD_ConfigWideBusOperation(SD_HandleTypeDef *hsd, uint32_t 
     /* Clear all the static flags */
     __HAL_SD_CLEAR_FLAG(hsd, SDIO_STATIC_FLAGS);
     hsd->State = HAL_SD_STATE_READY;
-  status = HAL_ERROR;
+    status = HAL_ERROR;
   }
   else
   {

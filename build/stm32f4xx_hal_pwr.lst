@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
   27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @{
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   */
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 2
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 2
 
 
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** /** @defgroup PWR PWR
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
   84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   */
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** 
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** /**
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 3
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 3
 
 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @brief Deinitializes the HAL PWR peripheral registers to their default reset values.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
   63              		.loc 1 109 1 is_stmt 1 view -0
   64              		.cfi_startproc
   65              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 4
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 4
 
 
   66              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  118:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *         backup data registers and backup SRAM).
  119:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @note If the HSE divided by 2, 3, ..31 is used as the RTC clock, the 
  120:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *         Backup Domain Access should be kept enabled.
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 5
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 5
 
 
  121:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @note The following sequence is required to bypass the delay between
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  149              		.section	.text.HAL_PWR_ConfigPVD,"ax",%progbits
  150              		.align	1
  151              		.p2align 2,,3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 6
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 6
 
 
  152              		.global	HAL_PWR_ConfigPVD
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  182:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****         The Sleep mode is entered by using the HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLE
  183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****               functions with
  184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****           (++) PWR_SLEEPENTRY_WFI: enter SLEEP mode with WFI instruction
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 7
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 7
 
 
  185:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****           (++) PWR_SLEEPENTRY_WFE: enter SLEEP mode with WFE instruction
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  239:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****       an external interrupt (Auto-wake-up mode).
  240:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** 
  241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****       (+) RTC auto-wake-up (AWU) from the Stop and Standby modes
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 8
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 8
 
 
  242:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****        
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  273:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   
  177              		.loc 1 273 3 view .LVU37
  178 0008 0468     		ldr	r4, [r0]
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 9
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 9
 
 
  179 000a 22F0E002 		bic	r2, r2, #224
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  219 004c 4B60     		str	r3, [r1, #4]
  220              	.L15:
  291:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   }
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 10
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 10
 
 
  292:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** /**
  306:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @brief Enables the Power Voltage Detector(PVD).
  307:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @retval None
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 11
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 11
 
 
  308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  306              		.align	2
  307              	.L37:
  308 0008 00000E42 		.word	1108213760
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 12
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 12
 
 
  309              		.cfi_endproc
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  348              		.thumb
  349              		.thumb_func
  351              	HAL_PWR_DisableWakeUpPin:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 13
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 13
 
 
  352              	.LVL3:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  363:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * 
  364:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @note In Sleep mode, the systick is stopped to avoid exit from this mode with
  365:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *       systick interrupt when used as time base for Timeout 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 14
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 14
 
 
  366:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *                
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  406 000e 40BF     		sev
  407              	@ 0 "" 2
  398:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****     __WFE();
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 15
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 15
 
 
  408              		.loc 1 398 5 view .LVU82
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  415:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *            @arg PWR_LOWPOWERREGULATOR_ON: Stop mode with low power regulator ON
  416:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   * @param STOPEntry Specifies if Stop mode in entered with WFI or WFE instruction.
  417:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *          This parameter can be one of the following values:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 16
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 16
 
 
  418:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   *            @arg PWR_STOPENTRY_WFI: Enter Stop mode with WFI instruction
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  438:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****     __WFI();
  439:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   }
  440:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   else
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 17
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 17
 
 
  441:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c ****   {
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  521 003c 00ED00E0 		.word	-536810240
  522              		.cfi_endproc
  523              	.LFE139:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 18
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 18
 
 
  525              		.section	.text.HAL_PWR_EnterSTANDBYMode,"ax",%progbits
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  554              	@ 474 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" 1
  555 0014 30BF     		wfi
  556              	@ 0 "" 2
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 19
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 19
 
 
  475:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  504:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** }
  584              		.loc 1 504 1 view .LVU115
  585 0000 7047     		bx	lr
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 20
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 20
 
 
  586              		.cfi_endproc
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  634              		.align	1
  635              		.p2align 2,,3
  636              		.global	HAL_PWR_EnableSleepOnExit
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 21
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 21
 
 
  637              		.syntax unified
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  527:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c **** {
  672              		.loc 1 527 1 is_stmt 1 view -0
  673              		.cfi_startproc
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 22
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 22
 
 
  674              		@ args = 0, pretend = 0, frame = 0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  715              	.L78:
  716 000c 00ED00E0 		.word	-536810240
  717              		.cfi_endproc
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 23
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 23
 
 
  718              	.LFE145:
@@ -1369,60 +1369,60 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 1
  754              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h"
  755              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  756              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h"
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s 			page 24
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal_pwr.c
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:21     .text.HAL_PWR_DeInit:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:28     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:49     .text.HAL_PWR_DeInit:00000014 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:54     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:61     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:96     .text.HAL_PWR_EnableBkUpAccess:00000014 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:102    .text.HAL_PWR_DisableBkUpAccess:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:109    .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:144    .text.HAL_PWR_DisableBkUpAccess:00000014 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:150    .text.HAL_PWR_ConfigPVD:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:157    .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:249    .text.HAL_PWR_ConfigPVD:00000070 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:255    .text.HAL_PWR_EnablePVD:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:262    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:279    .text.HAL_PWR_EnablePVD:00000008 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:284    .text.HAL_PWR_DisablePVD:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:291    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:308    .text.HAL_PWR_DisablePVD:00000008 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:313    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:320    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:339    .text.HAL_PWR_EnableWakeUpPin:0000000c $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:344    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:351    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:370    .text.HAL_PWR_DisableWakeUpPin:0000000c $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:375    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:382    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:432    .text.HAL_PWR_EnterSLEEPMode:0000001c $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:437    .text.HAL_PWR_EnterSTOPMode:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:444    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:520    .text.HAL_PWR_EnterSTOPMode:00000038 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:526    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:533    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:564    .text.HAL_PWR_EnterSTANDBYMode:00000018 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:570    .text.HAL_PWR_PVDCallback:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:577    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:590    .text.HAL_PWR_PVD_IRQHandler:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:597    .text.HAL_PWR_PVD_IRQHandler:00000000 HAL_PWR_PVD_IRQHandler
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:629    .text.HAL_PWR_PVD_IRQHandler:00000018 $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:634    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:641    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:658    .text.HAL_PWR_EnableSleepOnExit:0000000c $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:663    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:670    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:687    .text.HAL_PWR_DisableSleepOnExit:0000000c $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:692    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:699    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:716    .text.HAL_PWR_EnableSEVOnPend:0000000c $d
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:721    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:728    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
-C:\Users\pw705\AppData\Local\Temp\ccCG9L5a.s:745    .text.HAL_PWR_DisableSEVOnPend:0000000c $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:21     .text.HAL_PWR_DeInit:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:28     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:49     .text.HAL_PWR_DeInit:00000014 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:54     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:61     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:96     .text.HAL_PWR_EnableBkUpAccess:00000014 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:102    .text.HAL_PWR_DisableBkUpAccess:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:109    .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:144    .text.HAL_PWR_DisableBkUpAccess:00000014 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:150    .text.HAL_PWR_ConfigPVD:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:157    .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:249    .text.HAL_PWR_ConfigPVD:00000070 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:255    .text.HAL_PWR_EnablePVD:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:262    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:279    .text.HAL_PWR_EnablePVD:00000008 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:284    .text.HAL_PWR_DisablePVD:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:291    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:308    .text.HAL_PWR_DisablePVD:00000008 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:313    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:320    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:339    .text.HAL_PWR_EnableWakeUpPin:0000000c $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:344    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:351    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:370    .text.HAL_PWR_DisableWakeUpPin:0000000c $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:375    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:382    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:432    .text.HAL_PWR_EnterSLEEPMode:0000001c $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:437    .text.HAL_PWR_EnterSTOPMode:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:444    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:520    .text.HAL_PWR_EnterSTOPMode:00000038 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:526    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:533    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:564    .text.HAL_PWR_EnterSTANDBYMode:00000018 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:570    .text.HAL_PWR_PVDCallback:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:577    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:590    .text.HAL_PWR_PVD_IRQHandler:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:597    .text.HAL_PWR_PVD_IRQHandler:00000000 HAL_PWR_PVD_IRQHandler
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:629    .text.HAL_PWR_PVD_IRQHandler:00000018 $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:634    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:641    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:658    .text.HAL_PWR_EnableSleepOnExit:0000000c $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:663    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:670    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:687    .text.HAL_PWR_DisableSleepOnExit:0000000c $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:692    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:699    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:716    .text.HAL_PWR_EnableSEVOnPend:0000000c $d
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:721    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:728    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
+C:\Users\pw705\AppData\Local\Temp\ccYwKcSM.s:745    .text.HAL_PWR_DisableSEVOnPend:0000000c $d
 
 NO UNDEFINED SYMBOLS

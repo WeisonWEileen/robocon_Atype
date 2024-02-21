@@ -4,6 +4,8 @@
     "files.associations": {
         "segger_rtt_conf.h": "c",
         "segger_rtt.h": "c",
-        "ffconf.h": "c"
+        "ffconf.h": "c",
+        "struct_typedef.h": "c",
+        "usart.h": "c"
     }
 }

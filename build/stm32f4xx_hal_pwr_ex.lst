@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
   27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   */
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** 
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** /** @defgroup PWREx PWREx
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 2
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 2
 
 
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @brief PWR HAL module driver
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
   84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****           the Flash interface when a protection level change from level 1 to 
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****           level 0 is requested. 
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       -@- Refer to the description of Read protection (RDP) in the Flash 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 3
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 3
 
 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****           programming manual.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  141:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** HAL_StatusTypeDef HAL_PWREx_EnableBkUpReg(void)
  142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** {
   30              		.loc 1 142 1 view -0
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 4
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 4
 
 
   31              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
   70              	.L2:
   71              		.loc 1 153 5 is_stmt 1 view .LVU14
  151:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   {
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 5
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 5
 
 
   72              		.loc 1 151 42 view .LVU15
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  167:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   uint32_t tickstart = 0U;
  112              		.loc 1 167 3 view .LVU24
  113              	.LVL7:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 6
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 6
 
 
  168:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  152 0020 6B68     		ldr	r3, [r5, #4]
  175:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   {
  153              		.loc 1 175 42 view .LVU40
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 7
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 7
 
 
  154 0022 13F00803 		ands	r3, r3, #8
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  195 0004 5A62     		str	r2, [r3, #36]
  192:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** }
  196              		.loc 1 192 1 view .LVU49
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 8
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 8
 
 
  197 0006 7047     		bx	lr
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  204:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @brief Return Voltage Scaling Range.
  205:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @retval The configured scale for the regulator voltage(VOS bit field).
  206:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   *         The returned value can be one of the following:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 9
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 9
 
 
  207:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   *            - @arg PWR_REGULATOR_VOLTAGE_SCALE1: Regulator voltage output Scale 1 mode
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** {
  234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   uint32_t tickstart = 0U;
  235:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 10
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 10
 
 
  236:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   assert_param(IS_PWR_VOLTAGE_SCALING_RANGE(VoltageScaling));
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  274              		.loc 1 289 1 is_stmt 1 view -0
  275              		.cfi_startproc
  276              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 11
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 11
 
 
  277              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  318 0026 224B     		ldr	r3, .L39+4
  319 0028 1A66     		str	r2, [r3, #96]
  320 002a 0646     		mov	r6, r0
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 12
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 12
 
 
  321              		.loc 1 301 5 is_stmt 1 view .LVU73
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     
  317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     /* Enable the main PLL */
  318:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     __HAL_RCC_PLL_ENABLE();
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 13
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 13
 
 
  358              		.loc 1 318 5 is_stmt 0 view .LVU89
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  396              	.LVL23:
  397              		.loc 1 325 25 view .LVU103
  398 0072 001B     		subs	r0, r0, r4
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 14
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 14
 
 
  399              		.loc 1 325 9 view .LVU104
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  333:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     {
  437              		.loc 1 333 48 view .LVU121
  438 0096 5B04     		lsls	r3, r3, #17
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 15
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 15
 
 
  439 0098 F6D5     		bpl	.L35
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  480              		.thumb_func
  482              	HAL_PWREx_EnableOverDrive:
  483              	.LFB136:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 16
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 16
 
 
  348:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  402:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** /**
  403:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @brief  Activates the Over-Drive mode.
  404:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @note   This function can be used only for STM32F42xx/STM32F43xx/STM32F446xx/STM32F469xx/STM32F
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 17
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 17
 
 
  405:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   *         This mode allows the CPU and the core logic to operate at a higher frequency
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  514              		.loc 1 417 3 is_stmt 1 view .LVU136
  515 000e 1A6C     		ldr	r2, [r3, #64]
  516 0010 42F08052 		orr	r2, r2, #268435456
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 18
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 18
 
 
  517 0014 1A64     		str	r2, [r3, #64]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  558 003a DA03     		lsls	r2, r3, #15
  559 003c F6D5     		bpl	.L44
  428:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     {
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 19
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 19
 
 
  429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       return HAL_TIMEOUT;
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  443:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       return HAL_TIMEOUT;
  444:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     }
  445:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   } 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 20
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 20
 
 
  446:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   return HAL_OK;
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  633              		.loc 1 461 1 is_stmt 1 view -0
  634              		.cfi_startproc
  635              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 21
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 21
 
 
  636              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  464:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     
  674              		.loc 1 464 3 view .LVU185
  467:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 22
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 22
 
 
  675              		.loc 1 467 3 view .LVU186
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  709              		.loc 1 484 15 is_stmt 0 view .LVU200
  710 0044 FFF7FEFF 		bl	HAL_GetTick
  711              	.LVL47:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 23
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 23
 
 
  712 0048 0446     		mov	r4, r0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  755              	.L61:
  756 006c 00380240 		.word	1073887232
  757 0070 00000E42 		.word	1108213760
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 24
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 24
 
 
  758 0074 00700040 		.word	1073770496
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  537:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** {
  773              		.loc 1 537 1 is_stmt 1 view -0
  774              		.cfi_startproc
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 25
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 25
 
 
  775              		@ args = 0, pretend = 0, frame = 8
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  556:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   tmpreg1 &= (uint32_t)~(PWR_CR_PDDS | PWR_CR_LPDS | PWR_CR_LPUDS | PWR_CR_MRUDS);
  557:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   
  558:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   /* Set LPDS, MRLUDS and LPLUDS bits according to PWR_Regulator value */
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 26
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 26
 
 
  559:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   tmpreg1 |= Regulator;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  562:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   
  842              		.loc 1 562 11 is_stmt 0 view .LVU239
  843 003c 1360     		str	r3, [r2]
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 27
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 27
 
 
  844              		.loc 1 565 3 is_stmt 1 view .LVU240
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  878              		.cfi_remember_state
  879              		.cfi_def_cfa_offset 4
  880              		@ sp needed
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 28
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 28
 
 
  881 005a 5DF8044B 		ldr	r4, [sp], #4
@@ -1654,38 +1654,38 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 1
  911              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  912              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  913              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s 			page 29
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s 			page 29
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal_pwr_ex.c
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:21     .text.HAL_PWREx_EnableBkUpReg:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:28     .text.HAL_PWREx_EnableBkUpReg:00000000 HAL_PWREx_EnableBkUpReg
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:93     .text.HAL_PWREx_EnableBkUpReg:00000030 $d
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:99     .text.HAL_PWREx_DisableBkUpReg:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:106    .text.HAL_PWREx_DisableBkUpReg:00000000 HAL_PWREx_DisableBkUpReg
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:171    .text.HAL_PWREx_DisableBkUpReg:00000030 $d
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:177    .text.HAL_PWREx_EnableFlashPowerDown:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:184    .text.HAL_PWREx_EnableFlashPowerDown:00000000 HAL_PWREx_EnableFlashPowerDown
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:201    .text.HAL_PWREx_EnableFlashPowerDown:00000008 $d
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:206    .text.HAL_PWREx_DisableFlashPowerDown:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:213    .text.HAL_PWREx_DisableFlashPowerDown:00000000 HAL_PWREx_DisableFlashPowerDown
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:230    .text.HAL_PWREx_DisableFlashPowerDown:00000008 $d
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:235    .text.HAL_PWREx_GetVoltageRange:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:242    .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:259    .text.HAL_PWREx_GetVoltageRange:0000000c $d
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:264    .text.HAL_PWREx_ControlVoltageScaling:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:271    .text.HAL_PWREx_ControlVoltageScaling:00000000 HAL_PWREx_ControlVoltageScaling
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:468    .text.HAL_PWREx_ControlVoltageScaling:000000ac $d
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:475    .text.HAL_PWREx_EnableOverDrive:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:482    .text.HAL_PWREx_EnableOverDrive:00000000 HAL_PWREx_EnableOverDrive
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:617    .text.HAL_PWREx_EnableOverDrive:0000006c $d
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:624    .text.HAL_PWREx_DisableOverDrive:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:631    .text.HAL_PWREx_DisableOverDrive:00000000 HAL_PWREx_DisableOverDrive
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:756    .text.HAL_PWREx_DisableOverDrive:0000006c $d
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:763    .text.HAL_PWREx_EnterUnderDriveSTOPMode:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:770    .text.HAL_PWREx_EnterUnderDriveSTOPMode:00000000 HAL_PWREx_EnterUnderDriveSTOPMode
-C:\Users\pw705\AppData\Local\Temp\ccob25Kg.s:899    .text.HAL_PWREx_EnterUnderDriveSTOPMode:00000064 $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:21     .text.HAL_PWREx_EnableBkUpReg:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:28     .text.HAL_PWREx_EnableBkUpReg:00000000 HAL_PWREx_EnableBkUpReg
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:93     .text.HAL_PWREx_EnableBkUpReg:00000030 $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:99     .text.HAL_PWREx_DisableBkUpReg:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:106    .text.HAL_PWREx_DisableBkUpReg:00000000 HAL_PWREx_DisableBkUpReg
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:171    .text.HAL_PWREx_DisableBkUpReg:00000030 $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:177    .text.HAL_PWREx_EnableFlashPowerDown:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:184    .text.HAL_PWREx_EnableFlashPowerDown:00000000 HAL_PWREx_EnableFlashPowerDown
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:201    .text.HAL_PWREx_EnableFlashPowerDown:00000008 $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:206    .text.HAL_PWREx_DisableFlashPowerDown:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:213    .text.HAL_PWREx_DisableFlashPowerDown:00000000 HAL_PWREx_DisableFlashPowerDown
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:230    .text.HAL_PWREx_DisableFlashPowerDown:00000008 $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:235    .text.HAL_PWREx_GetVoltageRange:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:242    .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:259    .text.HAL_PWREx_GetVoltageRange:0000000c $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:264    .text.HAL_PWREx_ControlVoltageScaling:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:271    .text.HAL_PWREx_ControlVoltageScaling:00000000 HAL_PWREx_ControlVoltageScaling
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:468    .text.HAL_PWREx_ControlVoltageScaling:000000ac $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:475    .text.HAL_PWREx_EnableOverDrive:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:482    .text.HAL_PWREx_EnableOverDrive:00000000 HAL_PWREx_EnableOverDrive
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:617    .text.HAL_PWREx_EnableOverDrive:0000006c $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:624    .text.HAL_PWREx_DisableOverDrive:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:631    .text.HAL_PWREx_DisableOverDrive:00000000 HAL_PWREx_DisableOverDrive
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:756    .text.HAL_PWREx_DisableOverDrive:0000006c $d
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:763    .text.HAL_PWREx_EnterUnderDriveSTOPMode:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:770    .text.HAL_PWREx_EnterUnderDriveSTOPMode:00000000 HAL_PWREx_EnterUnderDriveSTOPMode
+C:\Users\pw705\AppData\Local\Temp\cc8d11dT.s:899    .text.HAL_PWREx_EnterUnderDriveSTOPMode:00000064 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

@@ -18,6 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "can.h"
+#include "dma.h"
 #include "fatfs.h"
 #include "sdio.h"
 #include "usart.h"
@@ -27,6 +29,9 @@
 /* USER CODE BEGIN Includes */
 #include "sd_card.h"
 #include "bsp_log.h"
+#include "bsp_can.h"
+#include "chasis.h"
+#include "sbus.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,18 +96,25 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_SDIO_SD_Init();
   MX_FATFS_Init();
   MX_USART6_UART_Init();
+  MX_CAN1_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   led_off();
+  can_filter_init();
   /* Initializes the SD card device */
-  SEGGER_RTT_Init();
-  SEGGER_RTT_printf(0, "Hello world !"); // 原接口
-  BSP_SD_Init();
+  // SEGGER_RTT_Init();
+  // SEGGER_RTT_printf(0, "Hello world !");
+  // BSP_SD_Init();
 
   /* SD card test */
-  sd_test();
+  // sd_test();
+  HAL_Delay(10);     // delay????canReceive????????
+  motor_data_init(); // desireRpm = 0
+  sbus_init();
 
   /* USER CODE END 2 */
 
@@ -110,14 +122,14 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
+    // MotorTask();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
     /* error detect */
-    error_detect(err);
-    HAL_GPIO_TogglePin(GPIOF, LED_GREEN_Pin);
-    HAL_Delay(500);
+    // error_detect(err);
+    // HAL_GPIO_TogglePin(GPIOF, LED_GREEN_Pin);
+    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -169,6 +181,28 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/**
+ * @brief  Period elapsed callback in non blocking mode
+ * @note   This function is called  when TIM14 interrupt took place, inside
+ * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+ * a global variable "uwTick" used as application time base.
+ * @param  htim : TIM handle
+ * @retval None
+ */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM14)
+  {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
  * @brief  This function is executed in case of error occurrence.

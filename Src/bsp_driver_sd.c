@@ -59,7 +59,7 @@ __weak uint8_t BSP_SD_Init(void)
   if (sd_state == MSD_OK)
   {
     /* Enable wide operation */
-     if (HAL_SD_ConfigWideBusOperation(&hsd, SDIO_BUS_WIDE_4B) != HAL_OK)
+    if (HAL_SD_ConfigWideBusOperation(&hsd, SDIO_BUS_WIDE_4B) != HAL_OK)
     {
       sd_state = MSD_ERROR;
     }
@@ -246,20 +246,20 @@ void HAL_SD_AbortCallback(SD_HandleTypeDef *hsd)
   * @param hsd: SD handle
   * @retval None
   */
-// void HAL_SD_TxCpltCallback(SD_HandleTypeDef *hsd)
-// {
-//   BSP_SD_WriteCpltCallback();
-// }
+void HAL_SD_TxCpltCallback(SD_HandleTypeDef *hsd)
+{
+  BSP_SD_WriteCpltCallback();
+}
 
 /**
   * @brief Rx Transfer completed callback
   * @param hsd: SD handle
   * @retval None
   */
-// void HAL_SD_RxCpltCallback(SD_HandleTypeDef *hsd)
-// {
-//   BSP_SD_ReadCpltCallback();
-// }
+void HAL_SD_RxCpltCallback(SD_HandleTypeDef *hsd)
+{
+  BSP_SD_ReadCpltCallback();
+}
 
 /* USER CODE BEGIN CallBacksSection_C */
 /**
@@ -277,10 +277,10 @@ __weak void BSP_SD_AbortCallback(void)
   * @retval None
   * @note empty (up to the user to fill it in or to remove it if useless)
   */
-// __weak void BSP_SD_WriteCpltCallback(void)
-// {
+__weak void BSP_SD_WriteCpltCallback(void)
+{
 
-// }
+}
 
 /**
   * @brief BSP Rx Transfer completed callback
@@ -303,9 +303,10 @@ __weak uint8_t BSP_SD_IsDetected(void)
 {
   __IO uint8_t status = SD_PRESENT;
 
-  /* USER CODE BEGIN 1 */
-  /* user code can be inserted here */
-  /* USER CODE END 1 */
+  if (BSP_PlatformIsDetected() == 0x0)
+  {
+    status = SD_NOT_PRESENT;
+  }
 
   return status;
 }

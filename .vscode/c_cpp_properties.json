@@ -9,7 +9,10 @@
         "Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
         "Inc",
         "Middlewares/Third_Party/FatFs/src",
-        "Middlewares/Third_Party/FatFs/src/RTT"
+        "Middlewares/Third_Party/FatFs/src/RTT",
+        "bsp/can",
+        "bsp/remote",
+        "module/chasis"
       ],
       "defines": [
         "STM32F427xx",

@@ -59,7 +59,7 @@ DSTATUS disk_initialize (
     disk.is_initialized[pdrv] = 1;
     stat = disk.drv[pdrv]->disk_initialize(disk.lun[pdrv]);
   }
-  return  stat;
+  return stat;
 }
 
 /**

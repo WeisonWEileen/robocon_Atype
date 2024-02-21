@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
   26:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @attention
   27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * Copyright (c) 2017 STMicroelectronics.
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 2
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 2
 
 
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * All rights reserved.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
   83:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       (+) Change on the fly the memory0 or memory1 address.
   84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** @endverbatim
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 3
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 3
 
 
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @{
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
   53 000e 07D0     		beq	.L5
   54              		.loc 1 116 5 discriminator 2 view .LVU9
  117:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 4
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 4
 
 
  118:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     if(HAL_DMA_STATE_READY == hdma->State)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
   80              	.LVL3:
   81              	.L11:
   82              		.cfi_restore_state
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 5
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 5
 
 
  121:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  174:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
  175:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   /* Process locked */
  176:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   __HAL_LOCK(hdma);
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 6
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 6
 
 
  177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  231:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                     the following values:
  232:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                      MEMORY0 /
  233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   *                      MEMORY1
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 7
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 7
 
 
  234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   * @note   The MEMORY0 address can be changed only when the current transfer use
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  103              		.loc 1 127 28 view .LVU28
  104 003a 2361     		str	r3, [r4, #16]
  130:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****       
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 8
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 8
 
 
  105              		.loc 1 130 7 is_stmt 1 view .LVU29
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  138 004c 43F00103 		orr	r3, r3, #1
  102:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   
  139              		.loc 1 102 21 is_stmt 0 view .LVU45
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 9
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 9
 
 
  140 0050 0020     		movs	r0, #0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  186              	HAL_DMAEx_MultiBufferStart_IT:
  187              	.LVL16:
  188              	.LFB131:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 10
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 10
 
 
  155:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  227 0020 4FF0010C 		mov	ip, #1
  178:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   {
  228              		.loc 1 178 5 discriminator 2 view .LVU72
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 11
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 11
 
 
  229 0024 6445     		cmp	r4, ip
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  268              	.LVL23:
  172:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****   }
  269              		.loc 1 172 5 is_stmt 1 view .LVU88
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 12
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 12
 
 
  270              	.L14:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  187:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     
  310              		.loc 1 187 24 view .LVU103
  311 0058 46F48026 		orr	r6, r6, #262144
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 13
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 13
 
 
  312 005c 2660     		str	r6, [r4]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  350 0070 E260     		strne	r2, [r4, #12]
  351              	.LVL32:
  352              		.loc 1 297 26 view .LVU122
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 14
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 14
 
 
  353              	.LBE12:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  397 00c8 9D4B     		ldr	r3, .L461+40
  398 00ca 9C42     		cmp	r4, r3
  399 00cc 00F01C85 		beq	.L398
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 15
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 15
 
 
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  441              	.L137:
  442 0110 824B     		ldr	r3, .L461+4
  443 0112 9C42     		cmp	r4, r3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 16
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 16
 
 
  444 0114 00F0E880 		beq	.L51
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  488 015e 00F00182 		beq	.L406
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
  489              		.loc 1 196 5 discriminator 108 view .LVU156
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 17
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 17
 
 
  490 0162 704B     		ldr	r3, .L461+12
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
  533              		.loc 1 196 5 view .LVU168
  534 01b6 D160     		str	r1, [r2, #12]
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 18
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 18
 
 
  535              	.LVL39:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
  578              		.loc 1 200 5 view .LVU180
  579              	.L49:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 19
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 19
 
 
  580 0204 0122     		movs	r2, #1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  618              		.loc 1 212 5 view .LVU196
  619 0230 2360     		str	r3, [r4]
  223:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 20
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 20
 
 
  620              		.loc 1 223 1 view .LVU197
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  665 0280 9C42     		cmp	r4, r3
  666 0282 00F06B84 		beq	.L60
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 21
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 21
 
 
  667              		.loc 1 196 5 discriminator 69 view .LVU207
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  710              	.L260:
  711 02d4 4022     		movs	r2, #64
  712              	.L302:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 22
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 22
 
 
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  755 02fe 1021     		movs	r1, #16
  756 0300 D160     		str	r1, [r2, #12]
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 23
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 23
 
 
  757              		.loc 1 198 5 view .LVU231
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  803 0368 B24B     		ldr	r3, .L463+8
  804 036a 9C42     		cmp	r4, r3
  805 036c 00F0FE80 		beq	.L424
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 24
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 24
 
 
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
  849              		.loc 1 196 5 view .LVU251
  850 03c6 9960     		str	r1, [r3, #8]
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 25
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 25
 
 
  851              	.LVL56:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  892              		.loc 1 198 5 view .LVU264
  893 0414 4FF00071 		mov	r1, #33554432
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 26
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 26
 
 
  894              		.loc 1 199 5 view .LVU265
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  938              		.loc 1 198 5 view .LVU275
  939 0458 C3F8F813 		str	r1, [r3, #1016]
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 27
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 27
 
 
  940              		.loc 1 199 5 is_stmt 1 view .LVU276
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
  982              		.loc 1 198 5 view .LVU289
  983 0488 2EE7     		b	.L51
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 28
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 28
 
 
  984              	.LVL69:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1025              		.loc 1 199 5 is_stmt 0 view .LVU302
  1026 04b0 0422     		movs	r2, #4
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 29
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 29
 
 
  1027              		.loc 1 198 5 view .LVU303
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1067              	.L53:
  1068 04da 604B     		ldr	r3, .L463+48
  1069 04dc 1022     		movs	r2, #16
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 30
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 30
 
 
  1070 04de DA60     		str	r2, [r3, #12]
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
  1114              		.loc 1 197 5 is_stmt 1 view .LVU328
  1115              	.L75:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 31
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 31
 
 
  1116 051a 524B     		ldr	r3, .L463+56
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
  1159              		.loc 1 197 5 is_stmt 1 view .LVU340
  1160 0546 43F81C2C 		str	r2, [r3, #-28]
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 32
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 32
 
 
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1202              	.LVL107:
  1203              	.L55:
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 33
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 33
 
 
  1204              		.loc 1 196 5 is_stmt 0 view .LVU354
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1246 05a6 2D4B     		ldr	r3, .L463+48
  1247 05a8 4FF48072 		mov	r2, #256
  1248 05ac DA60     		str	r2, [r3, #12]
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 34
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 34
 
 
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1291              		.loc 1 196 5 view .LVU378
  1292 05d8 9960     		str	r1, [r3, #8]
  1293              	.LVL123:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 35
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 35
 
 
  197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1333              	.L426:
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
  1334              		.loc 1 196 5 is_stmt 0 view .LVU394
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 36
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 36
 
 
  1335 060e 4FF40061 		mov	r1, #2048
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1380              		.loc 1 196 5 view .LVU403
  1381 066c C3F8CC23 		str	r2, [r3, #972]
  1382              	.LVL137:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 37
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 37
 
 
  197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1425 06b2 9442     		cmp	r4, r2
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
  1426              		.loc 1 198 5 view .LVU416
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 38
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 38
 
 
  1427 06b4 9960     		str	r1, [r3, #8]
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1471              		.loc 1 199 5 discriminator 71 view .LVU426
  1472 0710 A3F56873 		sub	r3, r3, #928
  1473 0714 9C42     		cmp	r4, r3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 39
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 39
 
 
  1474 0716 00F0CE83 		beq	.L254
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1517 076c 03F58063 		add	r3, r3, #1024
  1518 0770 9C42     		cmp	r4, r3
  1519 0772 3FF4F1AE 		beq	.L71
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 40
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 40
 
 
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1564              		.loc 1 200 5 view .LVU447
  1565 07d4 4C4B     		ldr	r3, .L465+44
  1566 07d6 9C42     		cmp	r4, r3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 41
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 41
 
 
  1567 07d8 3FF417AF 		beq	.L38
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1613 082a 9C42     		cmp	r4, r3
  1614 082c 40F29B80 		bls	.L277
  1615              	.L296:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 42
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 42
 
 
  1616 0830 344B     		ldr	r3, .L465+40
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1661              		.loc 1 199 5 is_stmt 0 view .LVU464
  1662 0886 174B     		ldr	r3, .L465+8
  1663 0888 4FF48072 		mov	r2, #256
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 43
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 43
 
 
  1664 088c 9A60     		str	r2, [r3, #8]
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1705              	.LVL141:
  1706              	.L57:
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 44
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 44
 
 
  1707              		.loc 1 196 5 is_stmt 0 view .LVU478
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1753 092a 9C42     		cmp	r4, r3
  1754 092c 00F0B583 		beq	.L271
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 45
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 45
 
 
  1755              		.loc 1 199 5 discriminator 122 view .LVU487
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1800 0990 03F58063 		add	r3, r3, #1024
  1801 0994 9C42     		cmp	r4, r3
  1802 0996 3FF49DAC 		beq	.L260
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 46
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 46
 
 
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1845              		.loc 1 197 5 is_stmt 1 view .LVU508
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
  1846              		.loc 1 198 5 is_stmt 0 view .LVU509
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 47
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 47
 
 
  1847 09de 4FF40072 		mov	r2, #512
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
  1888              		.loc 1 197 5 is_stmt 1 view .LVU523
  1889              	.L59:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 48
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 48
 
 
  1890 0a10 804B     		ldr	r3, .L467+44
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1930              		.loc 1 198 5 is_stmt 0 view .LVU537
  1931 0a42 A3F58563 		sub	r3, r3, #1064
  1932 0a46 4FF40072 		mov	r2, #512
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 49
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 49
 
 
  1933 0a4a 9A60     		str	r2, [r3, #8]
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  1973              		.loc 1 198 5 view .LVU551
  1974 0a82 9C42     		cmp	r4, r3
  197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 50
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 50
 
 
  1975              		.loc 1 197 5 view .LVU552
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2018 0acc 3FF4FEAB 		beq	.L167
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
  2019              		.loc 1 199 5 discriminator 161 view .LVU564
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 51
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 51
 
 
  2020 0ad0 03F58063 		add	r3, r3, #1024
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2063              	.LVL170:
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
  2064              		.loc 1 196 5 view .LVU576
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 52
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 52
 
 
  2065 0b0c C3F86C23 		str	r2, [r3, #876]
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2105 0b44 00F21382 		bhi	.L196
  2106 0b48 A3F56873 		sub	r3, r3, #928
  2107 0b4c 9C42     		cmp	r4, r3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 53
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 53
 
 
  2108 0b4e 00F29682 		bhi	.L380
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
  2150              		.loc 1 199 5 view .LVU603
  2151 0b84 9C42     		cmp	r4, r3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 54
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 54
 
 
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2192 0bc4 9442     		cmp	r4, r2
  2193 0bc6 00F09880 		beq	.L156
  2194 0bca 4FF08072 		mov	r2, #16777216
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 55
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 55
 
 
  2195 0bce DA60     		str	r2, [r3, #12]
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2244 0c4a A84B     		ldr	r3, .L469+16
  2245 0c4c 9C42     		cmp	r4, r3
  2246 0c4e 00F07E81 		beq	.L299
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 56
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 56
 
 
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2291 0c9a 2ED0     		beq	.L156
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
  2292              		.loc 1 199 5 view .LVU633
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 57
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 57
 
 
  2293 0c9c 8F4A     		ldr	r2, .L469
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2335              	.L399:
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
  2336              		.loc 1 196 5 is_stmt 0 view .LVU646
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 58
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 58
 
 
  2337 0ce0 4FF40012 		mov	r2, #2097152
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2381 0d20 7B4B     		ldr	r3, .L469+52
  2382 0d22 9C42     		cmp	r4, r3
  2383 0d24 3FF4B7AB 		beq	.L30
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 59
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 59
 
 
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2426 0d74 634B     		ldr	r3, .L469+40
  2427 0d76 9C42     		cmp	r4, r3
  2428 0d78 7FF4A4AC 		bne	.L198
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 60
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 60
 
 
  2429 0d7c 0423     		movs	r3, #4
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2471 0dba 3FF4CDAB 		beq	.L71
  2472 0dbe 494B     		ldr	r3, .L469+8
  2473 0dc0 9C42     		cmp	r4, r3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 61
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 61
 
 
  2474 0dc2 3FF4C9AB 		beq	.L71
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2521 0e28 3FF438AB 		beq	.L145
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
  2522              		.loc 1 199 5 view .LVU688
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 62
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 62
 
 
  2523 0e2c 394B     		ldr	r3, .L469+56
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
  2566              		.loc 1 197 5 is_stmt 1 view .LVU700
  2567 0e72 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 63
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 63
 
 
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2609              	.L429:
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
  2610              		.loc 1 196 5 is_stmt 0 view .LVU714
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 64
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 64
 
 
  2611 0ea4 4FF40011 		mov	r1, #2097152
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2652 0ed8 22E6     		b	.L69
  2653              	.L470:
  2654 0eda 00BF     		.align	2
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 65
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 65
 
 
  2655              	.L469:
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
  2702              		.loc 1 200 5 is_stmt 0 discriminator 118 view .LVU735
  2703 0f46 B04B     		ldr	r3, .L471+8
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 66
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 66
 
 
  2704 0f48 9C42     		cmp	r4, r3
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2750 0fa6 FFF76FBB 		b	.L114
  2751              	.LVL213:
  2752              	.L128:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 67
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 67
 
 
  197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_TE_FLAG_INDEX(hdma));
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2796              	.LVL217:
  2797              	.L413:
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_HT_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 68
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 68
 
 
  2798              		.loc 1 196 5 is_stmt 0 view .LVU755
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2839 102a 3FF43DAC 		beq	.L171
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
  2840              		.loc 1 199 5 discriminator 169 view .LVU769
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 69
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 69
 
 
  2841 102e 7B4B     		ldr	r3, .L471+28
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2883              		.loc 1 199 5 is_stmt 1 view .LVU781
  2884 107c AEE6     		b	.L153
  2885              	.L380:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 70
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 70
 
 
  2886 107e A83B     		subs	r3, r3, #168
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
  2928              		.loc 1 198 5 is_stmt 0 discriminator 118 view .LVU794
  2929 10c0 514B     		ldr	r3, .L471+8
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 71
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 71
 
 
  2930 10c2 9C42     		cmp	r4, r3
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  2971 1100 9A60     		str	r2, [r3, #8]
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
  2972              		.loc 1 199 5 is_stmt 1 view .LVU808
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 72
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 72
 
 
  2973 1102 FFF750BA 		b	.L111
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  3017 114e 3FF48EA9 		beq	.L329
  3018 1152 354B     		ldr	r3, .L471+40
  3019 1154 9C42     		cmp	r4, r3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 73
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 73
 
 
  3020 1156 0DD0     		beq	.L455
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  3064              		.loc 1 199 5 view .LVU828
  3065 11a6 164B     		ldr	r3, .L471
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_DME_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 74
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 74
 
 
  3066              		.loc 1 198 5 view .LVU829
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  3108              		.loc 1 200 5 is_stmt 0 view .LVU841
  3109 11ea 0B4B     		ldr	r3, .L471+24
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c ****     __HAL_DMA_CLEAR_FLAG (hdma, __HAL_DMA_GET_FE_FLAG_INDEX(hdma));
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 75
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 75
 
 
  3110              		.loc 1 199 5 view .LVU842
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  3156 1254 144B     		ldr	r3, .L473+12
  3157 1256 0422     		movs	r2, #4
  3158 1258 DA60     		str	r2, [r3, #12]
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 76
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 76
 
 
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c **** 
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  3203 12b0 88640240 		.word	1073898632
  3204              		.cfi_endproc
  3205              	.LFE131:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 77
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 77
 
 
  3207              		.section	.text.HAL_DMAEx_ChangeMemory,"ax",%progbits
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  3248              		.cfi_endproc
  3249              	.LFE132:
  3251              		.text
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 78
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 78
 
 
  3252              	.Letext0:
@@ -4628,29 +4628,29 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 1
  3256              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  3257              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
  3258              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h"
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s 			page 79
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccthnice.s 			page 79
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal_dma_ex.c
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:21     .text.HAL_DMAEx_MultiBufferStart:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:28     .text.HAL_DMAEx_MultiBufferStart:00000000 HAL_DMAEx_MultiBufferStart
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:179    .text.HAL_DMAEx_MultiBufferStart_IT:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:186    .text.HAL_DMAEx_MultiBufferStart_IT:00000000 HAL_DMAEx_MultiBufferStart_IT
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:776    .text.HAL_DMAEx_MultiBufferStart_IT:00000318 $d
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:795    .text.HAL_DMAEx_MultiBufferStart_IT:00000358 $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:1360   .text.HAL_DMAEx_MultiBufferStart_IT:0000062c $d
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:1378   .text.HAL_DMAEx_MultiBufferStart_IT:00000668 $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:1726   .text.HAL_DMAEx_MultiBufferStart_IT:000008dc $d
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:1742   .text.HAL_DMAEx_MultiBufferStart_IT:00000918 $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:2208   .text.HAL_DMAEx_MultiBufferStart_IT:00000be8 $d
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:2224   .text.HAL_DMAEx_MultiBufferStart_IT:00000c20 $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:2656   .text.HAL_DMAEx_MultiBufferStart_IT:00000edc $d
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:2673   .text.HAL_DMAEx_MultiBufferStart_IT:00000f1c $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:3123   .text.HAL_DMAEx_MultiBufferStart_IT:00001200 $d
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:3138   .text.HAL_DMAEx_MultiBufferStart_IT:00001234 $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:3198   .text.HAL_DMAEx_MultiBufferStart_IT:0000129c $d
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:3208   .text.HAL_DMAEx_ChangeMemory:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccnpDqF6.s:3215   .text.HAL_DMAEx_ChangeMemory:00000000 HAL_DMAEx_ChangeMemory
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:21     .text.HAL_DMAEx_MultiBufferStart:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:28     .text.HAL_DMAEx_MultiBufferStart:00000000 HAL_DMAEx_MultiBufferStart
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:179    .text.HAL_DMAEx_MultiBufferStart_IT:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:186    .text.HAL_DMAEx_MultiBufferStart_IT:00000000 HAL_DMAEx_MultiBufferStart_IT
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:776    .text.HAL_DMAEx_MultiBufferStart_IT:00000318 $d
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:795    .text.HAL_DMAEx_MultiBufferStart_IT:00000358 $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:1360   .text.HAL_DMAEx_MultiBufferStart_IT:0000062c $d
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:1378   .text.HAL_DMAEx_MultiBufferStart_IT:00000668 $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:1726   .text.HAL_DMAEx_MultiBufferStart_IT:000008dc $d
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:1742   .text.HAL_DMAEx_MultiBufferStart_IT:00000918 $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:2208   .text.HAL_DMAEx_MultiBufferStart_IT:00000be8 $d
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:2224   .text.HAL_DMAEx_MultiBufferStart_IT:00000c20 $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:2656   .text.HAL_DMAEx_MultiBufferStart_IT:00000edc $d
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:2673   .text.HAL_DMAEx_MultiBufferStart_IT:00000f1c $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:3123   .text.HAL_DMAEx_MultiBufferStart_IT:00001200 $d
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:3138   .text.HAL_DMAEx_MultiBufferStart_IT:00001234 $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:3198   .text.HAL_DMAEx_MultiBufferStart_IT:0000129c $d
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:3208   .text.HAL_DMAEx_ChangeMemory:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\ccthnice.s:3215   .text.HAL_DMAEx_ChangeMemory:00000000 HAL_DMAEx_ChangeMemory
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****       (+) Prefetch on I-Code
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****       (+) 64 cache lines of 128 bits on I-Code
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****       (+) 8 cache lines of 128 bits on D-Code
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 2
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 2
 
 
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****       
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   */
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** #ifdef HAL_FLASH_MODULE_ENABLED
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 3
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 3
 
 
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @{
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   */
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 4
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 4
 
 
  145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** /**
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   return status;
  201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** }
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 5
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 5
 
 
  202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  256:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @brief This function handles FLASH interrupt request.
  257:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @retval None
  258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   */
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 6
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 6
 
 
  259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** void HAL_FLASH_IRQHandler(void)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  313:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****         addresstmp = pFlash.Sector;
  314:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****         /*Indicate user which sector has been erased*/
  315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****         HAL_FLASH_EndOfOperationCallback(addresstmp);
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 7
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 7
 
 
  316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****         
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  370:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   }
  371:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** }
  372:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 8
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 8
 
 
  373:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** /**
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  427:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** /**
  428:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @brief  Unlock the FLASH control register access
  429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @retval HAL Status
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 9
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 9
 
 
  430:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  484:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @brief  Lock the FLASH Option Control Registers access.
  485:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @retval HAL Status 
  486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   */
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 10
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 10
 
 
  487:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** HAL_StatusTypeDef HAL_FLASH_OB_Lock(void)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  541:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** /**
  542:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @}
  543:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   */    
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 11
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 11
 
 
  544:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  598:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** /**
  599:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @brief  Program a double word (64-bit) at a specified address.
  600:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @note   This function must be used when the device voltage range is from
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 12
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 12
 
 
  601:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   *         2.7V to 3.6V and Vpp in the range 7V to 9V.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  655:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** }
  656:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
  657:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** /**
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 13
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 13
 
 
  658:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   * @brief  Program a half-word (16-bit) at a specified address.
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  712:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** { 
   29              		.loc 1 712 1 view -0
   30              		.cfi_startproc
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 14
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 14
 
 
   31              		@ args = 0, pretend = 0, frame = 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
   69              		.loc 1 726 4 is_stmt 1 view .LVU16
   70 0028 D860     		str	r0, [r3, #12]
   71              	.L3:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 15
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 15
 
 
  727:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  108 0054 D860     		str	r0, [r3, #12]
  109              	.L5:
  743:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   }
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 16
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 16
 
 
  744:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** #if defined(FLASH_SR_RDERR) 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  147              	.L1:
  759:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   }
  760:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** }
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 17
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 17
 
 
  148              		.loc 1 760 1 is_stmt 0 view .LVU49
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  196 000a 012B     		cmp	r3, #1
  197 000c 60D0     		beq	.L45
  159:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 18
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 18
 
 
  198              		.loc 1 159 3 discriminator 2 view .LVU58
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  236 0028 04E0     		b	.L31
  237              	.LVL5:
  238              	.L33:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 19
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 19
 
 
  567:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****       {
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  276              	.LBE44:
  167:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   {
  277              		.loc 1 167 3 is_stmt 1 view .LVU92
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 20
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 20
 
 
  169:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****     {
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  613:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   
  318              		.loc 1 613 3 view .LVU107
  616:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   FLASH->CR |= FLASH_PSIZE_DOUBLE_WORD;
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 21
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 21
 
 
  319              		.loc 1 616 3 view .LVU108
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
   31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
   32:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
   33:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 22
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 22
 
 
   34:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
   88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
   89:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   90:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 23
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 23
 
 
   91:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  145:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  146:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  147:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 24
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 24
 
 
  148:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the Control Register.
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  202:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the IPSR Register.
  203:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               IPSR Register value
  204:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 25
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 25
 
 
  205:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_IPSR(void)
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  259:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Process Stack Pointer (PSP) when in secure s
  260:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
  261:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 26
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 26
 
 
  262:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PSP_NS(void)
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  316:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSP_NS(void)
  317:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  318:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 27
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 27
 
 
  319:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  373:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  374:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  375:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 28
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 28
 
 
  376:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  430:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  431:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__ARM_ARCH_7M__      ) && (__ARM_ARCH_7M__      == 1)) || \
  432:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_7EM__     ) && (__ARM_ARCH_7EM__     == 1)) || \
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 29
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 29
 
 
  433:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1))    )
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  487:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Base Priority
  488:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Base Priority register.
  489:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 30
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 30
 
 
  490:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  544:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  545:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  546:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask_ns" : "=r" (result) );
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 31
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 31
 
 
  547:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  601:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
  602:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  603:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 32
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 32
 
 
  604:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  658:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PSPLIM_NS(uint32_t ProcStackPtrLimit)
  659:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  660:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)))
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 33
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 33
 
 
  661:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure PSPLIM is RAZ/WI
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  715:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  716:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  717:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer Limit
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 34
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 34
 
 
  718:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  772:Drivers/CMSIS/Include/cmsis_gcc.h **** // || (__GNUC__ > 7) || (__GNUC__ == 7 && __GNUC_MINOR__ >= 2)
  773:Drivers/CMSIS/Include/cmsis_gcc.h ****   /* see https://gcc.gnu.org/ml/gcc-patches/2017-04/msg00443.html */
  774:Drivers/CMSIS/Include/cmsis_gcc.h ****   return __builtin_arm_get_fpscr();
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 35
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 35
 
 
  775:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  829:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "r" (r)
  830:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  831:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 36
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 36
 
 
  832:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  351              	.L38:
  628:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** }
  352              		.loc 1 628 32 view .LVU120
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 37
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 37
 
 
  353              	.LBE55:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  567:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****       {
  391              		.loc 1 567 7 view .LVU137
  563:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   { 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 38
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 38
 
 
  392              		.loc 1 563 46 view .LVU138
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   }
  432              		.loc 1 194 15 view .LVU153
  433 00c6 0320     		movs	r0, #3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 39
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 39
 
 
  434              	.LVL16:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  474              	.LBB66:
  475              	.LBI63:
  694:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** {
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 40
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 40
 
 
  476              		.loc 1 694 13 is_stmt 1 view .LVU168
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  515              	.LBB69:
  516              	.LBB43:
  590:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   }
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 41
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 41
 
 
  517              		.loc 1 590 12 is_stmt 0 view .LVU184
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  556 011a AAF80080 		strh	r8, [r10]	@ movhi
  680:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
  557              		.loc 1 680 1 view .LVU200
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 42
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 42
 
 
  558 011e B1E7     		b	.L38
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  655:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
  597              		.loc 1 655 1 view .LVU216
  598 013a A3E7     		b	.L38
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 43
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 43
 
 
  599              	.L61:
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  217:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
  646              		.loc 1 217 3 is_stmt 1 discriminator 2 view .LVU226
  220:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 44
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 44
 
 
  647              		.loc 1 220 3 discriminator 2 view .LVU227
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  686              		.loc 1 694 13 is_stmt 1 view .LVU242
  687              	.LBB76:
  697:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 45
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 45
 
 
  688              		.loc 1 697 3 view .LVU243
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  610:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** {
  728              		.loc 1 610 13 view .LVU258
  729              	.LBB79:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 46
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 46
 
 
  613:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  629:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
  769              		.loc 1 629 1 view .LVU275
  770 006e E7E7     		b	.L66
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 47
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 47
 
 
  771              	.LVL36:
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  809              	.LBB84:
  810              	.LBB85:
  675:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   FLASH->CR |= FLASH_PSIZE_HALF_WORD;
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 48
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 48
 
 
  811              		.loc 1 675 3 is_stmt 0 view .LVU292
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  850              	.LVL40:
  253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
  851              		.loc 1 253 1 view .LVU308
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 49
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 49
 
 
  852 00ac 70BC     		pop	{r4, r5, r6}
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  907 0002 00BF     		.section	.text.HAL_FLASH_IRQHandler,"ax",%progbits
  908              		.align	1
  909              		.p2align 2,,3
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 50
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 50
 
 
  910              		.global	HAL_FLASH_IRQHandler
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  281:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****     }
  951              		.loc 1 281 7 is_stmt 1 view .LVU327
  281:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****     }
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 51
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 51
 
 
  952              		.loc 1 281 18 is_stmt 0 view .LVU328
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  991              		.loc 1 338 16 is_stmt 0 view .LVU343
  992 003e 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
  338:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****       {
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 52
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 52
 
 
  993              		.loc 1 338 9 view .LVU344
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  371:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
  1033              		.loc 1 371 1 is_stmt 0 view .LVU359
  1034 0076 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 53
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 53
 
 
  1035              	.L95:
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1071 0096 DAE7     		b	.L81
  1072              	.LVL53:
  1073              	.L94:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 54
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 54
 
 
  275:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****       pFlash.Sector = 0xFFFFFFFFU;
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1113              	.L98:
  1114 00c2 00BF     		.align	2
  1115              	.L97:
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 55
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 55
 
 
  1116 00c4 003C0240 		.word	1073888256
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1160 0012 5A60     		str	r2, [r3, #4]
  442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****     {
  1161              		.loc 1 442 5 view .LVU405
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 56
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 56
 
 
  442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****     {
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1208              		.cfi_endproc
  1209              	.LFE136:
  1211              		.section	.text.HAL_FLASH_OB_Unlock,"ax",%progbits
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 57
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 57
 
 
  1212              		.align	1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1252 0016 7047     		bx	lr
  1253              	.L112:
  1254              		.align	2
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 58
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 58
 
 
  1255              	.L111:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1305              	HAL_FLASH_OB_Launch:
  1306              	.LFB139:
  500:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   /* Set the OPTSTRT bit in OPTCR register */
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 59
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 59
 
 
  1307              		.loc 1 500 1 is_stmt 1 view -0
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1348 0010 D161     		str	r1, [r2, #28]
  561:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
  1349              		.loc 1 561 3 is_stmt 1 view .LVU453
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 60
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 60
 
 
  561:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c **** 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1386              		.loc 1 581 3 view .LVU471
  578:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   }
  1387              		.loc 1 578 5 is_stmt 0 view .LVU472
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 61
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 61
 
 
  1388 0032 44BF     		itt	mi
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1430 004e 70BD     		pop	{r4, r5, r6, pc}
  1431              	.L129:
  1432              		.align	2
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 62
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 62
 
 
  1433              	.L128:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  555:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   
  1484              		.loc 1 555 20 is_stmt 0 view .LVU492
  1485 0000 164B     		ldr	r3, .L151
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 63
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 63
 
 
  551:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   uint32_t tickstart = 0U;
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1524              		.loc 1 581 3 view .LVU508
  578:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c ****   }
  1525              		.loc 1 578 5 is_stmt 0 view .LVU509
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 64
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 64
 
 
  1526 0020 44BF     		itt	mi
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1565 004a DB03     		lsls	r3, r3, #15
  1566 004c F7D4     		bmi	.L136
  1567 004e E4E7     		b	.L139
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 65
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 65
 
 
  1568              	.LVL81:
@@ -3892,50 +3892,50 @@ ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 1
  1608              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h"
  1609              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h"
  1610              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s 			page 66
+ARM GAS  C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s 			page 66
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal_flash.c
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:21     .text.FLASH_SetErrorCode:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:27     .text.FLASH_SetErrorCode:00000000 FLASH_SetErrorCode
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:153    .text.FLASH_SetErrorCode:00000088 $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1599   .bss.pFlash:00000000 pFlash
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:159    .text.HAL_FLASH_Program:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:166    .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:602    .text.HAL_FLASH_Program:0000013c $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:610    .text.HAL_FLASH_Program_IT:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:617    .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:861    .text.HAL_FLASH_Program_IT:000000b0 $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:867    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:874    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:889    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:896    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:908    .text.HAL_FLASH_IRQHandler:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:915    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1116   .text.HAL_FLASH_IRQHandler:000000c4 $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1122   .text.HAL_FLASH_Unlock:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1129   .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1170   .text.HAL_FLASH_Unlock:0000001c $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1177   .text.HAL_FLASH_Lock:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1184   .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1207   .text.HAL_FLASH_Lock:00000010 $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1212   .text.HAL_FLASH_OB_Unlock:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1219   .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1256   .text.HAL_FLASH_OB_Unlock:00000018 $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1263   .text.HAL_FLASH_OB_Lock:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1270   .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1293   .text.HAL_FLASH_OB_Lock:00000010 $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1298   .text.HAL_FLASH_OB_Launch:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1305   .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1434   .text.HAL_FLASH_OB_Launch:00000050 $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1440   .text.HAL_FLASH_GetError:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1447   .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1463   .text.HAL_FLASH_GetError:00000008 $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1468   .text.FLASH_WaitForLastOperation:00000000 $t
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1475   .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1589   .text.FLASH_WaitForLastOperation:0000005c $d
-C:\Users\pw705\AppData\Local\Temp\ccd8DYlb.s:1596   .bss.pFlash:00000000 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:21     .text.FLASH_SetErrorCode:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:27     .text.FLASH_SetErrorCode:00000000 FLASH_SetErrorCode
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:153    .text.FLASH_SetErrorCode:00000088 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1599   .bss.pFlash:00000000 pFlash
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:159    .text.HAL_FLASH_Program:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:166    .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:602    .text.HAL_FLASH_Program:0000013c $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:610    .text.HAL_FLASH_Program_IT:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:617    .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:861    .text.HAL_FLASH_Program_IT:000000b0 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:867    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:874    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:889    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:896    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:908    .text.HAL_FLASH_IRQHandler:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:915    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1116   .text.HAL_FLASH_IRQHandler:000000c4 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1122   .text.HAL_FLASH_Unlock:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1129   .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1170   .text.HAL_FLASH_Unlock:0000001c $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1177   .text.HAL_FLASH_Lock:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1184   .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1207   .text.HAL_FLASH_Lock:00000010 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1212   .text.HAL_FLASH_OB_Unlock:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1219   .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1256   .text.HAL_FLASH_OB_Unlock:00000018 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1263   .text.HAL_FLASH_OB_Lock:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1270   .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1293   .text.HAL_FLASH_OB_Lock:00000010 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1298   .text.HAL_FLASH_OB_Launch:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1305   .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1434   .text.HAL_FLASH_OB_Launch:00000050 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1440   .text.HAL_FLASH_GetError:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1447   .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1463   .text.HAL_FLASH_GetError:00000008 $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1468   .text.FLASH_WaitForLastOperation:00000000 $t
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1475   .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1589   .text.FLASH_WaitForLastOperation:0000005c $d
+C:\Users\pw705\AppData\Local\Temp\cc4x44ph.s:1596   .bss.pFlash:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

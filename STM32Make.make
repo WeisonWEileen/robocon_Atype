@@ -37,6 +37,7 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c \
+Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c \
@@ -63,16 +64,26 @@ Middlewares/Third_Party/FatFs/src/option/ccsbcs.c \
 Middlewares/Third_Party/FatFs/src/option/syscall.c \
 Src/bsp_driver_sd.c \
 Src/bsp_log.c \
+Src/can.c \
+Src/dma.c \
 Src/fatfs.c \
+Src/fatfs_platform.c \
 Src/gpio.c \
 Src/main.c \
 Src/sd_card.c \
 Src/sd_diskio.c \
 Src/sdio.c \
 Src/stm32f4xx_hal_msp.c \
+Src/stm32f4xx_hal_timebase_tim.c \
 Src/stm32f4xx_it.c \
 Src/system_stm32f4xx.c \
-Src/usart.c
+Src/usart.c \
+bsp/can/CAN_receive.c \
+bsp/can/bsp_can.c \
+bsp/remote/remote.c \
+bsp/remote/sbus.c \
+module/chasis/chasis.c \
+module/chasis/pid.c
 
 
 CPP_SOURCES = \
@@ -150,7 +161,10 @@ C_INCLUDES =  \
 -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy \
 -IInc \
 -IMiddlewares/Third_Party/FatFs/src \
--IMiddlewares/Third_Party/FatFs/src/RTT
+-IMiddlewares/Third_Party/FatFs/src/RTT \
+-Ibsp/can \
+-Ibsp/remote \
+-Imodule/chasis
 
 
 
