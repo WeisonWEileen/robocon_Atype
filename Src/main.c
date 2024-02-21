@@ -122,7 +122,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    // MotorTask();
+    MotorTask();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

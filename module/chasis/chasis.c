@@ -3,11 +3,10 @@
 #include "main.h"
 #include "pid.h"
 #include "CAN_receive.h"
-#include "remote.h"
+#include "sbus.h"
 
 motor_run_data_t motor_3508[4]; // 电机驱动电机运动的数据
 chassis_move_t chassis_vxyz;
-extern void sbus_to_rpm(void);
 
 /**
  * @brief          电机转动任务，freertos种调用
@@ -36,13 +35,13 @@ void MotorTask(void)
         
         CAN_cmd_chassis(motor_3508[0].pid.Output, motor_3508[1].pid.Output, motor_3508[2].pid.Output, motor_3508[3].pid.Output);
         // vTaskDelay(1);
-        HAL_Delay(1);
+        // HAL_Delay(1);
 
         // // 双环pid，先算外环的角度的输出，@to do没调明白
         // PID_Calculate(&motor_3508[0].ang_pid, motor_3508[0].accumAngle, motor_3508[0].desireAngle);
         // // 再算内环的电流的输出
         // PID_Calculate(&motor_3508[0].pid, motor_3508[0].realRpm, motor_3508[0].ang_pid.Output);
-        // CAN_cmd_chassis(motor_3508[0].pid.Output, 0, 0, 0);
+        CAN_cmd_chassis(motor_3508[0].pid.Output, 0, 0, 0);
         // vTaskDelay(1);
     // }
 }

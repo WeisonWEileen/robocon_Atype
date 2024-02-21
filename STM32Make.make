@@ -80,7 +80,6 @@ Src/system_stm32f4xx.c \
 Src/usart.c \
 bsp/can/CAN_receive.c \
 bsp/can/bsp_can.c \
-bsp/remote/remote.c \
 bsp/remote/sbus.c \
 module/chasis/chasis.c \
 module/chasis/pid.c

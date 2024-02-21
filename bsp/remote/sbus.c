@@ -1,9 +1,11 @@
 #include "sbus.h"
 #include "usart.h"
+#include "chasis.h"
 
 fp32 SBUS_CHANNEL[10];
 static uint8_t SBUS_rx_buf[2][SBUS_RX_BUF_NUM];
 
+extern chassis_move_t chassis_vxyz;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 
 void sbus_init(void)
@@ -39,7 +41,7 @@ static void parse_sbus(volatile const uint8_t *sbus_buf)
 {
   SBUS_CHANNEL[0] = (((sbus_buf[1] | (sbus_buf[2] << 8)) & 0x07ff) - SBUS_VALUE_OFFSET) / SBUS_VALUE_MAX;
   SBUS_CHANNEL[1] = ((((sbus_buf[2] >> 3) | (sbus_buf[3] << 5)) & 0x07ff) - SBUS_VALUE_OFFSET) / SBUS_VALUE_MAX;
-  SBUS_CHANNEL[2] = ((((sbus_buf[3] >> 6) | (sbus_buf[4] << 2) | (sbus_buf[5] << 10)) & 0x07ff) - SBUS_VALUE_OFFSET) / SBUS_VALUE_MAX;
+  SBUS_CHANNEL[2] = ((((sbus_buf[3] >> 6) | (sbus_buf[4] << 2) | (sbus_buf[5] << 10)) & 0x07ff) - SBUS2_DEFAULT) / SBUS_VALUE_MAX;
   SBUS_CHANNEL[3] = ((((sbus_buf[5] >> 1) | (sbus_buf[6] << 7)) & 0x07ff) - SBUS_VALUE_OFFSET) / SBUS_VALUE_MAX;
   SBUS_CHANNEL[4] = ((((sbus_buf[6] >> 4) | (sbus_buf[7] << 4)) & 0x07ff) - SBUS_VALUE_OFFSET) / SBUS_VALUE_MAX;
   SBUS_CHANNEL[5] = ((((sbus_buf[7] >> 7) | (sbus_buf[8] << 1) | (sbus_buf[9] << 9)) & 0x07ff) - SBUS_VALUE_OFFSET) / SBUS_VALUE_MAX;
@@ -82,11 +84,13 @@ void sbus_hook(void)
   }
 }
 
-// /**
-//  * @brief 串口中断，调用sbus接手
-//  * 
-// */
-// void USART1_IRQHandler(void)
-// {
-//   sbus_hook();
-// }
+/**
+ * @brief 遥控器信号映射成地盘运动数据
+*/
+
+void sbus_to_chasisvxyz(void)
+{
+  chassis_vxyz.vx = 5000* SBUS_CHANNEL[3];
+  chassis_vxyz.vy = 5000 * SBUS_CHANNEL[1];
+  chassis_vxyz.wz = 5000 * SBUS_CHANNEL[0];
+}
