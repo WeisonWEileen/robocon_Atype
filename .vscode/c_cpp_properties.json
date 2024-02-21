@@ -10,6 +10,9 @@
         "Inc",
         "Middlewares/Third_Party/FatFs/src",
         "Middlewares/Third_Party/FatFs/src/RTT",
+        "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+        "Middlewares/Third_Party/FreeRTOS/Source/include",
+        "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F",
         "bsp/can",
         "bsp/remote",
         "module/chasis"

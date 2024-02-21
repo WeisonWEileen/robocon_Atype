@@ -10,9 +10,9 @@
 extern bool_t motor_flag;
 extern fp32 norm_rad_format(fp32 rad);
 extern void motor_data_init(void);
-extern void MotorTask(void);
+extern void ChasisTask(void *argument);
 
-typedef struct 
+    typedef struct
 {
     /*以下是速度*/
     fp32 desireRpm;     //目标转速

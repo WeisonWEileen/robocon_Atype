@@ -6,6 +6,7 @@
         "segger_rtt.h": "c",
         "ffconf.h": "c",
         "struct_typedef.h": "c",
-        "usart.h": "c"
+        "usart.h": "c",
+        "fatfs.h": "c"
     }
 }

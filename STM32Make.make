@@ -62,12 +62,23 @@ Middlewares/Third_Party/FatFs/src/ff.c \
 Middlewares/Third_Party/FatFs/src/ff_gen_drv.c \
 Middlewares/Third_Party/FatFs/src/option/ccsbcs.c \
 Middlewares/Third_Party/FatFs/src/option/syscall.c \
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c \
+Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
+Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
+Middlewares/Third_Party/FreeRTOS/Source/list.c \
+Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c \
+Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c \
+Middlewares/Third_Party/FreeRTOS/Source/queue.c \
+Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c \
+Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
+Middlewares/Third_Party/FreeRTOS/Source/timers.c \
 Src/bsp_driver_sd.c \
 Src/bsp_log.c \
 Src/can.c \
 Src/dma.c \
 Src/fatfs.c \
 Src/fatfs_platform.c \
+Src/freertos.c \
 Src/gpio.c \
 Src/main.c \
 Src/sd_card.c \
@@ -161,6 +172,9 @@ C_INCLUDES =  \
 -IInc \
 -IMiddlewares/Third_Party/FatFs/src \
 -IMiddlewares/Third_Party/FatFs/src/RTT \
+-IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
+-IMiddlewares/Third_Party/FreeRTOS/Source/include \
+-IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 -Ibsp/can \
 -Ibsp/remote \
 -Imodule/chasis

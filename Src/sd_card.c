@@ -24,7 +24,7 @@ uint32_t       byteswritten, bytesread;               /* file write/read counts 
 uint8_t        rtext[100];                            /* file read buffer */
 uint8_t        err;
 static char    *f_name = "ares.txt";           /* file name */
-uint8_t        wtext[] = " please come back to Hupan, Ares go! "; /* file write buffer */
+uint8_t        wtext[] = " please ggggo! "; /* file write buffer */
 extern UART_HandleTypeDef huart6;
 /**
   * @brief  read ok indicator
@@ -47,11 +47,11 @@ static void led_blinking(uint8_t num)
 	for (i = 0; i < num; i++)
 	{
 		HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
-		HAL_Delay(4000);
+		osDelay(4000);
 		HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
-		HAL_Delay(100);
+		osDelay(100);
 	}
-	HAL_Delay(500);
+	osDelay(500);
 }
 
 /**
@@ -69,7 +69,7 @@ void error_detect(uint8_t err)
 				HAL_UART_Transmit(&huart6, (uint8_t *)" Register file system error or create file system error!\n",  \
 				                 (COUNTOF(" Register file system error or create file system error!\n") - 1), 55);
 				LOGERROR(" Register file system error or create file system error!\n");
-				HAL_Delay(10);	
+				osDelay(10);	
 			}break;
 
 			case ERR_OPEN:
@@ -77,14 +77,14 @@ void error_detect(uint8_t err)
 				led_blinking(ERR_OPEN);
 				HAL_UART_Transmit(&huart6, (uint8_t *)" Open file error!\n", (COUNTOF(" Open file error!\n") - 1), 55);
 				LOGERROR(" Open file error!\n");
-				HAL_Delay(10);	
+				osDelay(10);	
 			}break;
 			
 			default:
 			{
 				HAL_UART_Transmit(&huart6, (uint8_t *)" Write & Read ok, welcome to Robomaster!\n", \
 				                 (COUNTOF(" Write & Read ok, welcome to Robomaster!\n") - 1), 55);
-				HAL_Delay(10);	
+				osDelay(10);	
 			}break;
 		}
 }
