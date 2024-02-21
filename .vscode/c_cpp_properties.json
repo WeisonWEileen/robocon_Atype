@@ -15,6 +15,7 @@
         "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F",
         "bsp/can",
         "bsp/remote",
+        "bsp/sd_card",
         "module/chasis"
       ],
       "defines": [

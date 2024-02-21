@@ -81,7 +81,6 @@ Src/fatfs_platform.c \
 Src/freertos.c \
 Src/gpio.c \
 Src/main.c \
-Src/sd_card.c \
 Src/sd_diskio.c \
 Src/sdio.c \
 Src/stm32f4xx_hal_msp.c \
@@ -92,6 +91,7 @@ Src/usart.c \
 bsp/can/CAN_receive.c \
 bsp/can/bsp_can.c \
 bsp/remote/sbus.c \
+bsp/sd_card/sd_card.c \
 module/chasis/chasis.c \
 module/chasis/pid.c
 
@@ -177,6 +177,7 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 -Ibsp/can \
 -Ibsp/remote \
+-Ibsp/sd_card \
 -Imodule/chasis
 
 
