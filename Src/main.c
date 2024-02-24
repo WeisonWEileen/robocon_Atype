@@ -105,15 +105,15 @@ int main(void)
   MX_CAN1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  led_off();
   can_filter_init();
+  // led_off();
   /* Initializes the SD card device */
   // SEGGER_RTT_Init();
   // SEGGER_RTT_printf(0, "Hello world !");
   BSP_SD_Init();
 
   /* SD card test */
-  sd_test();
+  // sd_test();
   motor_data_init(); // desireRpm = 0
   sbus_init();
 

@@ -46,7 +46,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 
-//这里配置每个任务参数  现在的格式：const名字小大， 函数任务大大
+//这里配置每个任务参数  现在的格式：const名字小大�?? 函数任务大大
 osThreadId_t chasisTaskHandle;
 const osThreadAttr_t chasisTask_attributes = {
     .name = "chasisTask",
@@ -58,7 +58,14 @@ osThreadId_t sdioTaskHandle;
 const osThreadAttr_t sdioTask_attributes = {
     .name = "sdioTask",
     .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityNormal,
+    .priority = (osPriority_t)osPriorityAboveNormal1,
+};
+
+osThreadId_t sdio2TaskHandle;
+const osThreadAttr_t sdio2ask_attributes = {
+    .name = "sdioTask2",
+    .stack_size = 128 * 12,
+    .priority = (osPriority_t)osPriorityAboveNormal2,
 };
 
 /* USER CODE END Variables */
@@ -74,6 +81,7 @@ const osThreadAttr_t defaultTask_attributes = {
 /* USER CODE BEGIN FunctionPrototypes */
 __weak void ChasisTask(void  *argument);
 __weak void SdioTask  (void  *argument);
+__weak void Sdio2Task  (void  *argument);
 
 /* USER CODE END FunctionPrototypes */
 
@@ -109,12 +117,12 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* creation of defaultTask */
-  // defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   chasisTaskHandle = osThreadNew(ChasisTask, NULL, &chasisTask_attributes);
-  sdioTaskHandle = osThreadNew(SdioTask, NULL, &sdioTask_attributes);
+  sdioTaskHandle = osThreadNew(Sdio2Task, NULL, &sdio2ask_attributes);
 
   /* USER CODE END RTOS_THREADS */
 
@@ -154,6 +162,14 @@ __weak void ChasisTask(void  *argument)
 }
 
 __weak void SdioTask(void *argument)
+{
+  for (;;)
+  {
+    osDelay(1);
+  }
+}
+
+__weak void Sdio2Task(void *argument)
 {
   for (;;)
   {

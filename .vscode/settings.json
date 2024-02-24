@@ -7,6 +7,9 @@
         "ffconf.h": "c",
         "struct_typedef.h": "c",
         "usart.h": "c",
-        "fatfs.h": "c"
+        "fatfs.h": "c",
+        "sdio.h": "c",
+        "main.h": "c",
+        "fatfs_platform.h": "c"
     }
 }

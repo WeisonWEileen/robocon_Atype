@@ -1,7 +1,10 @@
 /* USER CODE BEGIN Header */
+#include "main.h"
+#include <stdio.h>
+
 /**
  ******************************************************************************
-  * @file    bsp_driver_sd.c for F4 (based on stm324x9i_eval_sd.c)
+ * @file    bsp_driver_sd.c for F4 (based on stm324x9i_eval_sd.c)
  * @brief   This file includes a generic uSD card driver.
  *          To be completed by the user according to the board used for the project.
  * @note    Some functions generated as weak: they can be overridden by
@@ -9,17 +12,18 @@
  *          - or BSP code from the FW pack files
  *          if such files are added to the generated project (by the user).
  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
+ * @attention
+ *
+ * Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
  ******************************************************************************
  */
+extern UART_HandleTypeDef huart6;
 /* USER CODE END Header */
 
 #ifdef OLD_API
@@ -73,9 +77,9 @@ __weak uint8_t BSP_SD_Init(void)
 
 /* USER CODE BEGIN InterruptMode */
 /**
-  * @brief  Configures Interrupt mode for SD detection pin.
-  * @retval Returns 0
-  */
+ * @brief  Configures Interrupt mode for SD detection pin.
+ * @retval Returns 0
+ */
 __weak uint8_t BSP_SD_ITConfig(void)
 {
   /* Code to be updated by the user or replaced by one from the FW pack (in a stmxxxx_sd.c file) */
@@ -84,7 +88,7 @@ __weak uint8_t BSP_SD_ITConfig(void)
 }
 
 /** @brief  SD detect IT treatment
-  */
+ */
 __weak void BSP_SD_DetectIT(void)
 {
   /* Code to be updated by the user or replaced by one from the FW pack (in a stmxxxx_sd.c file) */
@@ -263,33 +267,30 @@ void HAL_SD_RxCpltCallback(SD_HandleTypeDef *hsd)
 
 /* USER CODE BEGIN CallBacksSection_C */
 /**
-  * @brief BSP SD Abort callback
-  * @retval None
-  * @note empty (up to the user to fill it in or to remove it if useless)
-  */
+ * @brief BSP SD Abort callback
+ * @retval None
+ * @note empty (up to the user to fill it in or to remove it if useless)
+ */
 __weak void BSP_SD_AbortCallback(void)
 {
-
 }
 
 /**
-  * @brief BSP Tx Transfer completed callback
-  * @retval None
-  * @note empty (up to the user to fill it in or to remove it if useless)
-  */
+ * @brief BSP Tx Transfer completed callback
+ * @retval None
+ * @note empty (up to the user to fill it in or to remove it if useless)
+ */
 __weak void BSP_SD_WriteCpltCallback(void)
 {
-
 }
 
 /**
-  * @brief BSP Rx Transfer completed callback
-  * @retval None
-  * @note empty (up to the user to fill it in or to remove it if useless)
-  */
+ * @brief BSP Rx Transfer completed callback
+ * @retval None
+ * @note empty (up to the user to fill it in or to remove it if useless)
+ */
 __weak void BSP_SD_ReadCpltCallback(void)
 {
-
 }
 /* USER CODE END CallBacksSection_C */
 #endif

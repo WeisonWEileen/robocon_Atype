@@ -75,6 +75,11 @@ void BSP_SD_DMA_Rx_IRQHandler(void);
 uint8_t BSP_SD_GetCardState(void);
 void    BSP_SD_GetCardInfo(HAL_SD_CardInfoTypeDef *CardInfo);
 uint8_t BSP_SD_IsDetected(void);
+
+//手动增加include
+void BSP_SD_AbortCallback(void);
+void BSP_SD_WriteCpltCallback(void);
+void BSP_SD_ReadCpltCallback(void);
 /* USER CODE END BSP_H_CODE */
 #endif
 
