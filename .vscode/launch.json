@@ -19,7 +19,11 @@
             },
             "rttConfig": {
                 "enabled": true,
-                "address": "auto",
+                "address": "0x20000000",
+                //TODO 内存芯片手册上写的大小是128+64，其中128是sram，64是ccm，到底应该用哪个？
+                "searchSize": 131072,
+                "rtt_start_retry": 10000,
+                "searchId": "SEGGER RTT",
                 "clearSearch": false,
                 "polling_interval": 20,
                 "decoders": [
@@ -29,7 +33,8 @@
                         "type": "console"
                     }
                 ]
-            }
+            },
+            "svdPath": ".vscode/stm32f427.svd"
         },
         {
             "showDevDebugOutput": "parsed",

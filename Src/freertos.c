@@ -46,7 +46,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 
-//这里配置每个任务参数  现在的格式：const名字小大�?? 函数任务大大
+//这里配置每个任务参数  现在的格式：const名字小写大写, 函数任务大写大写
 osThreadId_t chasisTaskHandle;
 const osThreadAttr_t chasisTask_attributes = {
     .name = "chasisTask",
@@ -54,16 +54,16 @@ const osThreadAttr_t chasisTask_attributes = {
     .priority = (osPriority_t)osPriorityAboveNormal1,
 };
 
-osThreadId_t sdioTaskHandle;
-const osThreadAttr_t sdioTask_attributes = {
-    .name = "sdioTask",
+osThreadId_t errorDetectTaskHandle;
+const osThreadAttr_t errorDetectTask_attributes = {
+    .name = "errorDetectTask",
     .stack_size = 128 * 4,
     .priority = (osPriority_t)osPriorityAboveNormal1,
 };
 
-osThreadId_t sdio2TaskHandle;
-const osThreadAttr_t sdio2ask_attributes = {
-    .name = "sdioTask2",
+osThreadId_t sdioTaskHandle;
+const osThreadAttr_t sdioTask_attributes = {
+    .name = "sdioTask",
     .stack_size = 128 * 12,
     .priority = (osPriority_t)osPriorityAboveNormal2,
 };
@@ -80,8 +80,8 @@ const osThreadAttr_t defaultTask_attributes = {
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
 __weak void ChasisTask(void  *argument);
+__weak void ErrorDetectTask  (void  *argument);
 __weak void SdioTask  (void  *argument);
-__weak void Sdio2Task  (void  *argument);
 
 /* USER CODE END FunctionPrototypes */
 
@@ -122,7 +122,8 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   chasisTaskHandle = osThreadNew(ChasisTask, NULL, &chasisTask_attributes);
-  sdioTaskHandle = osThreadNew(Sdio2Task, NULL, &sdio2ask_attributes);
+  sdioTaskHandle = osThreadNew(SdioTask, NULL, &sdioTask_attributes);
+  errorDetectTaskHandle = osThreadNew(ErrorDetectTask, NULL, &errorDetectTask_attributes);
 
   /* USER CODE END RTOS_THREADS */
 
@@ -161,7 +162,7 @@ __weak void ChasisTask(void  *argument)
   }
 }
 
-__weak void SdioTask(void *argument)
+__weak void ErrorDetectTask(void *argument)
 {
   for (;;)
   {
@@ -169,7 +170,7 @@ __weak void SdioTask(void *argument)
   }
 }
 
-__weak void Sdio2Task(void *argument)
+__weak void SdioTask(void *argument)
 {
   for (;;)
   {

@@ -22,7 +22,7 @@ TARGET = SDCard
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -Og
+OPT = -O0
 
 
 #######################################
@@ -55,8 +55,6 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c \
-Middlewares/Third_Party/FatFs/src/RTT/SEGGER_RTT.c \
-Middlewares/Third_Party/FatFs/src/RTT/SEGGER_RTT_printf.c \
 Middlewares/Third_Party/FatFs/src/diskio.c \
 Middlewares/Third_Party/FatFs/src/ff.c \
 Middlewares/Third_Party/FatFs/src/ff_gen_drv.c \
@@ -88,12 +86,15 @@ Src/stm32f4xx_hal_timebase_tim.c \
 Src/stm32f4xx_it.c \
 Src/system_stm32f4xx.c \
 Src/usart.c \
+bsp/RTT/SEGGER_RTT.c \
+bsp/RTT/SEGGER_RTT_printf.c \
 bsp/can/CAN_receive.c \
 bsp/can/bsp_can.c \
+bsp/dwt/bsp_dwt.c \
 bsp/remote/sbus.c \
 bsp/sd_card/sd_card.c \
-module/chasis/chasis.c \
-module/chasis/pid.c
+modules/chasis/chasis.c \
+modules/chasis/pid.c
 
 
 CPP_SOURCES = \
@@ -171,14 +172,15 @@ C_INCLUDES =  \
 -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy \
 -IInc \
 -IMiddlewares/Third_Party/FatFs/src \
--IMiddlewares/Third_Party/FatFs/src/RTT \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 -IMiddlewares/Third_Party/FreeRTOS/Source/include \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
+-Ibsp/RTT \
 -Ibsp/can \
+-Ibsp/dwt \
 -Ibsp/remote \
 -Ibsp/sd_card \
--Imodule/chasis
+-Imodules/chasis
 
 
 

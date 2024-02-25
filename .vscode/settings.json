@@ -10,6 +10,7 @@
         "fatfs.h": "c",
         "sdio.h": "c",
         "main.h": "c",
-        "fatfs_platform.h": "c"
+        "fatfs_platform.h": "c",
+        "integer.h": "c"
     }
 }

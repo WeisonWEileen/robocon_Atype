@@ -23,7 +23,6 @@
  *
  ******************************************************************************
  */
-extern UART_HandleTypeDef huart6;
 /* USER CODE END Header */
 
 #ifdef OLD_API

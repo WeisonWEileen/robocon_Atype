@@ -19,9 +19,8 @@
 
 extern uint8_t err;
 
-void sd_test(void);
-void error_detect(uint8_t err);
-void Sdio2Task(void *argument);
+void ErrorDetectTask(void *argument);
+void SdioTask(void *argument);
 
 #endif
 
