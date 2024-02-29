@@ -50,17 +50,18 @@ void MX_SDIO_SD_Init(void)
   /* USER CODE BEGIN SDIO_Init 2 */
 
   /* USER CODE END SDIO_Init 2 */
+
 }
 
-void HAL_SD_MspInit(SD_HandleTypeDef *sdHandle)
+void HAL_SD_MspInit(SD_HandleTypeDef* sdHandle)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  if (sdHandle->Instance == SDIO)
+  if(sdHandle->Instance==SDIO)
   {
-    /* USER CODE BEGIN SDIO_MspInit 0 */
+  /* USER CODE BEGIN SDIO_MspInit 0 */
 
-    /* USER CODE END SDIO_MspInit 0 */
+  /* USER CODE END SDIO_MspInit 0 */
     /* SDIO clock enable */
     __HAL_RCC_SDIO_CLK_ENABLE();
 
@@ -74,7 +75,8 @@ void HAL_SD_MspInit(SD_HandleTypeDef *sdHandle)
     PC9     ------> SDIO_D1
     PC8     ------> SDIO_D0
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_12 | GPIO_PIN_11 | GPIO_PIN_10 | GPIO_PIN_9 | GPIO_PIN_8;
+    GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_11|GPIO_PIN_10|GPIO_PIN_9
+                          |GPIO_PIN_8;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -108,7 +110,7 @@ void HAL_SD_MspInit(SD_HandleTypeDef *sdHandle)
       Error_Handler();
     }
 
-    __HAL_LINKDMA(sdHandle, hdmarx, hdma_sdio_rx);
+    __HAL_LINKDMA(sdHandle,hdmarx,hdma_sdio_rx);
 
     /* SDIO_TX Init */
     hdma_sdio_tx.Instance = DMA2_Stream6;
@@ -129,25 +131,25 @@ void HAL_SD_MspInit(SD_HandleTypeDef *sdHandle)
       Error_Handler();
     }
 
-    __HAL_LINKDMA(sdHandle, hdmatx, hdma_sdio_tx);
+    __HAL_LINKDMA(sdHandle,hdmatx,hdma_sdio_tx);
 
     /* SDIO interrupt Init */
     HAL_NVIC_SetPriority(SDIO_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(SDIO_IRQn);
-    /* USER CODE BEGIN SDIO_MspInit 1 */
+  /* USER CODE BEGIN SDIO_MspInit 1 */
 
-    /* USER CODE END SDIO_MspInit 1 */
+  /* USER CODE END SDIO_MspInit 1 */
   }
 }
 
-void HAL_SD_MspDeInit(SD_HandleTypeDef *sdHandle)
+void HAL_SD_MspDeInit(SD_HandleTypeDef* sdHandle)
 {
 
-  if (sdHandle->Instance == SDIO)
+  if(sdHandle->Instance==SDIO)
   {
-    /* USER CODE BEGIN SDIO_MspDeInit 0 */
+  /* USER CODE BEGIN SDIO_MspDeInit 0 */
 
-    /* USER CODE END SDIO_MspDeInit 0 */
+  /* USER CODE END SDIO_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_SDIO_CLK_DISABLE();
 
@@ -159,7 +161,8 @@ void HAL_SD_MspDeInit(SD_HandleTypeDef *sdHandle)
     PC9     ------> SDIO_D1
     PC8     ------> SDIO_D0
     */
-    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_12 | GPIO_PIN_11 | GPIO_PIN_10 | GPIO_PIN_9 | GPIO_PIN_8);
+    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_12|GPIO_PIN_11|GPIO_PIN_10|GPIO_PIN_9
+                          |GPIO_PIN_8);
 
     HAL_GPIO_DeInit(GPIOD, GPIO_PIN_2);
 
@@ -169,9 +172,9 @@ void HAL_SD_MspDeInit(SD_HandleTypeDef *sdHandle)
 
     /* SDIO interrupt Deinit */
     HAL_NVIC_DisableIRQ(SDIO_IRQn);
-    /* USER CODE BEGIN SDIO_MspDeInit 1 */
+  /* USER CODE BEGIN SDIO_MspDeInit 1 */
 
-    /* USER CODE END SDIO_MspDeInit 1 */
+  /* USER CODE END SDIO_MspDeInit 1 */
   }
 }
 

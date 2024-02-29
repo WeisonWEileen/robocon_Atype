@@ -19,8 +19,10 @@
             },
             "rttConfig": {
                 "enabled": true,
+                //搜索的内存地址
                 "address": "0x20000000",
-                //TODO 内存芯片手册上写的大小是128+64，其中128是sram，64是ccm，到底应该用哪个？
+                //内存芯片手册上写的大小是128+64，其中128是sram，64是ccm，到底应该用哪个
+                //      目前的搜索是采用 1024×128，目前是找到了control block的了，是够的
                 "searchSize": 131072,
                 "rtt_start_retry": 10000,
                 "searchId": "SEGGER RTT",
@@ -34,7 +36,9 @@
                     }
                 ]
             },
-            "svdPath": ".vscode/stm32f427.svd"
+            //svd文件用于查看寄存器的值。https://github.com/posborne/cmsis-svd
+            "svdFile": "stm32f427.svd"
+            
         },
         {
             "showDevDebugOutput": "parsed",

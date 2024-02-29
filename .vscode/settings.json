@@ -12,5 +12,6 @@
         "main.h": "c",
         "fatfs_platform.h": "c",
         "integer.h": "c"
-    }
+    },
+    "cortex-debug.variableUseNaturalFormat": false
 }

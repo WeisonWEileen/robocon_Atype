@@ -17,10 +17,13 @@
 #define ERR_MOUNT_MKFS (1)
 #define ERR_OPEN       (2)
 
+#define MAX_MO_TIMES 3
+
 extern uint8_t err;
 
 void ErrorDetectTask(void *argument);
 void SdioTask(void *argument);
+void Mount_sdTask(void);
 
 #endif
 

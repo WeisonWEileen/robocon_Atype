@@ -46,26 +46,34 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 
-//这里配置每个任务参数  现在的格式：const名字小写大写, 函数任务大写大写
+// 这里配置每个任务参数  现在的格式：const名字小写大写, 函数任务大写大写，�?�空间由CubeMX里面设置，一共是15k = 128*8*15
 osThreadId_t chasisTaskHandle;
 const osThreadAttr_t chasisTask_attributes = {
     .name = "chasisTask",
-    .stack_size = 128 * 4,
+    .stack_size = 128 * 2,
     .priority = (osPriority_t)osPriorityAboveNormal1,
 };
 
 osThreadId_t errorDetectTaskHandle;
 const osThreadAttr_t errorDetectTask_attributes = {
     .name = "errorDetectTask",
-    .stack_size = 128 * 4,
+    .stack_size = 128 * 1,
     .priority = (osPriority_t)osPriorityAboveNormal1,
 };
 
 osThreadId_t sdioTaskHandle;
 const osThreadAttr_t sdioTask_attributes = {
-    .name = "sdioTask",
-    .stack_size = 128 * 12,
-    .priority = (osPriority_t)osPriorityAboveNormal2,
+    .name = "sdrwTask",
+    .stack_size = 128 * 8 * 4,
+    .priority = (osPriority_t)osPriorityHigh,
+};
+
+// 这是挂载sd卡的句柄
+osThreadId_t mount_open_sdTaskHandle;
+const osThreadAttr_t mount_openTask_attributes = {
+    .name = "mount_open_sdTask",
+    .stack_size = 128 * 8,
+    .priority = (osPriority_t)osPriorityHigh,
 };
 
 /* USER CODE END Variables */
@@ -79,9 +87,10 @@ const osThreadAttr_t defaultTask_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-__weak void ChasisTask(void  *argument);
-__weak void ErrorDetectTask  (void  *argument);
-__weak void SdioTask  (void  *argument);
+__weak void ChasisTask(void *argument);
+__weak void ErrorDetectTask(void *argument);
+__weak void SdioTask(void *argument);
+__weak void Mount_open_sdTask(void *argument);
 
 /* USER CODE END FunctionPrototypes */
 
@@ -121,9 +130,10 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  // mount_open_sdTaskHandle = osThreadNew(Mount_open_sdTask, NULL, &mount_openTask_attributes);
   chasisTaskHandle = osThreadNew(ChasisTask, NULL, &chasisTask_attributes);
+  // errorDetectTaskHandle = osThreadNew(ErrorDetectTask, NULL, &errorDetectTask_attributes);
   sdioTaskHandle = osThreadNew(SdioTask, NULL, &sdioTask_attributes);
-  errorDetectTaskHandle = osThreadNew(ErrorDetectTask, NULL, &errorDetectTask_attributes);
 
   /* USER CODE END RTOS_THREADS */
 
@@ -154,7 +164,7 @@ void StartDefaultTask(void *argument)
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
 
-__weak void ChasisTask(void  *argument)
+__weak void ChasisTask(void *argument)
 {
   for (;;)
   {
@@ -171,6 +181,14 @@ __weak void ErrorDetectTask(void *argument)
 }
 
 __weak void SdioTask(void *argument)
+{
+  for (;;)
+  {
+    osDelay(1);
+  }
+}
+
+__weak void Mount_open_sdTask(void *argument)
 {
   for (;;)
   {
